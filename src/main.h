@@ -19,21 +19,27 @@
 #define logFileName *logFileName_
 #define appVerReal *appVerReal_
 #define appVerStr *appVerStr_
-#define validKeySign *validKeySign_
 #define useSSL *useSSL_
+#define currencyStr *currencyStr_
+#define currencySign *currencySign_
+#define bitcoinSign *bitcoinSign_
 
+extern QByteArray *bitcoinSign_;
+extern QByteArray *currencyStr_;
+extern QByteArray *currencySign_;
 extern bool *useSSL_;
-extern bool *validKeySign_;
 extern QByteArray *appVerStr_;
 extern LogThread *logThread;
 extern QByteArray *restKey_;
 extern QByteArray *restSign_;
-extern BitcoinTrader *mainWindow_;
+extern QtBitcoinTrader *mainWindow_;
 extern quint64 *nonce_;
 extern bool *logEnabled_;
 extern QString *logFileName_;
 extern QString *iniFileName_;
 extern double *appVerReal_;
+extern QMap<QByteArray,QByteArray> *currencySignMap;
+extern QMap<QByteArray,QByteArray> *currencyNamesMap;
 //
 //quint64 getNextNonce()
 //{
