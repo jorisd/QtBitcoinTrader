@@ -72,10 +72,3 @@ void NewPasswordDialog::checkToEnableButton()
 	}
 	ui.okButton->setEnabled(containsLetter&&containsDigit&&containsSpec);
 }
-
-QByteArray NewPasswordDialog::getSelectedCurrency()
-{
-	if(ui.currencyComboBox->currentIndex()==-1)return QByteArray("USD");
-	return ui.currencyComboBox->itemData(ui.currencyComboBox->currentIndex()).toString().toAscii();
-}
-

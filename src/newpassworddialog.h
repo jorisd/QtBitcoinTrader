@@ -9,7 +9,6 @@ class NewPasswordDialog : public QDialog
 	Q_OBJECT
 
 public:
-	QByteArray getSelectedCurrency();
 	QString getRestSign();
 	QString getRestKey();
 	QString getPassword();
