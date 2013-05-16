@@ -1,3 +1,15 @@
+v0.90
+- Added all currencies support
+- Fixed minor bugs
+
+v0.89
+- Critical Bug Fixed
+
+v0.88
+ - Addes Mt.Gox key and secret encryption with AES 256
+ - Fixed some ui bugx
+ - Minor fixes
+
 v0.87
 - Match more faster engine
 - Fixed some bugs
