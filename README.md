@@ -16,6 +16,9 @@ This software helps you to open and cancel Mt.Gox orders vary fast.
 
 Change Log
 
+v0.93
+- Fixed critical ui bug where was wrong field in orders table.
+
 v0.92
 - Fixed minor bugs in ui and currencies
 
