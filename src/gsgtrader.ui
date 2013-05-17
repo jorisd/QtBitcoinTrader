@@ -1843,6 +1843,12 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
@@ -1973,6 +1979,12 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="minimumSize">
+             <size>
+              <width>10</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="toolTip">
              <string>Profit per Bitcoin</string>
             </property>
@@ -2015,6 +2027,12 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="minimumSize">
+             <size>
+              <width>10</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="toolTip">
              <string>Profit per Bitcoin</string>
             </property>
@@ -2056,6 +2074,12 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>10</width>
+              <height>0</height>
+             </size>
             </property>
             <property name="toolTip">
              <string>Profit per Bitcoin</string>
@@ -2143,6 +2167,12 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="minimumSize">
+             <size>
+              <width>10</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -2187,7 +2217,7 @@
           <item>
            <widget class="QDoubleSpinBox" name="sellBuyBtcPerOrder">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -2377,6 +2407,12 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>50</width>
@@ -2487,6 +2523,12 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
           </property>
           <property name="suffix">
            <string/>
@@ -2607,10 +2649,16 @@
       <item row="0" column="2">
        <widget class="QPushButton" name="sellTotalBtcAllIn">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>0</height>
+         </size>
         </property>
         <property name="maximumSize">
          <size>
@@ -2626,10 +2674,16 @@
       <item row="0" column="3">
        <widget class="QPushButton" name="sellTotalBtcHalfIn">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>0</height>
+         </size>
         </property>
         <property name="maximumSize">
          <size>
@@ -2793,14 +2847,14 @@
       <item row="1" column="2" colspan="2">
        <widget class="QPushButton" name="sellPricePerCoinAsMarketPrice">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
         <property name="minimumSize">
          <size>
-          <width>100</width>
+          <width>30</width>
           <height>0</height>
          </size>
         </property>
@@ -2937,7 +2991,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>60</width>
+            <width>80</width>
             <height>0</height>
            </size>
           </property>
@@ -3016,7 +3070,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>60</width>
+            <width>80</width>
             <height>0</height>
            </size>
           </property>
@@ -3067,6 +3121,12 @@
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
            </property>
            <property name="font">
             <font>
@@ -3188,10 +3248,16 @@
       <item row="0" column="2">
        <widget class="QPushButton" name="buyTotalBtcAllIn">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>0</height>
+         </size>
         </property>
         <property name="maximumSize">
          <size>
@@ -3207,10 +3273,16 @@
       <item row="0" column="3">
        <widget class="QPushButton" name="buyTotalBtcHalfIn">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>0</height>
+         </size>
         </property>
         <property name="maximumSize">
          <size>
@@ -3300,14 +3372,14 @@
       <item row="1" column="2" colspan="2">
        <widget class="QPushButton" name="buyPriceAsMarketPrice">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
         <property name="minimumSize">
          <size>
-          <width>100</width>
+          <width>30</width>
           <height>0</height>
          </size>
         </property>
@@ -3423,7 +3495,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>60</width>
+            <width>110</width>
             <height>0</height>
            </size>
           </property>
@@ -3574,6 +3646,12 @@ p, li { white-space: pre-wrap; }
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>0</height>
+           </size>
           </property>
           <property name="suffix">
            <string/>
@@ -3732,7 +3810,7 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="minimumSize">
            <size>
-            <width>60</width>
+            <width>80</width>
             <height>0</height>
            </size>
           </property>
@@ -3814,7 +3892,7 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="minimumSize">
            <size>
-            <width>60</width>
+            <width>80</width>
             <height>0</height>
            </size>
           </property>
@@ -3871,6 +3949,12 @@ p, li { white-space: pre-wrap; }
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
            </property>
            <property name="font">
             <font>
