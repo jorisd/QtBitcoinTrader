@@ -1,18 +1,39 @@
+Description
+
+This software helps you to open and cancel Mt.Gox orders vary fast.
+ Real time data monitoring.
+ Developed on pure Qt, uses OpenSSL, AES 256 key and secret protection.
+
+ I want to develop Trader App that can be configured for any rule and strategy.
+ If you want to help me, than donate to 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+
+ Next ToDo:
+ 1) Make simple rules working
+ 2) Add support of other than USD currencies
+ 3) Add localization support
+ 4) Add realtime charts
+ 5) Make rules more advanced
+
+Change Log
+
+v0.92
+- Fixed minor bugs in ui and currencies
+
 v0.91
-- Added Profiles
-- Fixed Ui Bugs
+ - Added Profiles
+ - Fixed Ui Bugs
 
 v0.90
-- Added all currencies support
-- Fixed minor bugs
+- Added all currencies supported by Mt.Gox
+- Minor fixes
 
 v0.89
-- Critical Bug Fixed
+- Fixed critical bug
 
 v0.88
- - Addes Mt.Gox key and secret encryption with AES 256
- - Fixed some ui bugx
- - Minor fixes
+- Addes Mt.Gox key and secret encryption with AES 256
+- Fixed some ui bugx
+- Minor fixes
 
 v0.87
 - Match more faster engine
