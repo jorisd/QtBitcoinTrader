@@ -9,6 +9,8 @@ class NewPasswordDialog : public QDialog
 	Q_OBJECT
 
 public:
+	QString selectedProfileName();
+	void updateIniFileName();
 	QString getRestSign();
 	QString getRestKey();
 	QString getPassword();

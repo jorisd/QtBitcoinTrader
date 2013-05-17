@@ -11,6 +11,7 @@ TempWindow::TempWindow(QWidget *parent)
 	ui.setupUi(this);
 	setWindowFlags(Qt::WindowCloseButtonHint);
 	setFixedSize(size());
+	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 }
 
 TempWindow::~TempWindow()

@@ -1,3 +1,7 @@
+v0.91
+- Added Profiles
+- Fixed Ui Bugs
+
 v0.90
 - Added all currencies support
 - Fixed minor bugs

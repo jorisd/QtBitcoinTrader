@@ -49,8 +49,8 @@ QtBitcoinTrader::QtBitcoinTrader()
 
 
 	ui.setupUi(this);
+
 	accountFeeChanged(ui.accountFee->value());
-	setWindowTitle(windowTitle()+" v"+appVerStr);
 	setAttribute(Qt::WA_QuitOnClose,true);
 
 	setWindowFlags(Qt::Window);
@@ -90,12 +90,10 @@ QtBitcoinTrader::QtBitcoinTrader()
 
 #ifdef Q_OS_WIN
 	if(QtWin::isCompositionEnabled())
-	{
 		QtWin::extendFrameIntoClientArea(this);
-		setStyleSheet("QGroupBox {background: rgba(255,255,255,160); border: 1px solid gray;border-radius: 3px;margin-top: 7px;} QGroupBox:title {background: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.7, stop: 0 #fff, stop: 1 transparent); border-radius: 2px; padding: 1 4px; top: -7; left: 7px;}");
-	}
 #endif
 
+	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 	setApiDown(false);
 
 	ui.ordersTableFrame->setVisible(false);
@@ -120,6 +118,7 @@ QtBitcoinTrader::QtBitcoinTrader()
 
 	QSettings settings(iniFileName,QSettings::IniFormat);
 
+	setWindowTitle(windowTitle()+" v"+appVerStr+" ["+settings.value("ProfileName","Default Profile").toString()+"]");
 #ifdef Q_OS_WIN
 	useSSL=settings.value("OpenSSL",bool(QSysInfo::windowsVersion()>=0x0080)).toBool();
 #else
@@ -494,18 +493,21 @@ void QtBitcoinTrader::dataReceivedAuth(QByteArray data)
 				QByteArray logType=getMidData("\"Type\":\"","\",\"",&curLog);
 				int logTypeInt=0;
 				if(logType=="out"){logTypeInt=1;logType="<font color=\"red\">(Sold)</font>";}
-				else
+				else 
 				if(logType=="in"){logTypeInt=2;logType="<font color=\"blue\">(Bought)</font>";}
 				else 
 				if(logType=="fee"){logTypeInt=3;logType.clear();}
+				else 
+				if(logType=="deposit"){logTypeInt=4;logType.clear();logType="<font color=\"green\">(Deposit)</font>";}
 				if(logTypeInt)
 				{
 					QByteArray logValue=getMidData("\"Value\":{\"value\":\"","\",\"",&curLog);
 					QByteArray logDate=getMidData("\"Date\":",",\"",&curLog);
 					QByteArray logText=getMidData(" at ","\",\"",&curLog);
+					if(!logText.isEmpty())logText=" at <font color=\"darkgreen\">"+logText+"</font>";
 					curLog=getMidData("\"Info\":\"","\",\"",&curLog);
 	
-				newLog.append("<font color=\"gray\">"+QDateTime::fromTime_t(logDate.toUInt()).toString("yyyy-MM-dd HH:mm:ss")+"</font>  <font color=\"#996515\">"+bitcoinSign+logValue+"</font> at <font color=\"darkgreen\">"+logText+"</font> "+logType+"<br>");
+				newLog.append("<font color=\"gray\">"+QDateTime::fromTime_t(logDate.toUInt()).toString("yyyy-MM-dd HH:mm:ss")+"</font>  <font color=\"#996515\">"+bitcoinSign+logValue+"</font>"+logText+" "+logType+"<br>");
 				}
 			}
 			ui.logTextEdit->setHtml(newLog);
@@ -776,7 +778,7 @@ void QtBitcoinTrader::sellBitcoinButton()
 	QMessageBox msgBox(this);
 	msgBox.setIcon(QMessageBox::Question);
 	msgBox.setWindowTitle("Please confirm transaction");
-	msgBox.setText("Are you sure to sell "+bitcoinSign+" "+ui.sellTotalBtc->text()+" for $ "+ui.sellPricePerCoin->text()+" ?");
+	msgBox.setText("Are you sure to sell "+bitcoinSign+" "+ui.sellTotalBtc->text()+" at "+currencySign+" "+ui.sellPricePerCoin->text()+" ?");
 	msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 	msgBox.setDefaultButton(QMessageBox::Yes);
 	if(msgBox.exec()!=QMessageBox::Yes)return;
@@ -897,6 +899,7 @@ void QtBitcoinTrader::closeEvent(QCloseEvent *event)
 	msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 	msgBox.setDefaultButton(QMessageBox::Yes);
 	if(msgBox.exec()!=QMessageBox::Yes){event->ignore();return;}
+	emit quit();
 	event->accept();
 }
 
@@ -909,7 +912,7 @@ void QtBitcoinTrader::buyBitcoinsButton()
 	QMessageBox msgBox(this);
 	msgBox.setIcon(QMessageBox::Question);
 	msgBox.setWindowTitle("Please confirm transaction");
-	msgBox.setText("Are you sure to buy "+bitcoinSign+" "+ui.buyTotalBtc->text()+" for $ "+ui.buyPricePerCoin->text()+" ?");
+	msgBox.setText("Are you sure to buy "+bitcoinSign+" "+ui.buyTotalBtc->text()+" at "+currencySign+" "+ui.buyPricePerCoin->text()+" ?");
 	msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 	msgBox.setDefaultButton(QMessageBox::Yes);
 	if(msgBox.exec()!=QMessageBox::Yes)return;
@@ -964,7 +967,7 @@ void QtBitcoinTrader::sellBuyButtonSellBuy()
 	QMessageBox msgBox(this);
 	msgBox.setIcon(QMessageBox::Question);
 	msgBox.setWindowTitle("Please confirm transaction");
-	msgBox.setText("Are you sure to buy "+bitcoinSign+" "+ui.buyTotalBtc->text()+" for $ "+ui.buyPricePerCoin->text()+" ?\nAre you sure to sell "+bitcoinSign+" "+ui.sellTotalBtc->text()+" for $ "+ui.sellPricePerCoin->text()+" ?");
+	msgBox.setText("Are you sure to buy "+bitcoinSign+" "+ui.buyTotalBtc->text()+" at "+currencySign+" "+ui.buyPricePerCoin->text()+" ?\nAre you sure to sell "+bitcoinSign+" "+ui.sellTotalBtc->text()+" for "+currencySign+" "+ui.sellPricePerCoin->text()+" ?");
 	msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 	msgBox.setDefaultButton(QMessageBox::Yes);
 	if(msgBox.exec()!=QMessageBox::Yes)return;

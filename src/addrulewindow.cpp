@@ -17,6 +17,7 @@ AddRuleWindow::AddRuleWindow(QWidget *parent)
 	setMaximumSize(width()+100,height());
 	//if(QtWin::isCompositionEnabled())QtWin::extendFrameIntoClientArea(this);
 	setWindowFlags(Qt::WindowCloseButtonHint);
+	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 }
 
 AddRuleWindow::~AddRuleWindow()

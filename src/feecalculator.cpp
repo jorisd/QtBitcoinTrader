@@ -18,7 +18,7 @@ FeeCalculator::FeeCalculator()
 	ui.setupUi(this);
 	setWindowFlags(Qt::WindowCloseButtonHint);
 	setFixedSize(minimumSizeHint());
-
+	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 #ifdef Q_OS_WIN
 	if(QtWin::isCompositionEnabled())QtWin::extendFrameIntoClientArea(this);
 #endif
@@ -30,7 +30,6 @@ FeeCalculator::FeeCalculator()
 	ui.feeValue->setValue(mainWindow_->ui.accountFee->value());
 	ui.sellPrice->setValue((ui.buyPrice->value()+ui.buyPrice->value()*ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
 	
-
 	QPixmap btcPixmap("://Resources/BTC.png");
 	ui.btcLabel1->setPixmap(btcPixmap);
 	ui.btcLabel2->setPixmap(btcPixmap);
