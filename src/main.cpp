@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
 	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
 	appDataDir_=new QByteArray();
-	appVerStr_=new QByteArray("0.92");
+	appVerStr_=new QByteArray("0.93");
 	appVerReal_=new double(appVerStr_->toDouble());
 	currencyStr_=new QByteArray();
 	currencySign_=new QByteArray();
@@ -63,7 +63,9 @@ int main(int argc, char *argv[])
 	QApplication a(argc,argv);
 
 #ifndef Q_OS_WIN
+#ifndef Q_OS_MAC
 	a.setStyle(new QPlastiqueStyle);
+#endif
 #endif
 	{
 	nonce_=new quint64(0);

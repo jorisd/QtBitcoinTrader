@@ -439,7 +439,7 @@ void QtBitcoinTrader::dataReceivedAuth(QByteArray data)
 								{
 									ui.ordersTable->item(n,2)->setText(itemStatus);
 									ui.ordersTable->item(n,3)->setText(bitcoinSign+" "+itemAmount);
-									ui.ordersTable->item(n,3)->setText(orderSign+" "+itemPrice);
+									ui.ordersTable->item(n,4)->setText(orderSign+" "+itemPrice);
 									ui.ordersTable->item(n,5)->setText(orderSign+" "+QString::number(itemAmount.toDouble()*itemPrice.toDouble(),'f',5));
 									setRowStateByText(n,itemStatus);
 									oidMap[oid]=oidData;
