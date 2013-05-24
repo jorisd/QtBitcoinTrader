@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = 
+TARGET = QtBitcoinTrader
 DEPENDPATH += .
 INCLUDEPATH += .
 
@@ -19,7 +19,8 @@ HEADERS += addrulewindow.h \
            newpassworddialog.h \
            passworddialog.h \
            socketthread.h \
-           tempwindow.h
+           tempwindow.h \
+	   ruleholder.h
 FORMS += addrulewindow.ui \
          feecalculator.ui \
          gsgtrader.ui \
@@ -37,7 +38,8 @@ SOURCES += addrulewindow.cpp \
            newpassworddialog.cpp \
            passworddialog.cpp \
            socketthread.cpp \
-           tempwindow.cpp
+           tempwindow.cpp \
+	   ruleholder.cpp
 RESOURCES += QtResource.qrc
 QT += network
 LIBS += -lcrypto
