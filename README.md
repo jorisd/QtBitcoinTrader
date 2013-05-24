@@ -17,6 +17,7 @@ Change Log
 v0.94
 - Rules finally working!
 - Fixed some minor bugs
+- Removed order counter
 
 v0.93
 - Fixed critical ui bug where was wrong field in orders table
