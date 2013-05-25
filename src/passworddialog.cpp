@@ -16,7 +16,7 @@ PasswordDialog::PasswordDialog(QWidget *parent)
 	ui.setupUi(this);
 	setWindowTitle(windowTitle()+" v"+appVerStr);
 	setFixedSize(minimumSizeHint());
-	setWindowFlags(Qt::WindowCloseButtonHint);
+	setWindowFlags(Qt::WindowCloseButtonHint|Qt::WindowStaysOnTopHint);
 	ui.okButton->setEnabled(false);
 #ifdef Q_OS_WIN
 	if(QtWin::isCompositionEnabled())

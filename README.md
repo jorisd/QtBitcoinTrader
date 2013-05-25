@@ -8,13 +8,21 @@ This software helps you to open and cancel Mt.Gox orders vary fast.
  If you want to help me, than donate to 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
 
  Next ToDo:
- 1) Make simple rules working
- 2) Add support of other than USD currencies
- 3) Add localization support
- 4) Add realtime charts
- 5) Make rules more advanced
+ 1) Add localization support
+ 2) Add realtime charts
+ 3) Make rules more advanced
 
 Change Log
+
+v0.95a
+- Fixed fee calculator
+
+v0.94
+- Rules finally working!
+- Fixed some minor bugs
+
+v0.93
+- Fixed critical ui bug where was wrong field in orders table
 
 v0.92
 - Fixed minor bugs in ui and currencies

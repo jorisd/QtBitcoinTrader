@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
 	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
 	appDataDir_=new QByteArray();
-	appVerStr_=new QByteArray("0.92");
+	appVerStr_=new QByteArray("0.95a");
 	appVerReal_=new double(appVerStr_->toDouble());
 	currencyStr_=new QByteArray();
 	currencySign_=new QByteArray();
@@ -61,9 +61,12 @@ int main(int argc, char *argv[])
 	}
 
 	QApplication a(argc,argv);
+	QFile *lockFile=0;
 
 #ifndef Q_OS_WIN
+#ifndef Q_OS_MAC
 	a.setStyle(new QPlastiqueStyle);
+#endif
 #endif
 	{
 	nonce_=new quint64(0);
@@ -83,7 +86,7 @@ int main(int argc, char *argv[])
 	appDataDir=QDesktopServices::storageLocation(QDesktopServices::HomeLocation).toAscii()+"/.config/QtBitcoinTrader/";
 	if(!QFile::exists(appDataDir))QDir().mkpath(appDataDir);
 #endif
-	a.setStyleSheet("QGroupBox {background: rgba(255,255,255,160); border: 1px solid gray;border-radius: 3px;margin-top: 7px;} QGroupBox:title {background: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.7, stop: 0 #fff, stop: 1 transparent); border-radius: 2px; padding: 1 4px; top: -7; left: 7px;} QLabel {color: black;} QDoubleSpinBox {background: white;} QTextEdit {background: white;} QCheckBox {color: black;} QLineEdit {color: black; background: white; border: 1px solid gray;}");
+	a.setStyleSheet("QGroupBox {background: rgba(255,255,255,160); border: 1px solid gray;border-radius: 3px;margin-top: 7px;} QGroupBox:title {background: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.7, stop: 0 #fff, stop: 1 transparent); border-radius: 2px; padding: 1 4px; top: -7; left: 7px;} QLabel {color: black;} QDoubleSpinBox {background: white;} QTextEdit {background: white;} QCheckBox {color: black;} QLineEdit {color: black; background: white; border: 1px solid gray;} QDoubleSpinBox:disabled{color:black;border: 1px solid gray; background: white;}");
 
 	logFileName_=new QString("QtBitcoinTrader.log");
 	iniFileName_=new QString("QtBitcoinTrader.ini");
@@ -151,10 +154,6 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				QFile *lockFile=new QFile(lockFilePath);
-				lockFile->open(QIODevice::WriteOnly);
-				lockFile->write("Qt Bitcoin Trader Lock File");
-
 				QSettings settings(iniFileName,QSettings::IniFormat);
 				QStringList decryptedList=QString(JulyAES256::decrypt(QByteArray::fromBase64(settings.value("CryptedData","").toString().toAscii()),tryPassword.toAscii())).split("\r\n");
 
@@ -163,6 +162,10 @@ int main(int argc, char *argv[])
 					restKey=decryptedList.at(1).toAscii();
 					restSign=QByteArray::fromBase64(decryptedList.last().toAscii());
 					tryDecrypt=false;
+
+					lockFile=new QFile(lockFilePath);
+					lockFile->open(QIODevice::WriteOnly);
+					lockFile->write("Qt Bitcoin Trader Lock File");
 				}
 			}
 		}
@@ -181,5 +184,12 @@ int main(int argc, char *argv[])
 	QObject::connect(mainWindow_,SIGNAL(quit()),&a,SLOT(quit()));
 	}
 	mainWindow_->show();
-	return a.exec();
+	a.exec();
+	if(lockFile)
+	{
+		lockFile->close();
+		lockFile->remove();
+		delete lockFile;
+	}
+	return 0;
 }

@@ -102,7 +102,7 @@ void SocketThread::sendToApiNow(QByteArray request, QByteArray command)
 	{
 		checkSocketConnected();
 		sslSocket->write(dataToSend);
-		sslSocket->waitForBytesWritten();
+		//sslSocket->waitForBytesWritten(3000);
 	}
 }
 

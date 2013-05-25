@@ -49,21 +49,19 @@ void NewPasswordDialog::getApiKeySecretButton()
 
 void NewPasswordDialog::checkToEnableButton()
 {
+	QString profileName=ui.profileNameEdit->text();
+	if(!profileName.isEmpty())
 	{
-		QString profileName=ui.profileNameEdit->text();
-		if(!profileName.isEmpty())
-		{
-			static QString allowedNameChars="()+,-.;=@[]^_`{}~ ";
-			QString allowedPName;
-			for(int n=0;n<profileName.length();n++)
-				if(profileName.at(n).isLetterOrNumber()||allowedNameChars.contains(profileName.at(n)))
-					allowedPName.append(profileName.at(n));
+		static QString allowedNameChars="()+,-.;=@[]^_`{}~ ";
+		QString allowedPName;
+		for(int n=0;n<profileName.length();n++)
+			if(profileName.at(n).isLetterOrNumber()||allowedNameChars.contains(profileName.at(n)))
+				allowedPName.append(profileName.at(n));
 
-			if(profileName!=allowedPName)
-			{
-				ui.profileNameEdit->setText(allowedPName);
-				return;
-			}
+		if(profileName!=allowedPName)
+		{
+			ui.profileNameEdit->setText(allowedPName);
+			return;
 		}
 	}
 

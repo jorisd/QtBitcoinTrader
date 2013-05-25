@@ -28,8 +28,8 @@ FeeCalculator::FeeCalculator()
 	ui.buyTotalBtc->setValue(btcVal);
 
 	ui.feeValue->setValue(mainWindow_->ui.accountFee->value());
-	ui.sellPrice->setValue((ui.buyPrice->value()+ui.buyPrice->value()*ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
-	
+	setZeroProfitPrice();
+	buyBtcChanged(ui.buyTotalBtc->value());
 	QPixmap btcPixmap("://Resources/BTC.png");
 	ui.btcLabel1->setPixmap(btcPixmap);
 	ui.btcLabel2->setPixmap(btcPixmap);
@@ -49,6 +49,11 @@ FeeCalculator::FeeCalculator()
 FeeCalculator::~FeeCalculator()
 {
 
+}
+
+void FeeCalculator::setZeroProfitPrice()
+{
+	ui.sellPrice->setValue((ui.buyPrice->value()+ui.buyPrice->value()*ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
 }
 
 void FeeCalculator::profitLossChanged(double val)

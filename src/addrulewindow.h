@@ -7,6 +7,7 @@
 
 #include <QDialog>
 #include "ui_addrulewindow.h"
+#include "ruleholder.h"
 
 class AddRuleWindow : public QDialog
 {
@@ -16,13 +17,16 @@ public:
 	Ui::AddRuleWindow ui;
 	AddRuleWindow(QWidget *parent = 0);
 	~AddRuleWindow();
-	QString getIfString();
-	QString getGoesString();
-	QString getPriceString();
-	QString getSellBuyString();
+	QString getDescriptionString();
 	QString getBitcoinsString();
+	QString getSellOrBuy();
+	QString getPrice();
+	RuleHolder getRuleHolder();
+	int getPriceType();
 private:
+	bool checkIsValidRule();
 public slots:
+	void amountChanged();
 	void buttonAddRule();
 };
 
