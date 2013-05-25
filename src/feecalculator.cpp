@@ -28,6 +28,7 @@ FeeCalculator::FeeCalculator()
 	ui.buyTotalBtc->setValue(btcVal);
 
 	ui.feeValue->setValue(mainWindow_->ui.accountFee->value());
+	setZeroProfitPrice();
 	buyBtcChanged(ui.buyTotalBtc->value());
 	setZeroProfitPrice();
 	QPixmap btcPixmap("://Resources/BTC.png");
