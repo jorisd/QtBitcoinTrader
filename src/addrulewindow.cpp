@@ -33,7 +33,7 @@ AddRuleWindow::AddRuleWindow(QWidget *parent)
 	ui.label_53->setPixmap(curPix);ui.label_53->setToolTip(currencyStr);
 
 	QPixmap btcPix(":/Resources/BTC.png");
-	ui.btcLabel->setPixmap(curPix);ui.btcLabel->setToolTip("BTC");
+	ui.btcLabel->setPixmap(btcPix);ui.btcLabel->setToolTip("BTC");
 
 	new JulySpinBoxFix(ui.thanValue);
 	new JulySpinBoxFix(ui.btcValue);
