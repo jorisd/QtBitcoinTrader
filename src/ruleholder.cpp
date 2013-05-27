@@ -1,9 +1,10 @@
 #include "ruleholder.h"
 #include <QDebug>
 
-RuleHolder::RuleHolder(bool moreLess, double price, double bitcoins, uint guid, bool isBuy)
+RuleHolder::RuleHolder(bool moreLess, double price, double bitcoins, uint guid, bool isBuy, double sellPrice)
 {
-	rulePrice=price;
+	rulePrice=sellPrice;
+	ruleCheckPrice=price;
 	ruleGuid=guid;
 	ruleMoreThanPrice=moreLess;
 	ruleBtc=bitcoins;
@@ -15,8 +16,8 @@ bool RuleHolder::isAchieved(double price)
 {
 	if(price<0.1)return false;
 	if(waitingGoodLag)return true;
-	if(ruleMoreThanPrice&&rulePrice<=price)return true;
-	if(!ruleMoreThanPrice&&rulePrice>=price)return true;
+	if(ruleMoreThanPrice&&ruleCheckPrice<=price)return true;
+	if(!ruleMoreThanPrice&&ruleCheckPrice>=price)return true;
 	return false;
 }
 

@@ -20,7 +20,7 @@ private:
 	double lastValue;
 	QString colorL;
 	QString colorH;
-	QDoubleSpinBox *parentSheet;
+	QDoubleSpinBox *parentSpinBox;
 	QTimer *changeTimer;
 private slots:
 	void changeTimerSlot();

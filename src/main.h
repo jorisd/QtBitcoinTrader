@@ -10,21 +10,23 @@
 
 #define hostName QByteArray("data.mtgox.com")
 #define apiId QByteArray("2")
-#define restKey *restKey_
-#define restSign *restSign_
-#define mainWindow *mainWindow_
-#define nonce *nonce_
-#define isLogEnabled *logEnabled_
-#define iniFileName *iniFileName_
-#define logFileName *logFileName_
-#define appVerReal *appVerReal_
-#define appVerStr *appVerStr_
-#define useSSL *useSSL_
-#define currencyStr *currencyStr_
-#define currencySign *currencySign_
-#define bitcoinSign *bitcoinSign_
-#define appDataDir *appDataDir_
+#define restKey (*restKey_)
+#define restSign (*restSign_)
+#define mainWindow (*mainWindow_)
+#define nonce (*nonce_)
+#define isLogEnabled (*logEnabled_)
+#define iniFileName (*iniFileName_)
+#define logFileName (*logFileName_)
+#define appVerReal (*appVerReal_)
+#define appVerStr (*appVerStr_)
+#define useSSL (*useSSL_)
+#define currencyStr (*currencyStr_)
+#define currencySign (*currencySign_)
+#define bitcoinSign (*bitcoinSign_)
+#define appDataDir (*appDataDir_)
+#define aFontMetrics (*aFontMetrics_)
 
+extern QFontMetrics *aFontMetrics_;
 extern QByteArray *appDataDir_;
 extern QByteArray *bitcoinSign_;
 extern QByteArray *currencyStr_;

@@ -22,6 +22,7 @@ private:
 	bool buyBtcLocked;
 	Ui::FeeCalculator ui;
 private slots:
+	void setZeroProfitPrice();
 	void profitLossChanged(double);
 	void buyBtcChanged(double);
 	void buyPriceChanged(double);

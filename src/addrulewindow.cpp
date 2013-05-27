@@ -5,6 +5,7 @@
 #include "addrulewindow.h"
 #include "main.h"
 #include "tempwindow.h"
+#include "julyspinboxfix.h"
 #ifdef Q_OS_WIN
 #include "qtwin.h"
 #endif
@@ -14,11 +15,11 @@ AddRuleWindow::AddRuleWindow(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
-	ui.thanValue->setValue(mainWindow_->ui.marketLast->value());
-	ui.btcValue->setValue(mainWindow_->ui.accountBTC->value());
-	resize(minimumSizeHint());
-	setMinimumSize(size());
-	setMaximumSize(width()+100,height());
+	ui.thanValue->setValue(mainWindow.ui.marketLast->value());
+	ui.exactPriceValue->setValue(mainWindow.ui.marketLast->value());
+	ui.btcValue->setValue(mainWindow.ui.accountBTC->value());
+	ui.exactPriceValue->setEnabled(false);
+	ui.label_53->setEnabled(false);
 	setWindowFlags(Qt::WindowCloseButtonHint);
 	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 	amountChanged();
@@ -27,7 +28,24 @@ AddRuleWindow::AddRuleWindow(QWidget *parent)
 	if(QtWin::isCompositionEnabled())QtWin::extendFrameIntoClientArea(this);
 #endif
 
+	QPixmap curPix(":/Resources/"+currencyStr+".png");
+	ui.labelUSD1->setPixmap(curPix);ui.labelUSD1->setToolTip(currencyStr);
+	ui.label_53->setPixmap(curPix);ui.label_53->setToolTip(currencyStr);
+
+	QPixmap btcPix(":/Resources/BTC.png");
+	ui.btcLabel->setPixmap(curPix);ui.btcLabel->setToolTip("BTC");
+
+	new JulySpinBoxFix(ui.thanValue);
+	new JulySpinBoxFix(ui.btcValue);
+	new JulySpinBoxFix(ui.exactPriceValue);
+
+	foreach(QPushButton* pushButtons, findChildren<QPushButton*>())pushButtons->setMinimumWidth(QFontMetrics(pushButtons->font()).width(pushButtons->text())+10);
+
+	foreach(QCheckBox* checkBoxes, findChildren<QCheckBox*>())checkBoxes->setMinimumWidth(QFontMetrics(checkBoxes->font()).width(checkBoxes->text())+10);
+
 	resize(minimumSizeHint());
+	setMinimumSize(size());
+	setMaximumSize(width()+100,height());
 }
 
 AddRuleWindow::~AddRuleWindow()
@@ -37,7 +55,17 @@ AddRuleWindow::~AddRuleWindow()
 
 QString AddRuleWindow::getPrice()
 {
-	return currencySign+" "+ui.thanValue->text();
+	QString ruleSellPrice=ui.exactPriceValue->text();
+
+	if(ui.checkLastPrice_2->isChecked())ruleSellPrice=ui.checkLastPrice_2->text().replace(" Price","");else
+	if(ui.checkMarketBuy_2->isChecked())ruleSellPrice=ui.checkMarketBuy_2->text().replace(" Price","");else
+	if(ui.checkMarketSell_2->isChecked())ruleSellPrice=ui.checkMarketSell_2->text().replace(" Price","");else
+	if(ui.checkMarketHigh_2->isChecked())ruleSellPrice=ui.checkMarketHigh_2->text().replace(" Price","");else
+	if(ui.checkMarketLow_2->isChecked())ruleSellPrice=ui.checkMarketLow_2->text().replace(" Price","");else
+	if(ui.checkOrdersLastBuyPrice_2->isChecked())ruleSellPrice=ui.checkOrdersLastBuyPrice_2->text().replace(" Price","");else
+	if(ui.checkOrdersLastSellPrice_2->isChecked())ruleSellPrice=ui.checkOrdersLastSellPrice_2->text().replace(" Price","");else
+	ruleSellPrice.prepend(currencySign+" ");
+	return ruleSellPrice;
 }
 
 void AddRuleWindow::buttonAddRule()
@@ -48,13 +76,13 @@ void AddRuleWindow::buttonAddRule()
 
 bool AddRuleWindow::checkIsValidRule()
 {
-	if(ui.checkLastPrice->isChecked()&&getRuleHolder().isAchieved(mainWindow_->ui.marketLast->value()))return false;
-	if(ui.checkMarketBuy->isChecked()&&getRuleHolder().isAchieved(mainWindow_->ui.marketBuy->value()))return false;
-	if(ui.checkMarketSell->isChecked()&&getRuleHolder().isAchieved(mainWindow_->ui.marketSell->value()))return false;
-	if(ui.checkMarketHigh->isChecked()&&getRuleHolder().isAchieved(mainWindow_->ui.marketHigh->value()))return false;
-	if(ui.checkMarketLow->isChecked()&&getRuleHolder().isAchieved(mainWindow_->ui.marketLow->value()))return false;
-	if(ui.checkOrdersLastBuyPrice->isChecked()&&getRuleHolder().isAchieved(mainWindow_->ui.ordersLastBuyPrice->value()))return false;
-	if(ui.checkOrdersLastSellPrice->isChecked()&&getRuleHolder().isAchieved(mainWindow_->ui.ordersLastSellPrice->value()))return false;
+	if(ui.checkLastPrice->isChecked()&&getRuleHolder().isAchieved(mainWindow.ui.marketLast->value()))return false;
+	if(ui.checkMarketBuy->isChecked()&&getRuleHolder().isAchieved(mainWindow.ui.marketBuy->value()))return false;
+	if(ui.checkMarketSell->isChecked()&&getRuleHolder().isAchieved(mainWindow.ui.marketSell->value()))return false;
+	if(ui.checkMarketHigh->isChecked()&&getRuleHolder().isAchieved(mainWindow.ui.marketHigh->value()))return false;
+	if(ui.checkMarketLow->isChecked()&&getRuleHolder().isAchieved(mainWindow.ui.marketLow->value()))return false;
+	if(ui.checkOrdersLastBuyPrice->isChecked()&&getRuleHolder().isAchieved(mainWindow.ui.ordersLastBuyPrice->value()))return false;
+	if(ui.checkOrdersLastSellPrice->isChecked()&&getRuleHolder().isAchieved(mainWindow.ui.ordersLastSellPrice->value()))return false;
 	return true;
 }
 
@@ -72,15 +100,16 @@ void AddRuleWindow::amountChanged()
 
 QString AddRuleWindow::getDescriptionString()
 {
+	QString priceStr=currencySign+" "+ui.thanValue->text();
 	if(ui.checkGoesAbove->isChecked())
 	{
-	QString strA="If market last price goes more than";//Temporary values before Translation engine release
-	QString strB="If market buy price goes more than";
-	QString strC="If market sellprice goes more than";
-	QString strD="If market high price goes more than";
-	QString strE="If market low price goes more than";
-	QString strF="If orders last buy price goes more than";
-	QString strG="If orders last sell price goes more than";
+	QString strA="If market last price goes more than "+priceStr;//Temporary values before Translation engine release
+	QString strB="If market buy price goes more than "+priceStr;
+	QString strC="If market sellprice goes more than "+priceStr;
+	QString strD="If market high price goes more than "+priceStr;
+	QString strE="If market low price goes more than "+priceStr;
+	QString strF="If orders last buy price goes more than "+priceStr;
+	QString strG="If orders last sell price goes more than "+priceStr;
 
 	if(ui.checkLastPrice->isChecked())return strA;
 	if(ui.checkMarketBuy->isChecked())return strB;
@@ -92,13 +121,13 @@ QString AddRuleWindow::getDescriptionString()
 	return ui.checkSellAmount->text();
 	}
 
-	QString strA="If market last price goes less than";
-	QString strB="If market buy price goes less than";
-	QString strC="If market sellprice goes less than";
-	QString strD="If market high price goes less than";
-	QString strE="If market low price goes less than";
-	QString strF="If orders last buy price goes less than";
-	QString strG="If orders last sell price goes less than";
+	QString strA="If market last price goes less than "+priceStr;
+	QString strB="If market buy price goes less than "+priceStr;
+	QString strC="If market sellprice goes less than "+priceStr;
+	QString strD="If market high price goes less than "+priceStr;
+	QString strE="If market low price goes less than "+priceStr;
+	QString strF="If orders last buy price goes less than "+priceStr;
+	QString strG="If orders last sell price goes less than "+priceStr;
 
 	if(ui.checkLastPrice->isChecked())return strA;
 	if(ui.checkMarketBuy->isChecked())return strB;
@@ -138,11 +167,22 @@ RuleHolder AddRuleWindow::getRuleHolder()
 	if(ui.checkBuyAllIn->isChecked()){isBuying=true;btcValue=-3.0;}
 	if(ui.checkBuyHalfIn->isChecked()){isBuying=true;btcValue=-4.0;}
 	if(ui.checkCancelAllOrders->isChecked())btcValue=-5.0;
+
+	double ruleSellPrice=ui.exactPriceValue->value();
+
+	if(ui.checkLastPrice_2->isChecked())ruleSellPrice=-1.0;
+	if(ui.checkMarketBuy_2->isChecked())ruleSellPrice=-2.0;
+	if(ui.checkMarketSell_2->isChecked())ruleSellPrice=-3.0;
+	if(ui.checkMarketHigh_2->isChecked())ruleSellPrice=-4.0;
+	if(ui.checkMarketLow_2->isChecked())ruleSellPrice=-5.0;
+	if(ui.checkOrdersLastBuyPrice_2->isChecked())ruleSellPrice=-6.0;
+	if(ui.checkOrdersLastSellPrice_2->isChecked())ruleSellPrice=-7.0;
+
 	static uint ruleGuid=0;
-	return RuleHolder(ui.checkGoesAbove->isChecked(), ui.thanValue->value(), btcValue, ++ruleGuid, isBuying);
+	return RuleHolder(ui.checkGoesAbove->isChecked(), ui.thanValue->value(), btcValue, ++ruleGuid, isBuying, ruleSellPrice);
 }
 
-int AddRuleWindow::getPriceType()
+int AddRuleWindow::getRulePriceType()
 {
 	if(ui.checkLastPrice->isChecked())return 1;
 	if(ui.checkMarketBuy->isChecked())return 2;

@@ -4,6 +4,7 @@
 
 #include "feecalculator.h"
 #include "main.h"
+#include "julyspinboxfix.h"
 
 #ifdef Q_OS_WIN
 #include "qtwin.h"
@@ -13,23 +14,29 @@ FeeCalculator::FeeCalculator()
 	: QDialog()
 {
 	buyPaidLocked=false;
-	buyBtcLocked=false;
+	buyBtcLocked=true;
 	buyBtcReceivedLocked=false;
 	ui.setupUi(this);
 	setWindowFlags(Qt::WindowCloseButtonHint);
-	setFixedSize(minimumSizeHint());
+	foreach(QDoubleSpinBox* spinBox, findChildren<QDoubleSpinBox*>())new JulySpinBoxFix(spinBox);
+	mainWindow.fixAllChildButtonsAndLabels(this);
 	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 #ifdef Q_OS_WIN
 	if(QtWin::isCompositionEnabled())QtWin::extendFrameIntoClientArea(this);
 #endif
-	ui.buyPrice->setValue(mainWindow_->ui.marketBuy->value());
-	double btcVal=mainWindow_->ui.accountUSD->value()/ui.buyPrice->value();
+	ui.feeValue->setValue(mainWindow.ui.accountFee->value());
+
+	ui.buyPrice->setValue(mainWindow.ui.marketBuy->value());
+	double btcVal=mainWindow.ui.accountUSD->value()/ui.buyPrice->value();
 	if(btcVal<0.01)btcVal=1.0;
 	ui.buyTotalBtc->setValue(btcVal);
 
-	ui.feeValue->setValue(mainWindow_->ui.accountFee->value());
-	ui.sellPrice->setValue((ui.buyPrice->value()+ui.buyPrice->value()*ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
-	
+	buyBtcLocked=false;
+	buyBtcChanged(ui.buyTotalBtc->value());
+	setZeroProfitPrice();
+	buyBtcChanged(ui.buyTotalBtc->value());//I'll remove this soon
+	setZeroProfitPrice();//and this too
+
 	QPixmap btcPixmap("://Resources/BTC.png");
 	ui.btcLabel1->setPixmap(btcPixmap);
 	ui.btcLabel2->setPixmap(btcPixmap);
@@ -44,6 +51,8 @@ FeeCalculator::FeeCalculator()
 	ui.usdLabel5->setPixmap(curPix);
 	ui.usdLabel6->setPixmap(curPix);
 	ui.usdLabel7->setPixmap(curPix);
+
+	setMaximumSize(minimumSizeHint().width()+200,minimumSizeHint().height());
 }
 
 FeeCalculator::~FeeCalculator()
@@ -51,12 +60,17 @@ FeeCalculator::~FeeCalculator()
 
 }
 
+void FeeCalculator::setZeroProfitPrice()
+{
+	ui.sellPrice->setValue((ui.buyPrice->value()+ui.buyPrice->value()*ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
+}
+
 void FeeCalculator::profitLossChanged(double val)
 {
 	if(val<0)
-		ui.profitLoss->setStyleSheet("QLabel {background: #ffaaaa;}");
+		ui.profitLoss->setStyleSheet("QDoubleSpinBox {background: #ffaaaa;}");
 	else
-		ui.profitLoss->setStyleSheet("");
+		ui.profitLoss->setStyleSheet("QDoubleSpinBox {background: #aaffaa;}");
 }
 
 void FeeCalculator::buyBtcChanged(double val)

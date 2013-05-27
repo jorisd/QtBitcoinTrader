@@ -22,5 +22,5 @@ TempWindow::~TempWindow()
 
 void TempWindow::copyAddress()
 {
-	mainWindow_->copyDonateButton();
+	mainWindow.copyDonateButton();
 }

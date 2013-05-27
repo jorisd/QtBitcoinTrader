@@ -13,12 +13,15 @@
 #include <QHttp>
 #include <QCloseEvent>
 #include "ruleholder.h"
+#include "audioplayer.h"
 
 class QtBitcoinTrader : public QDialog
 {
 	Q_OBJECT
 
 public:
+	void fixAllChildButtonsAndLabels(QWidget *par);
+
 	QList<RuleHolder> rulesLastPrice;
 	QList<RuleHolder> rulesMarketBuyPrice;
 	QList<RuleHolder> rulesMarketSellPrice;
@@ -45,6 +48,8 @@ public:
 	~QtBitcoinTrader();
 
 private:
+	AudioPlayer *player;
+	void postWorkAtTableItem(QTableWidgetItem *);
 	void checkAllRules();
 
 	void removeRuleByGuid(uint guid);
@@ -96,6 +101,10 @@ private:
 	QDateTime lastUpdate;
 	QTime updateLogTime;
 public slots:
+	void profitLossChanged(double);
+
+	void buttonNewWindow();
+
 	void checkValidRulesButtons();
 	void aboutTranslationButton();
 	void ordersLogGroupBoxToggled(bool);
