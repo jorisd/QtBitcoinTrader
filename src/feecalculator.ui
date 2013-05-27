@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>847</width>
-    <height>190</height>
+    <width>781</width>
+    <height>167</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,10 @@
    <property name="bottomMargin">
     <number>4</number>
    </property>
-   <property name="spacing">
+   <property name="horizontalSpacing">
+    <number>2</number>
+   </property>
+   <property name="verticalSpacing">
     <number>4</number>
    </property>
    <item row="0" column="0">
@@ -44,6 +47,9 @@
       <string/>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
+      <property name="horizontalSpacing">
+       <number>4</number>
+      </property>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
@@ -139,7 +145,7 @@
            <string notr="true">color: #996515</string>
           </property>
           <property name="text">
-           <string>฿</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -152,7 +158,7 @@
         <item row="0" column="1">
          <widget class="QDoubleSpinBox" name="buyTotalBtc">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -184,6 +190,12 @@
       </item>
       <item row="1" column="1">
        <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -235,7 +247,7 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -248,7 +260,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="buyPrice">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -280,6 +292,12 @@
       </item>
       <item row="1" column="3">
        <widget class="QLabel" name="label_9">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -331,7 +349,7 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -344,7 +362,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="totalPaid">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -376,6 +394,12 @@
       </item>
       <item row="1" column="5">
        <widget class="QLabel" name="label_10">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -430,7 +454,7 @@
            <string notr="true">color: #996515</string>
           </property>
           <property name="text">
-           <string>฿</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -443,7 +467,7 @@
         <item row="0" column="1">
          <widget class="QDoubleSpinBox" name="buyFee">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -481,6 +505,12 @@
       </item>
       <item row="1" column="7">
        <widget class="QLabel" name="label_11">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -532,7 +562,7 @@
            <string notr="true">color: #996515</string>
           </property>
           <property name="text">
-           <string>฿</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -545,7 +575,7 @@
         <item row="0" column="1">
          <widget class="QDoubleSpinBox" name="btcReceived">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -670,7 +700,7 @@
            <string notr="true">color: #996515</string>
           </property>
           <property name="text">
-           <string>฿</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -683,7 +713,7 @@
         <item row="0" column="1">
          <widget class="QDoubleSpinBox" name="sellBtc">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -721,6 +751,12 @@
       </item>
       <item row="3" column="1">
        <widget class="QLabel" name="label_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -772,7 +808,7 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -785,7 +821,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="sellPrice">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -817,6 +853,12 @@
       </item>
       <item row="3" column="3">
        <widget class="QLabel" name="label_12">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -868,7 +910,7 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -881,7 +923,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="sellAmount">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -919,6 +961,12 @@
       </item>
       <item row="3" column="5">
        <widget class="QLabel" name="label_13">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -970,7 +1018,7 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -983,7 +1031,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="sellFee">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1021,6 +1069,12 @@
       </item>
       <item row="3" column="7">
        <widget class="QLabel" name="label_14">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>20</width>
@@ -1069,7 +1123,7 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1082,7 +1136,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="sellFiatReceived">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1191,7 +1245,7 @@
            <double>0.010000000000000</double>
           </property>
           <property name="value">
-           <double>0.250000000000000</double>
+           <double>0.600000000000000</double>
           </property>
          </widget>
         </item>
@@ -1221,7 +1275,7 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -1234,7 +1288,7 @@
         <item>
          <widget class="QDoubleSpinBox" name="profitLoss">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1272,8 +1326,14 @@
       </item>
       <item row="5" column="2">
        <widget class="QPushButton" name="setZeroProfitButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
-         <string>Set Zero profit Price</string>
+         <string> Zero profit Price</string>
         </property>
        </widget>
       </item>
@@ -1308,8 +1368,8 @@
    <slot>buyBtcChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>95</x>
-     <y>58</y>
+     <x>119</x>
+     <y>56</y>
     </hint>
     <hint type="destinationlabel">
      <x>146</x>
@@ -1356,8 +1416,8 @@
    <slot>buyBtcReceivedChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>831</x>
-     <y>64</y>
+     <x>765</x>
+     <y>56</y>
     </hint>
     <hint type="destinationlabel">
      <x>697</x>
@@ -1388,8 +1448,8 @@
    <slot>sellAmountChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>447</x>
-     <y>106</y>
+     <x>449</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
      <x>1085</x>
@@ -1420,8 +1480,8 @@
    <slot>feeChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>137</x>
-     <y>164</y>
+     <x>133</x>
+     <y>150</y>
     </hint>
     <hint type="destinationlabel">
      <x>149</x>
@@ -1436,8 +1496,8 @@
    <slot>profitLossChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>717</x>
-     <y>160</y>
+     <x>765</x>
+     <y>150</y>
     </hint>
     <hint type="destinationlabel">
      <x>710</x>
@@ -1452,8 +1512,8 @@
    <slot>setZeroProfitPrice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>297</x>
-     <y>165</y>
+     <x>301</x>
+     <y>152</y>
     </hint>
     <hint type="destinationlabel">
      <x>307</x>

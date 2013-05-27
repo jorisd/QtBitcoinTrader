@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>813</width>
-    <height>251</height>
+    <width>942</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,13 +29,73 @@
    <property name="spacing">
     <number>6</number>
    </property>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="buttonCancel">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="buttonAddRule">
+     <property name="text">
+      <string>Add Rule</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
    <item row="0" column="0" colspan="4">
     <widget class="QGroupBox" name="addNewRuleGroupbox">
      <property name="title">
       <string>Add new rule</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="1" rowspan="2">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>If</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
        <widget class="QGroupBox" name="groupBox">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
@@ -105,7 +165,146 @@
         </layout>
        </widget>
       </item>
-      <item row="0" column="6" rowspan="2">
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Goes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {background: white; border-radius: 8px; border: 1px solid gray;}</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QRadioButton" name="checkGoesAbove">
+           <property name="text">
+            <string>More</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="checkGoesBelow">
+           <property name="text">
+            <string>Less</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Than</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <widget class="QLabel" name="labelUSD1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: darkgreen</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="thanValue">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>5</number>
+          </property>
+          <property name="minimum">
+           <double>0.010000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999999.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="6">
        <widget class="QGroupBox" name="groupBox_2">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
@@ -217,19 +416,28 @@
         </layout>
        </widget>
       </item>
-      <item row="0" column="7" rowspan="2">
+      <item row="0" column="7">
        <widget class="QWidget" name="widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
-          <width>170</width>
+          <width>0</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>170</width>
+          <width>16777215</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="0">
@@ -251,7 +459,7 @@
             <string notr="true">color: #996515</string>
            </property>
            <property name="text">
-            <string>฿</string>
+            <string/>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -292,7 +500,7 @@
          <item row="1" column="0" colspan="2">
           <widget class="QLabel" name="labelSellAll">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -323,7 +531,7 @@
          <item row="2" column="0" colspan="2">
           <widget class="QLabel" name="labelSellHalf">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -354,7 +562,7 @@
          <item row="3" column="0" colspan="2">
           <widget class="QLabel" name="labelSpendAll">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -385,7 +593,7 @@
          <item row="4" column="0" colspan="2">
           <widget class="QLabel" name="labelSpendHalf">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -416,7 +624,7 @@
          <item row="5" column="0" colspan="2">
           <widget class="QLabel" name="labelCancelAllOrders">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -434,7 +642,7 @@
             </size>
            </property>
            <property name="text">
-            <string>Cancel All Orders</string>
+            <string>Cancel All Orders opened at the time of rule executed.</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -447,43 +655,8 @@
         </layout>
        </widget>
       </item>
-      <item row="0" column="3" rowspan="2">
-       <widget class="QGroupBox" name="groupBox_3">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QGroupBox {background: white; border-radius: 8px; border: 1px solid gray;}</string>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QRadioButton" name="checkGoesAbove">
-           <property name="text">
-            <string>More</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="checkGoesBelow">
-           <property name="text">
-            <string>Less</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="0" column="2" rowspan="2">
-       <widget class="QLabel" name="label_2">
+      <item row="0" column="8">
+       <widget class="QLabel" name="label_4">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
@@ -498,40 +671,94 @@
          </font>
         </property>
         <property name="text">
-         <string>Goes</string>
+         <string>at </string>
         </property>
        </widget>
       </item>
-      <item row="0" column="4" rowspan="2">
-       <widget class="QLabel" name="label_3">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Than</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="5" rowspan="2">
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <property name="spacing">
-         <number>4</number>
-        </property>
-        <property name="sizeConstraint">
-         <enum>QLayout::SetDefaultConstraint</enum>
-        </property>
-        <item>
-         <widget class="QLabel" name="label_52">
+      <item row="0" column="9">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {background: white; border-radius: 8px; border: 1px solid gray;}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QRadioButton" name="checkLastPrice_2">
+             <property name="text">
+              <string>Market Last Price</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="checkMarketBuy_2">
+             <property name="text">
+              <string>Market Buy Price</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="checkMarketSell_2">
+             <property name="text">
+              <string>Market Sell Price</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="checkMarketHigh_2">
+             <property name="text">
+              <string>Market High Price</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="checkMarketLow_2">
+             <property name="text">
+              <string>Market Low Price</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="checkOrdersLastBuyPrice_2">
+             <property name="text">
+              <string>Orders Last Buy Price</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="checkOrdersLastSellPrice_2">
+             <property name="text">
+              <string>Orders Last Sell Price</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="exactPrice">
+             <property name="text">
+              <string>Exact Price</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_53">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -549,15 +776,18 @@
            <string notr="true">color: darkgreen</string>
           </property>
           <property name="text">
-           <string>$</string>
+           <string/>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="thanValue">
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="exactPriceValue">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -569,6 +799,9 @@
             <width>120</width>
             <height>0</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
           </property>
           <property name="prefix">
            <string/>
@@ -586,68 +819,8 @@
         </item>
        </layout>
       </item>
-      <item row="0" column="0" rowspan="2">
-       <widget class="QLabel" name="label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>If</string>
-        </property>
-       </widget>
-      </item>
      </layout>
     </widget>
-   </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="buttonAddRule">
-     <property name="text">
-      <string>Add Rule</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QPushButton" name="buttonCancel">
-     <property name="text">
-      <string>Cancel</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
@@ -715,12 +888,12 @@
    <slot>amountChanged()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>659</x>
-     <y>75</y>
+     <x>598</x>
+     <y>80</y>
     </hint>
     <hint type="destinationlabel">
      <x>580</x>
-     <y>-33</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -731,12 +904,12 @@
    <slot>amountChanged()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>659</x>
-     <y>98</y>
+     <x>598</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
      <x>551</x>
-     <y>-28</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -747,12 +920,12 @@
    <slot>amountChanged()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>659</x>
-     <y>121</y>
+     <x>598</x>
+     <y>126</y>
     </hint>
     <hint type="destinationlabel">
      <x>552</x>
-     <y>-42</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -763,12 +936,12 @@
    <slot>amountChanged()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>659</x>
-     <y>144</y>
+     <x>598</x>
+     <y>149</y>
     </hint>
     <hint type="destinationlabel">
      <x>627</x>
-     <y>-59</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -779,12 +952,12 @@
    <slot>amountChanged()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>659</x>
-     <y>167</y>
+     <x>598</x>
+     <y>172</y>
     </hint>
     <hint type="destinationlabel">
      <x>646</x>
-     <y>-22</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -795,12 +968,12 @@
    <slot>amountChanged()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>659</x>
-     <y>190</y>
+     <x>598</x>
+     <y>195</y>
     </hint>
     <hint type="destinationlabel">
      <x>516</x>
-     <y>-54</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -816,7 +989,23 @@
     </hint>
     <hint type="destinationlabel">
      <x>634</x>
-     <y>-109</y>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exactPrice</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>exactPriceValue</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>847</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>877</x>
+     <y>232</y>
     </hint>
    </hints>
   </connection>

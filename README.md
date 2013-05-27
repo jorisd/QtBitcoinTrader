@@ -14,8 +14,11 @@ This software helps you to open and cancel Mt.Gox orders vary fast.
 
 Change Log
 
-v0.95a
-- Fixed fee calculator
+v0.95
+- Fixed fee calculator bug
+- Now supports resolution down to 1024x700
+- Enhanced rules feature
+- Minor bugs fixed
 
 v0.94
 - Rules finally working!

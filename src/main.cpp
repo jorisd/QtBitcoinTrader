@@ -34,6 +34,7 @@ double *appVerReal_;
 QByteArray *appVerStr_;
 bool *validKeySign_;
 bool *useSSL_;
+QFontMetrics *aFontMetrics_;
 
 int main(int argc, char *argv[])
 {
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
 	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
 	appDataDir_=new QByteArray();
 	appVerStr_=new QByteArray("0.95");
-	appVerReal_=new double(appVerStr_->toDouble());
+	appVerReal_=new double(appVerStr.toDouble());
 	currencyStr_=new QByteArray();
 	currencySign_=new QByteArray();
 	validKeySign_=new bool(false);
@@ -61,6 +62,7 @@ int main(int argc, char *argv[])
 	}
 
 	QApplication a(argc,argv);
+	aFontMetrics_=new QFontMetrics(a.font());
 	QFile *lockFile=0;
 
 #ifndef Q_OS_WIN
@@ -86,7 +88,7 @@ int main(int argc, char *argv[])
 	appDataDir=QDesktopServices::storageLocation(QDesktopServices::HomeLocation).toAscii()+"/.config/QtBitcoinTrader/";
 	if(!QFile::exists(appDataDir))QDir().mkpath(appDataDir);
 #endif
-	a.setStyleSheet("QGroupBox {background: rgba(255,255,255,160); border: 1px solid gray;border-radius: 3px;margin-top: 7px;} QGroupBox:title {background: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.7, stop: 0 #fff, stop: 1 transparent); border-radius: 2px; padding: 1 4px; top: -7; left: 7px;} QLabel {color: black;} QDoubleSpinBox {background: white;} QTextEdit {background: white;} QCheckBox {color: black;} QLineEdit {color: black; background: white; border: 1px solid gray;} QDoubleSpinBox:disabled{color:black;border: 1px solid gray; background: white;}");
+	a.setStyleSheet("QGroupBox {background: rgba(255,255,255,160); border: 1px solid gray;border-radius: 3px;margin-top: 7px;} QGroupBox:title {background: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.7, stop: 0 #fff, stop: 1 transparent); border-radius: 2px; padding: 1 4px; top: -7; left: 7px;} QLabel {color: black;} QDoubleSpinBox {background: white;} QTextEdit {background: white;} QCheckBox {color: black;} QLineEdit {color: black; background: white; border: 1px solid gray;}");
 
 	logFileName_=new QString("QtBitcoinTrader.log");
 	iniFileName_=new QString("QtBitcoinTrader.ini");
@@ -113,18 +115,19 @@ int main(int argc, char *argv[])
 	while(tryDecrypt)
 	{
 		QString tryPassword;
-		restKey_->clear();
-		restSign_->clear();
+		restKey.clear();
+		restSign.clear();
 
 		if(QDir(appDataDir,"*.ini").entryList().isEmpty()||showNewPasswordDialog)
 		{
 			NewPasswordDialog newPassword;
-			if(newPassword.exec()==QDialog::Rejected)return 0;
+			if(newPassword.exec()==QDialog::Accepted)
+			{
 			tryPassword=newPassword.getPassword();
 			newPassword.updateIniFileName();
 			restKey=newPassword.getRestKey().toAscii();
 			restSign=QByteArray::fromBase64(newPassword.getRestSign().toAscii());
-			QByteArray cryptedData=JulyAES256::encrypt("Qt Bitcoin Trader\r\n"+restKey+"\r\n"+restSign_->toBase64(),tryPassword.toAscii());
+			QByteArray cryptedData=JulyAES256::encrypt("Qt Bitcoin Trader\r\n"+restKey+"\r\n"+restSign.toBase64(),tryPassword.toAscii());
 			QSettings settings(iniFileName,QSettings::IniFormat);
 			settings.setValue("CryptedData",QString(cryptedData.toBase64()));
 			settings.setValue("ProfileName",newPassword.selectedProfileName());
@@ -133,6 +136,7 @@ int main(int argc, char *argv[])
 			settings.sync();
 
 			showNewPasswordDialog=false;
+			}
 		}
 			PasswordDialog enterPassword;
 			if(enterPassword.exec()==QDialog::Rejected)return 0;
@@ -144,7 +148,7 @@ int main(int argc, char *argv[])
 		{
 			iniFileName=enterPassword.getIniFilePath();
 
-			QString lockFilePath(QDesktopServices::storageLocation(QDesktopServices::TempLocation)+"/QtBitcoinTrader_lock_"+QString(QCryptographicHash::hash(iniFileName_->toAscii(),QCryptographicHash::Sha1).toHex()));
+			QString lockFilePath(QDesktopServices::storageLocation(QDesktopServices::TempLocation)+"/QtBitcoinTrader_lock_"+QString(QCryptographicHash::hash(iniFileName.toAscii(),QCryptographicHash::Sha1).toHex()));
 		
 			QFile::remove(lockFilePath);
 			if(QFile::exists(lockFilePath))
@@ -183,7 +187,7 @@ int main(int argc, char *argv[])
 	mainWindow_=new QtBitcoinTrader;
 	QObject::connect(mainWindow_,SIGNAL(quit()),&a,SLOT(quit()));
 	}
-	mainWindow_->show();
+	mainWindow.show();
 	a.exec();
 	if(lockFile)
 	{

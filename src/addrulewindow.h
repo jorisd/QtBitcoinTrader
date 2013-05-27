@@ -22,7 +22,7 @@ public:
 	QString getSellOrBuy();
 	QString getPrice();
 	RuleHolder getRuleHolder();
-	int getPriceType();
+	int getRulePriceType();
 private:
 	bool checkIsValidRule();
 public slots:

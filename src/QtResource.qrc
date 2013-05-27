@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/">
+    <file>Resources/Mute.png</file>
     <file>Resources/minus.png</file>
     <file>Resources/multiply.png</file>
     <file>Resources/equal.png</file>

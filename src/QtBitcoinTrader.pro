@@ -41,5 +41,5 @@ SOURCES += addrulewindow.cpp \
            tempwindow.cpp \
 	   ruleholder.cpp
 RESOURCES += QtResource.qrc
-QT += network
+QT += network multimedia
 LIBS += -lcrypto
