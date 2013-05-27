@@ -21,7 +21,8 @@ HEADERS += addrulewindow.h \
            socketthread.h \
            tempwindow.h \
 	   ruleholder.h \
-	   audioplayer.h
+	   audioplayer.h \
+           julyspinboxfix.h
 FORMS += addrulewindow.ui \
          feecalculator.ui \
          gsgtrader.ui \
@@ -41,7 +42,8 @@ SOURCES += addrulewindow.cpp \
            socketthread.cpp \
            tempwindow.cpp \
 	   ruleholder.cpp \
-	   audioplayer.cpp
+	   audioplayer.cpp \
+           julyspinboxfix.cpp
 RESOURCES += QtResource.qrc
 QT += network multimedia
 LIBS += -lcrypto
