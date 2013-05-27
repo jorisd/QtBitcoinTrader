@@ -1072,6 +1072,7 @@ void QtBitcoinTrader::ruleRemove()
 			removeRuleByGuid(ui.rulesTable->item(n,0)->data(Qt::UserRole).toUInt());
 			ui.rulesTable->removeRow(n--);
 		}
+	checkValidRulesButtons();
 }
 
 void QtBitcoinTrader::removeRuleByGuid(uint guid)
@@ -1110,6 +1111,7 @@ void QtBitcoinTrader::ruleRemoveAll()
 		removeRuleByGuid(ui.rulesTable->item(n,0)->data(Qt::UserRole).toUInt());
 	ui.rulesTable->clearContents();
 	ui.rulesTable->setRowCount(0);
+	checkValidRulesButtons();
 }
 
 void QtBitcoinTrader::beep()
