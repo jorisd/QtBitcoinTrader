@@ -19,7 +19,8 @@ JulySpinBoxFix::JulySpinBoxFix(QDoubleSpinBox *parentSB, int minWid)
 	{
 		pMinimumWidth=parentSB->minimumWidth();
 		parentSB->setMinimumWidth(pMinimumWidth);
-	}
+    }
+
 	parentSB->setMaximumWidth(110);
 	connect(parentSB,SIGNAL(valueChanged(QString)),this,SLOT(valueChanged(QString)));
 }

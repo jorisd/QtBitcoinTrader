@@ -190,7 +190,7 @@ QtBitcoinTrader::QtBitcoinTrader()
 		if(QApplication::desktop()->screen(n)->rect().contains(cursorPos))
 			currentDesktopRect=QApplication::desktop()->availableGeometry(n);
 	}
-	resize(qMax(minimumSizeHint().width(),qMin(1100,(int)(currentDesktopRect.width()*0.95))),qMin((int)(currentDesktopRect.height()*0.95),700));
+    resize(qMax(minimumSizeHint().width(),qMin(1200,(int)(currentDesktopRect.width()*0.95))),qMin((int)(currentDesktopRect.height()*0.95),700));
 }
 
 QtBitcoinTrader::~QtBitcoinTrader()
@@ -771,7 +771,7 @@ void QtBitcoinTrader::sellTotalBtcToSellHalfIn()
 	ui.sellTotalBtc->setValue(ui.accountBTC->value()/2.0);
 }
 
-void QtBitcoinTrader::lastSoftLagChanged(double val)
+void QtBitcoinTrader::lastSoftLagChanged(double)
 {
 	bool lastL=lastLagState;
 	if(!isValidSoftLag())
@@ -813,7 +813,7 @@ void QtBitcoinTrader::checkAllRules()
 	ordersLastSellPriceChanged(ui.ordersLastSellPrice->value());
 }
 
-void QtBitcoinTrader::sellTotalBtcToSellChanged(double val)
+void QtBitcoinTrader::sellTotalBtcToSellChanged(double)
 {
 	if(sellLockBtcToSell)return;
 	sellLockBtcToSell=true;
@@ -877,7 +877,7 @@ void QtBitcoinTrader::sellBitcoinButton()
 	apiSell(ui.sellTotalBtc->value(),ui.sellPricePerCoin->value());
 }
 
-void QtBitcoinTrader::buyTotalToSpendInUsdChanged(double val)
+void QtBitcoinTrader::buyTotalToSpendInUsdChanged(double)
 {
 	ui.profitLossSpinBox->setValue(ui.sellAmountToReceive->value()-ui.buyTotalSpend->value());
 	if(buyLockTotalSpend)return;
@@ -1222,5 +1222,5 @@ void QtBitcoinTrader::buttonNewWindow()
 {
 	QProcess proc;
 	proc.startDetached(QApplication::applicationFilePath());
-	proc.waitForStarted();
+    //proc.waitForStarted();
 }

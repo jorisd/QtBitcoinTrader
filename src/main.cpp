@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 	useSSL_=new bool(true);
 	currencySignMap=new QMap<QByteArray,QByteArray>;
 	currencyNamesMap=new QMap<QByteArray,QByteArray>;
-
+#ifdef Q_OS_WIN
 	if(argc>1)
 	{
 		QApplication a(argc,argv);
@@ -60,15 +60,16 @@ int main(int argc, char *argv[])
 			return a.exec();
 		}
 	}
+#endif
 
 	QApplication a(argc,argv);
 	aFontMetrics_=new QFontMetrics(a.font());
 	QFile *lockFile=0;
 
 #ifndef Q_OS_WIN
-#ifndef Q_OS_MAC
+//#ifndef Q_OS_MAC
 	a.setStyle(new QPlastiqueStyle);
-#endif
+//#endif
 #endif
 	{
 	nonce_=new quint64(0);
@@ -149,8 +150,14 @@ int main(int argc, char *argv[])
 			iniFileName=enterPassword.getIniFilePath();
 
 			QString lockFilePath(QDesktopServices::storageLocation(QDesktopServices::TempLocation)+"/QtBitcoinTrader_lock_"+QString(QCryptographicHash::hash(iniFileName.toAscii(),QCryptographicHash::Sha1).toHex()));
-		
-			QFile::remove(lockFilePath);
+
+            QFile testFile(lockFilePath);
+            if(testFile.open(QIODevice::ReadOnly))
+            {
+                if(!testFile.readAll().isEmpty())QFile::remove(lockFilePath);
+            }
+            else QFile::remove(lockFilePath);
+
 			if(QFile::exists(lockFilePath))
 			{
 				QMessageBox::warning(0,"Qt Bitcoin Trader","This profile is already used by another instance.\nAPI does not allow to run two instances with same key sign pair.\nPlease create new profile if you want to use two instances.");
@@ -165,10 +172,9 @@ int main(int argc, char *argv[])
 				{
 					restKey=decryptedList.at(1).toAscii();
 					restSign=QByteArray::fromBase64(decryptedList.last().toAscii());
-					tryDecrypt=false;
-
+                    tryDecrypt=false;
 					lockFile=new QFile(lockFilePath);
-					lockFile->open(QIODevice::WriteOnly);
+                    lockFile->open(QIODevice::WriteOnly|QIODevice::Truncate);
 					lockFile->write("Qt Bitcoin Trader Lock File");
 				}
 			}

@@ -73,7 +73,7 @@ void FeeCalculator::profitLossChanged(double val)
 		ui.profitLoss->setStyleSheet("QDoubleSpinBox {background: #aaffaa;}");
 }
 
-void FeeCalculator::buyBtcChanged(double val)
+void FeeCalculator::buyBtcChanged(double)
 {
 	ui.buyFee->setValue(ui.buyTotalBtc->value()*ui.feeValue->value()/100);
 
