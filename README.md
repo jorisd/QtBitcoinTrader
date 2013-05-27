@@ -16,6 +16,7 @@ Change Log
 
 v0.95
 - Fixed fee calculator bug
+- Fixed sounds bug in Linux
 - Now supports resolution down to 1024x700
 - Enhanced rules feature
 - Minor bugs fixed

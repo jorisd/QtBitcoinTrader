@@ -20,7 +20,8 @@ HEADERS += addrulewindow.h \
            passworddialog.h \
            socketthread.h \
            tempwindow.h \
-	   ruleholder.h
+	   ruleholder.h \
+	   audioplayer.h
 FORMS += addrulewindow.ui \
          feecalculator.ui \
          gsgtrader.ui \
@@ -39,7 +40,8 @@ SOURCES += addrulewindow.cpp \
            passworddialog.cpp \
            socketthread.cpp \
            tempwindow.cpp \
-	   ruleholder.cpp
+	   ruleholder.cpp \
+	   audioplayer.cpp
 RESOURCES += QtResource.qrc
 QT += network multimedia
 LIBS += -lcrypto
