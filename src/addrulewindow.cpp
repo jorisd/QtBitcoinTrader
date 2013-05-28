@@ -19,7 +19,7 @@ AddRuleWindow::AddRuleWindow(QWidget *parent)
 	ui.exactPriceValue->setValue(mainWindow.ui.marketLast->value());
 	ui.btcValue->setValue(mainWindow.ui.accountBTC->value());
 	ui.exactPriceValue->setEnabled(false);
-	ui.label_53->setEnabled(false);
+
 	setWindowFlags(Qt::WindowCloseButtonHint);
 	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 	amountChanged();
@@ -33,7 +33,7 @@ AddRuleWindow::AddRuleWindow(QWidget *parent)
 	ui.label_53->setPixmap(curPix);ui.label_53->setToolTip(currencyStr);
 
 	QPixmap btcPix(":/Resources/BTC.png");
-	ui.btcLabel->setPixmap(curPix);ui.btcLabel->setToolTip("BTC");
+	ui.btcLabel->setPixmap(btcPix);ui.btcLabel->setToolTip("BTC");
 
 	new JulySpinBoxFix(ui.thanValue);
 	new JulySpinBoxFix(ui.btcValue);

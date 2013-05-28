@@ -5,7 +5,7 @@
 #include "tempwindow.h"
 #include "main.h"
 
-TempWindow::TempWindow(QWidget *parent)
+TempWindow::TempWindow(QWidget *)
 	: QDialog()
 {
 	ui.setupUi(this);

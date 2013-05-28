@@ -14,6 +14,15 @@ This software helps you to open and cancel Mt.Gox orders vary fast.
 
 Change Log
 
+v0.97a
+- Added profit calculation to main window
+- Optimized ui
+
+v0.96
+- Fixed minor bugs
+- Optimized ui
+- Mac version released
+
 v0.95
 - Fixed fee calculator bug
 - Now supports resolution down to 1024x700

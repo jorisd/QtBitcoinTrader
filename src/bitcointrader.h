@@ -100,8 +100,17 @@ private:
 	void insertIntoTable(QByteArray,QString);
 	QDateTime lastUpdate;
 	QTime updateLogTime;
+	bool profitSellThanBuyUnlocked;
+	bool profitBuyThanSellUnlocked;
 public slots:
-	void profitLossChanged(double);
+	void zeroSellThanBuyProfit();
+	void zeroBuyThanSellProfit();
+	void profitSellThanBuy();
+	void profitSellThanBuyChanged(double);
+	void profitSellThanBuyCalc();
+	void profitBuyThanSellCalc();
+	void profitBuyThanSell();
+	void profitBuyThanSellChanged(double);
 
 	void buttonNewWindow();
 

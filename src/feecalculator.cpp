@@ -62,7 +62,7 @@ FeeCalculator::~FeeCalculator()
 
 void FeeCalculator::setZeroProfitPrice()
 {
-	ui.sellPrice->setValue((ui.buyPrice->value()+ui.buyPrice->value()*ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
+	ui.sellPrice->setValue(ui.buyPrice->value()*(1+ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
 }
 
 void FeeCalculator::profitLossChanged(double val)
@@ -73,7 +73,7 @@ void FeeCalculator::profitLossChanged(double val)
 		ui.profitLoss->setStyleSheet("QDoubleSpinBox {background: #aaffaa;}");
 }
 
-void FeeCalculator::buyBtcChanged(double val)
+void FeeCalculator::buyBtcChanged(double)
 {
 	ui.buyFee->setValue(ui.buyTotalBtc->value()*ui.feeValue->value()/100);
 
