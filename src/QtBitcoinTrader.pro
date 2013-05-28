@@ -26,7 +26,9 @@ FORMS += addrulewindow.ui \
          gsgtrader.ui \
          newpassworddialog.ui \
          passworddialog.ui \
-         tempwindow.ui
+         tempwindow.ui \
+	 audioplayer.h \
+         julyspinboxfix.h
 SOURCES += addrulewindow.cpp \
            bitcointrader.cpp \
            bitcointraderupdater.cpp \
@@ -39,7 +41,9 @@ SOURCES += addrulewindow.cpp \
            passworddialog.cpp \
            socketthread.cpp \
            tempwindow.cpp \
-	   ruleholder.cpp
+	   ruleholder.cpp \
+	   audioplayer.cpp \
+           julyspinboxfix.cpp
 RESOURCES += QtResource.qrc
 QT += network multimedia
 LIBS += -lcrypto
