@@ -20,15 +20,15 @@ HEADERS += addrulewindow.h \
            passworddialog.h \
            socketthread.h \
            tempwindow.h \
-	   ruleholder.h
+	   ruleholder.h \
+	   audioplayer.h \
+           julyspinboxfix.h
 FORMS += addrulewindow.ui \
          feecalculator.ui \
          gsgtrader.ui \
          newpassworddialog.ui \
          passworddialog.ui \
-         tempwindow.ui \
-	 audioplayer.h \
-         julyspinboxfix.h
+         tempwindow.ui
 SOURCES += addrulewindow.cpp \
            bitcointrader.cpp \
            bitcointraderupdater.cpp \
