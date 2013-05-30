@@ -1,6 +1,11 @@
-//Created by July IGHOR
-//http://trader.uax.co
-//Bitcoin Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// Copyright (C) 2013 July IGHOR.
+// I want to create Bitcoin Trader application that can be configured for any rule and strategy.
+// If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// For any questions please use contact form at http://trader.uax.co
+// Or send e-mail directly to julyighor@gmail.com
+//
+// You may use, distribute and copy the Qt Bitcion Trader under the terms of
+// GNU General Public License version 3
 
 #include <QDir>
 #include <QPlastiqueStyle>
@@ -34,12 +39,14 @@ double *appVerReal_;
 QByteArray *appVerStr_;
 bool *validKeySign_;
 bool *useSSL_;
-QFontMetrics *aFontMetrics_;
+JulyTranslator *julyTranslator;
 
 int main(int argc, char *argv[])
 {
 	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
 	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
+
+	julyTranslator=new JulyTranslator;
 	appDataDir_=new QByteArray();
 	appVerStr_=new QByteArray("0.97");
 	appVerReal_=new double(appVerStr.toDouble());
@@ -63,21 +70,13 @@ int main(int argc, char *argv[])
 #endif
 
 	QApplication a(argc,argv);
-	aFontMetrics_=new QFontMetrics(a.font());
+	a.setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 	QFile *lockFile=0;
 
 #ifndef Q_OS_WIN
-//#ifndef Q_OS_MAC
 	a.setStyle(new QPlastiqueStyle);
-	//#endif
-	{
-	QFont appFont=a.font();
-	appFont.setPixelSize(11);
-	a.setFont(appFont);
-	}
 #endif
 	{
-
 	nonce_=new quint64(0);
 	logEnabled_=new bool(false);
 
@@ -99,6 +98,11 @@ int main(int argc, char *argv[])
 
 	logFileName_=new QString("QtBitcoinTrader.log");
 	iniFileName_=new QString("QtBitcoinTrader.ini");
+
+#ifdef GENERATE_LANGUAGE_FILE
+#else
+	julyTranslator->loadFromFile("TRTRTR.txt");
+#endif
 
 	nonce=QDateTime::currentDateTime().toMSecsSinceEpoch();
 	restKey_=new QByteArray;
@@ -159,12 +163,25 @@ int main(int argc, char *argv[])
 
 			QFile::remove(lockFilePath);
 
-			if(QFile::exists(lockFilePath))
+			bool profileLocked=QFile::exists(lockFilePath);
+			if(profileLocked)
 			{
-				QMessageBox::warning(0,"Qt Bitcoin Trader","This profile is already used by another instance.\nAPI does not allow to run two instances with same key sign pair.\nPlease create new profile if you want to use two instances.");
-				tryPassword.clear();
+				QMessageBox msgBox(0);
+				msgBox.setIcon(QMessageBox::Question);
+				msgBox.setWindowTitle("Qt Bitcoin Trader");
+				msgBox.setText(julyTr("RULE_CONFIRM_REMOVE",julyTr("THIS_PROFILE_ALREADY_USED","This profile is already used by another instance.<br>API does not allow to run two instances with same key sign pair.<br>Please create new profile if you want to use two instances.")));
+#ifdef Q_OS_WIN
+				msgBox.setStandardButtons(QMessageBox::Ok);
+				msgBox.setDefaultButton(QMessageBox::Ok);
+				msgBox.exec();
+#else
+				msgBox.setStandardButtons(QMessageBox::Ignore|QMessageBox::Ok);
+				msgBox.setDefaultButton(QMessageBox::Ok);
+				if(msgBox.exec()==QMessageBox::Ignore)profileLocked=false;
+#endif
+				if(profileLocked)tryPassword.clear();
 			}
-			else
+			if(!profileLocked)
 			{
 				QSettings settings(iniFileName,QSettings::IniFormat);
 				QStringList decryptedList=QString(JulyAES256::decrypt(QByteArray::fromBase64(settings.value("CryptedData","").toString().toAscii()),tryPassword.toAscii())).split("\r\n");

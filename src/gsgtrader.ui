@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1142</width>
-    <height>739</height>
+    <width>1139</width>
+    <height>814</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,6 +32,12 @@
          <width>0</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleName">
+        <string>ACCOUNT_GROUPBOX</string>
        </property>
        <property name="title">
         <string>Mt.Gox Account</string>
@@ -63,6 +69,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00005</string>
+          </property>
           <property name="text">
            <string>Curency:</string>
           </property>
@@ -78,6 +87,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>FEE_LABEL</string>
           </property>
           <property name="text">
            <string>Fee:</string>
@@ -262,6 +274,12 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="whatsThis">
+           <string/>
+          </property>
+          <property name="accessibleName">
+           <string>LOGIN_LABEL</string>
+          </property>
           <property name="text">
            <string>Login:</string>
           </property>
@@ -277,6 +295,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00004</string>
           </property>
           <property name="text">
            <string>Volume:</string>
@@ -328,6 +349,9 @@
          <width>170</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="accessibleName">
+        <string>BALANCE_GROUPBOX</string>
        </property>
        <property name="title">
         <string>Balance</string>
@@ -541,6 +565,9 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="accessibleName">
+        <string>MARKET_GROUPBOX</string>
+       </property>
        <property name="title">
         <string>Market</string>
        </property>
@@ -571,6 +598,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00012</string>
+          </property>
           <property name="text">
            <string>Last Price:</string>
           </property>
@@ -586,6 +616,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00011</string>
           </property>
           <property name="text">
            <string>Low:</string>
@@ -671,6 +704,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00010</string>
           </property>
           <property name="text">
            <string>High:</string>
@@ -877,6 +913,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00009</string>
+          </property>
           <property name="text">
            <string>Sell:</string>
           </property>
@@ -892,6 +931,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00013</string>
           </property>
           <property name="text">
            <string>Volume:</string>
@@ -934,6 +976,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00008</string>
           </property>
           <property name="text">
            <string>Buy:</string>
@@ -1106,6 +1151,9 @@
          <bold>false</bold>
         </font>
        </property>
+       <property name="accessibleName">
+        <string>TR00014</string>
+       </property>
        <property name="title">
         <string>Lag</string>
        </property>
@@ -1136,6 +1184,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00015</string>
+          </property>
           <property name="text">
            <string>Mt.Gox:</string>
           </property>
@@ -1162,6 +1213,9 @@
               <width>90</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="accessibleName">
+             <string>TR00113</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1218,6 +1272,9 @@
               <bold>false</bold>
              </font>
             </property>
+            <property name="accessibleName">
+             <string>TR00017</string>
+            </property>
             <property name="styleSheet">
              <string notr="true">QLabel {border: 1px solid gray; background: #FFAAAA; color: black}</string>
             </property>
@@ -1248,6 +1305,9 @@
             <height>0</height>
            </size>
           </property>
+          <property name="accessibleName">
+           <string>TR00016</string>
+          </property>
           <property name="text">
            <string>API Lag:</string>
           </property>
@@ -1269,6 +1329,9 @@
             <width>90</width>
             <height>0</height>
            </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00113</string>
           </property>
           <property name="styleSheet">
            <string notr="true"/>
@@ -1317,6 +1380,9 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="accessibleName">
+        <string>TR00018</string>
+       </property>
        <property name="title">
         <string>Your Open Orders</string>
        </property>
@@ -1339,6 +1405,9 @@
            <font>
             <pointsize>20</pointsize>
            </font>
+          </property>
+          <property name="accessibleName">
+           <string>TR00057</string>
           </property>
           <property name="styleSheet">
            <string notr="true">border: 1px solid gray; background: white; color: gray</string>
@@ -1465,6 +1534,9 @@
                   <height>0</height>
                  </size>
                 </property>
+                <property name="accessibleName">
+                 <string>TR00021</string>
+                </property>
                 <property name="text">
                  <string>Cancel Selected</string>
                 </property>
@@ -1484,6 +1556,9 @@
                   <height>0</height>
                  </size>
                 </property>
+                <property name="accessibleName">
+                 <string>TR00020</string>
+                </property>
                 <property name="text">
                  <string>Cancel All</string>
                 </property>
@@ -1502,6 +1577,9 @@
                   <width>60</width>
                   <height>0</height>
                  </size>
+                </property>
+                <property name="accessibleName">
+                 <string>TR00019</string>
                 </property>
                 <property name="text">
                  <string>Select None</string>
@@ -1531,6 +1609,15 @@
          <height>0</height>
         </size>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="accessibleName">
+        <string>TR00022</string>
+       </property>
        <property name="title">
         <string>Orders Log</string>
        </property>
@@ -1548,6 +1635,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00023</string>
           </property>
           <property name="text">
            <string>Last Buy Price:</string>
@@ -1627,6 +1717,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00024</string>
           </property>
           <property name="text">
            <string>Last Sell Price:</string>
@@ -1733,7 +1826,7 @@
      <item row="1" column="1">
       <widget class="QGroupBox" name="groupboxRules">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -1744,36 +1837,41 @@
          <height>10</height>
         </size>
        </property>
+       <property name="accessibleName">
+        <string>TR00025</string>
+       </property>
        <property name="title">
         <string>Rules for creating Orders</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_21">
-        <property name="margin">
-         <number>10</number>
-        </property>
-        <property name="spacing">
-         <number>10</number>
-        </property>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="ruleSelectNone">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Select None</string>
-          </property>
-         </widget>
+        <item row="0" column="0" colspan="5">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QRadioButton" name="ruleSequencialMode">
+            <property name="accessibleName">
+             <string>SEQUENTIAL_MODE</string>
+            </property>
+            <property name="text">
+             <string>Sequential Mode</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="ruleConcurrentMode">
+            <property name="accessibleName">
+             <string>CONCURRENT_MODE</string>
+            </property>
+            <property name="text">
+             <string>Concurrent Mode</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item row="2" column="2">
+        <item row="3" column="3">
          <widget class="QPushButton" name="ruleRemoveAll">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -1787,12 +1885,15 @@
             <height>0</height>
            </size>
           </property>
+          <property name="accessibleName">
+           <string>RULE_REMOVE_ALL</string>
+          </property>
           <property name="text">
            <string>Remove All</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
+        <item row="3" column="1">
          <widget class="QPushButton" name="ruleAddButton">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -1806,64 +1907,15 @@
             <height>0</height>
            </size>
           </property>
+          <property name="accessibleName">
+           <string>TR00027</string>
+          </property>
           <property name="text">
            <string>Add Rule</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="3">
-         <widget class="QPushButton" name="ruleRemove">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Remove Selected</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0" colspan="4">
-         <widget class="QLabel" name="rulesNoMessage">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border: 1px solid gray; background: white; color: gray</string>
-          </property>
-          <property name="text">
-           <string>No Rules</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0" colspan="4">
+        <item row="1" column="0" colspan="5">
          <widget class="QTableWidget" name="rulesTable">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -1884,7 +1936,7 @@
            <bool>true</bool>
           </property>
           <property name="selectionMode">
-           <enum>QAbstractItemView::SingleSelection</enum>
+           <enum>QAbstractItemView::ExtendedSelection</enum>
           </property>
           <property name="selectionBehavior">
            <enum>QAbstractItemView::SelectRows</enum>
@@ -1925,6 +1977,108 @@
           </column>
          </widget>
         </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="ruleEditButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_EDIT</string>
+          </property>
+          <property name="text">
+           <string>Edit Rule</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="ruleSelectNone">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_SELECT_NONE</string>
+          </property>
+          <property name="text">
+           <string>Select None</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="5">
+         <widget class="QLabel" name="rulesNoMessage">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+           </font>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_NOITEMS</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid gray; background: white; color: gray</string>
+          </property>
+          <property name="text">
+           <string>No Rules</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QPushButton" name="ruleRemove">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_REMOVE_SELECTED</string>
+          </property>
+          <property name="text">
+           <string>Remove Selected</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
      </item>
@@ -1950,6 +2104,9 @@
        <bold>false</bold>
       </font>
      </property>
+     <property name="accessibleName">
+      <string>TR00111</string>
+     </property>
      <property name="styleSheet">
       <string notr="true">QGroupBox {color: red}</string>
      </property>
@@ -1959,6 +2116,9 @@
      <layout class="QGridLayout" name="gridLayout_6">
       <item row="0" column="0">
        <widget class="QLabel" name="label_16">
+        <property name="accessibleName">
+         <string>TR00030</string>
+        </property>
         <property name="text">
          <string>Total to spend:</string>
         </property>
@@ -2051,6 +2211,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00035</string>
+        </property>
         <property name="text">
          <string>All In</string>
         </property>
@@ -2076,6 +2239,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00036</string>
+        </property>
         <property name="text">
          <string>Half In</string>
         </property>
@@ -2083,6 +2249,9 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_13">
+        <property name="accessibleName">
+         <string>TR00031</string>
+        </property>
         <property name="text">
          <string> Price per coin:</string>
         </property>
@@ -2178,6 +2347,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00037</string>
+        </property>
         <property name="text">
          <string>As Market Price</string>
         </property>
@@ -2190,6 +2362,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>TR00032</string>
         </property>
         <property name="text">
          <string>Total BTC to BUY:</string>
@@ -2373,6 +2548,9 @@
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_10">
+        <property name="accessibleName">
+         <string>TR00033</string>
+        </property>
         <property name="text">
          <string>Zero profit Price:</string>
         </property>
@@ -2491,6 +2669,9 @@
              <pointsize>16</pointsize>
             </font>
            </property>
+           <property name="accessibleName">
+            <string>TR00058</string>
+           </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {color: red} QPushButton::disabled {color: gray}</string>
            </property>
@@ -2512,6 +2693,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>TR00034</string>
         </property>
         <property name="text">
          <string>Zero profit Step:</string>
@@ -2605,6 +2789,9 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="accessibleName">
+      <string>TR00038</string>
+     </property>
      <property name="title">
       <string>Buy Than Sell Profit</string>
      </property>
@@ -2631,6 +2818,9 @@
           <width>16777215</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="accessibleName">
+         <string>TR00039</string>
         </property>
         <property name="text">
          <string>Apply</string>
@@ -2738,6 +2928,9 @@
        <weight>50</weight>
        <bold>false</bold>
       </font>
+     </property>
+     <property name="accessibleName">
+      <string>TR00056</string>
      </property>
      <property name="styleSheet">
       <string notr="true">QGroupBox {color: green}</string>
@@ -2912,6 +3105,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00037</string>
+        </property>
         <property name="text">
          <string>As Market Price</string>
         </property>
@@ -3068,6 +3264,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00035</string>
+        </property>
         <property name="text">
          <string>All In</string>
         </property>
@@ -3080,6 +3279,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>TR00046</string>
         </property>
         <property name="text">
          <string>Zero profit Step:</string>
@@ -3155,6 +3357,9 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_4">
+        <property name="accessibleName">
+         <string>TR00043</string>
+        </property>
         <property name="text">
          <string>Price per coin:</string>
         </property>
@@ -3183,6 +3388,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00036</string>
+        </property>
         <property name="text">
          <string>Half In</string>
         </property>
@@ -3190,6 +3398,9 @@
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_5">
+        <property name="accessibleName">
+         <string>TR00044</string>
+        </property>
         <property name="text">
          <string>Amount to receive:</string>
         </property>
@@ -3200,6 +3411,9 @@
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label_7">
+        <property name="accessibleName">
+         <string>TR00042</string>
+        </property>
         <property name="text">
          <string>Total to SELL:</string>
         </property>
@@ -3210,6 +3424,9 @@
       </item>
       <item row="4" column="0">
        <widget class="QLabel" name="label_6">
+        <property name="accessibleName">
+         <string>TR00045</string>
+        </property>
         <property name="text">
          <string>Zero profit Price:</string>
         </property>
@@ -3248,6 +3465,9 @@
             <font>
              <pointsize>16</pointsize>
             </font>
+           </property>
+           <property name="accessibleName">
+            <string>TR00059</string>
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {color: blue} QPushButton::disabled {color: gray}</string>
@@ -3300,9 +3520,12 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>16777215</width>
+         <width>480</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="accessibleName">
+        <string>TR00041</string>
        </property>
        <property name="styleSheet">
         <string notr="true"/>
@@ -3322,6 +3545,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00047</string>
+          </property>
           <property name="text">
            <string>Language</string>
           </property>
@@ -3333,10 +3559,38 @@
           </property>
          </widget>
         </item>
+        <item row="1" column="2" rowspan="2">
+         <widget class="QPushButton" name="buttonNewWindow">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00051</string>
+          </property>
+          <property name="text">
+           <string>New Window</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="1">
          <widget class="QComboBox" name="comboBox">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -3348,53 +3602,25 @@
           </item>
          </widget>
         </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="aboutTranslationButton">
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_52">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
+          <property name="accessibleName">
+           <string>TR00052</string>
           </property>
           <property name="text">
-           <string>About Translation</string>
+           <string>Support:</string>
           </property>
-         </widget>
-        </item>
-        <item row="1" column="2" rowspan="2">
-         <widget class="QPushButton" name="buttonNewWindow">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>New Window</string>
+          <property name="openExternalLinks">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -3405,6 +3631,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00049</string>
           </property>
           <property name="text">
            <string>Security:</string>
@@ -3420,32 +3649,16 @@
         <item row="2" column="1">
          <widget class="QCheckBox" name="sslCheck">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00050</string>
           </property>
           <property name="text">
            <string>Use SSL Socket</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="label_52">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Support:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-          <property name="openExternalLinks">
-           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -3540,6 +3753,34 @@
           </item>
          </layout>
         </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="aboutTranslationButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00048</string>
+          </property>
+          <property name="text">
+           <string>Translation</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
      </item>
@@ -3556,6 +3797,9 @@
          <width>480</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="accessibleName">
+        <string>TR00053</string>
        </property>
        <property name="title">
         <string>Donate</string>
@@ -3626,6 +3870,9 @@
             <height>16777215</height>
            </size>
           </property>
+          <property name="accessibleName">
+           <string>TR00054</string>
+          </property>
           <property name="text">
            <string>Copy</string>
           </property>
@@ -3649,6 +3896,9 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="accessibleName">
+      <string>TR00040</string>
      </property>
      <property name="title">
       <string>Sell Than Buy Profit</string>
@@ -3676,6 +3926,9 @@
           <width>16777215</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="accessibleName">
+         <string>TR00039</string>
         </property>
         <property name="text">
          <string>Apply</string>
@@ -3788,7 +4041,7 @@
    <slot>ordersCancelAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>374</x>
+     <x>373</x>
      <y>351</y>
     </hint>
     <hint type="destinationlabel">
@@ -3805,7 +4058,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>227</x>
-     <y>660</y>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
      <x>3</x>
@@ -3821,7 +4074,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>298</x>
-     <y>604</y>
+     <y>579</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3837,7 +4090,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>368</x>
-     <y>604</y>
+     <y>579</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3853,7 +4106,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>227</x>
-     <y>631</y>
+     <y>606</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3869,7 +4122,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>368</x>
-     <y>633</y>
+     <y>608</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3885,7 +4138,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>227</x>
-     <y>602</y>
+     <y>577</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3901,7 +4154,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>368</x>
-     <y>713</y>
+     <y>688</y>
     </hint>
     <hint type="destinationlabel">
      <x>1</x>
@@ -3964,7 +4217,7 @@
    <slot>ordersCancelSelected()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>552</x>
+     <x>551</x>
      <y>351</y>
     </hint>
     <hint type="destinationlabel">
@@ -4012,8 +4265,8 @@
    <slot>sellTotalBtcToSellAllIn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>807</x>
-     <y>604</y>
+     <x>804</x>
+     <y>579</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4028,8 +4281,8 @@
    <slot>sellBitcoinButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>873</x>
-     <y>713</y>
+     <x>870</x>
+     <y>688</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4044,8 +4297,8 @@
    <slot>sellPricePerCoinAsMarketPrice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>873</x>
-     <y>633</y>
+     <x>870</x>
+     <y>608</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4060,8 +4313,8 @@
    <slot>sellTotalBtcToSellChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>740</x>
-     <y>602</y>
+     <x>737</x>
+     <y>577</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4076,8 +4329,8 @@
    <slot>sellAmountToReceiveChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>740</x>
-     <y>660</y>
+     <x>737</x>
+     <y>635</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4092,8 +4345,8 @@
    <slot>sellPricePerCoinInUsdChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>740</x>
-     <y>631</y>
+     <x>737</x>
+     <y>606</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4108,8 +4361,8 @@
    <slot>sellTotalBtcToSellHalfIn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>873</x>
-     <y>604</y>
+     <x>870</x>
+     <y>579</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4156,8 +4409,8 @@
    <slot>ruleAddButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>814</x>
-     <y>525</y>
+     <x>793</x>
+     <y>514</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4172,8 +4425,8 @@
    <slot>ruleRemoveAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>944</x>
-     <y>525</y>
+     <x>1010</x>
+     <y>514</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4188,8 +4441,8 @@
    <slot>ruleRemove()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1075</x>
-     <y>525</y>
+     <x>1118</x>
+     <y>514</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4204,8 +4457,8 @@
    <slot>clearSelection()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>683</x>
-     <y>525</y>
+     <x>684</x>
+     <y>514</y>
     </hint>
     <hint type="destinationlabel">
      <x>1075</x>
@@ -4220,8 +4473,8 @@
    <slot>copyDonateButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1121</x>
-     <y>715</y>
+     <x>1118</x>
+     <y>690</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4348,7 +4601,7 @@
    <slot>ordersLastSellPriceChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1121</x>
+     <x>1118</x>
      <y>147</y>
     </hint>
     <hint type="destinationlabel">
@@ -4364,7 +4617,7 @@
    <slot>ordersLastBuyPriceChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>847</x>
+     <x>845</x>
      <y>147</y>
     </hint>
     <hint type="destinationlabel">
@@ -4412,7 +4665,7 @@
    <slot>marketSellChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>610</x>
+     <x>608</x>
      <y>85</y>
     </hint>
     <hint type="destinationlabel">
@@ -4428,8 +4681,8 @@
    <slot>aboutTranslationButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1070</x>
-     <y>588</y>
+     <x>1118</x>
+     <y>578</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4460,8 +4713,8 @@
    <slot>buttonNewWindow()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1070</x>
-     <y>617</y>
+     <x>1118</x>
+     <y>607</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4476,7 +4729,7 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>458</x>
+     <x>456</x>
      <y>58</y>
     </hint>
     <hint type="destinationlabel">
@@ -4492,7 +4745,7 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>458</x>
+     <x>456</x>
      <y>84</y>
     </hint>
     <hint type="destinationlabel">
@@ -4508,7 +4761,7 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>771</x>
+     <x>769</x>
      <y>58</y>
     </hint>
     <hint type="destinationlabel">
@@ -4524,7 +4777,7 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>771</x>
+     <x>769</x>
      <y>86</y>
     </hint>
     <hint type="destinationlabel">
@@ -4541,11 +4794,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>503</x>
-     <y>602</y>
+     <y>574</y>
     </hint>
     <hint type="destinationlabel">
      <x>798</x>
-     <y>738</y>
+     <y>710</y>
     </hint>
    </hints>
   </connection>
@@ -4556,12 +4809,12 @@
    <slot>profitBuyThanSell()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>441</x>
-     <y>622</y>
+     <x>482</x>
+     <y>603</y>
     </hint>
     <hint type="destinationlabel">
      <x>585</x>
-     <y>806</y>
+     <y>710</y>
     </hint>
    </hints>
   </connection>
@@ -4572,12 +4825,12 @@
    <slot>profitSellThanBuy()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>434</x>
-     <y>712</y>
+     <x>482</x>
+     <y>691</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
-     <y>769</y>
+     <y>710</y>
     </hint>
    </hints>
   </connection>
@@ -4588,12 +4841,12 @@
    <slot>profitSellThanBuyChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>480</x>
-     <y>680</y>
+     <x>503</x>
+     <y>662</y>
     </hint>
     <hint type="destinationlabel">
      <x>506</x>
-     <y>755</y>
+     <y>710</y>
     </hint>
    </hints>
   </connection>
@@ -4604,12 +4857,12 @@
    <slot>zeroBuyThanSellProfit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>496</x>
-     <y>620</y>
+     <x>503</x>
+     <y>603</y>
     </hint>
     <hint type="destinationlabel">
      <x>544</x>
-     <y>821</y>
+     <y>710</y>
     </hint>
    </hints>
   </connection>
@@ -4620,12 +4873,28 @@
    <slot>zeroSellThanBuyProfit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>490</x>
-     <y>714</y>
+     <x>503</x>
+     <y>691</y>
     </hint>
     <hint type="destinationlabel">
      <x>486</x>
-     <y>778</y>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ruleEditButton</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>ruleEditButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>876</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1362</x>
+     <y>502</y>
     </hint>
    </hints>
   </connection>
@@ -4693,5 +4962,6 @@
   <slot>profitBuyThanSellChanged(double)</slot>
   <slot>zeroBuyThanSellProfit()</slot>
   <slot>zeroSellThanBuyProfit()</slot>
+  <slot>ruleEditButton()</slot>
  </slots>
 </ui>

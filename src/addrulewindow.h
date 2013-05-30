@@ -1,6 +1,11 @@
-//Created by July IGHOR
-//Feel free to contact me: julyighor@gmail.com
-//Bitcoin Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// Copyright (C) 2013 July IGHOR.
+// I want to create Bitcoin Trader application that can be configured for any rule and strategy.
+// If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// For any questions please use contact form at http://trader.uax.co
+// Or send e-mail directly to julyighor@gmail.com
+//
+// You may use, distribute and copy the Qt Bitcion Trader under the terms of
+// GNU General Public License version 3
 
 #ifndef ADDRULEWINDOW_H
 #define ADDRULEWINDOW_H
@@ -17,15 +22,14 @@ public:
 	Ui::AddRuleWindow ui;
 	AddRuleWindow(QWidget *parent = 0);
 	~AddRuleWindow();
-	QString getDescriptionString();
-	QString getBitcoinsString();
-	QString getSellOrBuy();
-	QString getPrice();
 	RuleHolder getRuleHolder();
-	int getRulePriceType();
+	void fillByRuleHolder(RuleHolder holder);
 private:
 	bool checkIsValidRule();
 public slots:
+	void languageChanged();
+public slots:
+	void setOrdersBackInvisible(bool);
 	void amountChanged();
 	void buttonAddRule();
 };

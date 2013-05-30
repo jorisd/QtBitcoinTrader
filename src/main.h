@@ -1,12 +1,22 @@
-//Created by July IGHOR
-//http://trader.uax.co
-//Bitcoin Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// Copyright (C) 2013 July IGHOR.
+// I want to create Bitcoin Trader application that can be configured for any rule and strategy.
+// If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// For any questions please use contact form at http://trader.uax.co
+// Or send e-mail directly to julyighor@gmail.com
+//
+// You may use, distribute and copy the Qt Bitcion Trader under the terms of
+// GNU General Public License version 3
 
 #ifndef MAIN_H
 #define MAIN_H
 
 #include "bitcointrader.h"
 #include "logthread.h"
+#include "julytranslator.h"
+
+#define GENERATE_LANGUAGE_FILE//Used for make default language file
+
+#define julyTr julyTranslator->translateString
 
 #define hostName QByteArray("data.mtgox.com")
 #define apiId QByteArray("2")
@@ -24,9 +34,8 @@
 #define currencySign (*currencySign_)
 #define bitcoinSign (*bitcoinSign_)
 #define appDataDir (*appDataDir_)
-#define aFontMetrics (*aFontMetrics_)
 
-extern QFontMetrics *aFontMetrics_;
+extern JulyTranslator *julyTranslator;
 extern QByteArray *appDataDir_;
 extern QByteArray *bitcoinSign_;
 extern QByteArray *currencyStr_;

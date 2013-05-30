@@ -1,6 +1,11 @@
-//Created by July IGHOR
-//http://trader.uax.co
-//Bitcoin Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// Copyright (C) 2013 July IGHOR.
+// I want to create Bitcoin Trader application that can be configured for any rule and strategy.
+// If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// For any questions please use contact form at http://trader.uax.co
+// Or send e-mail directly to julyighor@gmail.com
+//
+// You may use, distribute and copy the Qt Bitcion Trader under the terms of
+// GNU General Public License version 3
 
 #include "julyspinboxfix.h"
 #include "main.h"
@@ -10,6 +15,7 @@
 JulySpinBoxFix::JulySpinBoxFix(QDoubleSpinBox *parentSB, int minWid)
 	: QObject()
 {
+	parentSB->setMaximumWidth(110);
 	pMinimumWidth=minWid;
 	spinMargin=30;
 	if(parentSB->buttonSymbols()==QDoubleSpinBox::NoButtons)spinMargin=10;
@@ -19,9 +25,8 @@ JulySpinBoxFix::JulySpinBoxFix(QDoubleSpinBox *parentSB, int minWid)
 	{
 		pMinimumWidth=parentSB->minimumWidth();
 		parentSB->setMinimumWidth(pMinimumWidth);
+		valueChanged(parentSB->text());
     }
-
-	parentSB->setMaximumWidth(110);
 	connect(parentSB,SIGNAL(valueChanged(QString)),this,SLOT(valueChanged(QString)));
 }
 
@@ -31,8 +36,9 @@ JulySpinBoxFix::~JulySpinBoxFix()
 
 void JulySpinBoxFix::valueChanged(QString text)
 {
+	const QFontMetrics spinBoxFontMetrics(parentSpinBox->font());
 	if(pMinimumWidth==0)
-		parentSpinBox->setMinimumWidth(aFontMetrics.width(text)+spinMargin);
+		parentSpinBox->setMinimumWidth(spinBoxFontMetrics.width(text)+spinMargin);
 	else 
-		parentSpinBox->setMinimumWidth(qMax(aFontMetrics.width(text)+spinMargin,pMinimumWidth));
+		parentSpinBox->setMinimumWidth(qMax(spinBoxFontMetrics.width(text)+spinMargin,pMinimumWidth));
 }
