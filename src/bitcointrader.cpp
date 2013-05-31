@@ -189,8 +189,6 @@ QtBitcoinTrader::QtBitcoinTrader()
 	checkUpdate();
 	updateCheckTimer->start(3600000);
 
-	checkValidRulesButtons();
-	currencyChanged(ui.currencyComboBox->currentIndex());
 
 	int screenCount=QApplication::desktop()->screenCount();
 	QPoint cursorPos=QCursor::pos();
@@ -210,6 +208,8 @@ QtBitcoinTrader::QtBitcoinTrader()
 	reloadLanguageList();
 	constructorFinished=true;
 
+	checkValidRulesButtons();
+	currencyChanged(ui.currencyComboBox->currentIndex());
 	connect(julyTranslator,SIGNAL(languageChanged()),this,SLOT(languageChanged()));
 }
 
@@ -439,7 +439,7 @@ void QtBitcoinTrader::httpUpdateDone(bool on)
 			proc.startDetached(QApplication::applicationFilePath()+" /checkupdate");
 			proc.waitForStarted();
 #else
-			QMessageBox::information(this,"Qt Bitcoin Trader",julyTr("UPDATE_RELEASED_TEXT","Update released %1. Please download from %2").arg(versionString).arg("https://sourceforge.net/projects/bitcointrader/"));
+			QMessageBox::information(this,"Qt Bitcoin Trader",julyTr("UPDATE_RELEASED_TEXT","Update released %1. Please download from %2").arg(versionString).arg("https://sourceforge.net/projects/bitcointrader/")));
 #endif
 		}
 	}
