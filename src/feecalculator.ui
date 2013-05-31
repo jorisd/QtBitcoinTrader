@@ -52,6 +52,9 @@
       </property>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
+        <property name="accessibleName">
+         <string>TR00084</string>
+        </property>
         <property name="text">
          <string>Buy BTC</string>
         </property>
@@ -65,6 +68,9 @@
       </item>
       <item row="0" column="2">
        <widget class="QLabel" name="label_4">
+        <property name="accessibleName">
+         <string>TR00085</string>
+        </property>
         <property name="text">
          <string>Price</string>
         </property>
@@ -78,6 +84,9 @@
       </item>
       <item row="0" column="4">
        <widget class="QLabel" name="label_5">
+        <property name="accessibleName">
+         <string>TR00086</string>
+        </property>
         <property name="text">
          <string>Total Paid</string>
         </property>
@@ -91,6 +100,9 @@
       </item>
       <item row="0" column="6">
        <widget class="QLabel" name="label_7">
+        <property name="accessibleName">
+         <string>TR00087</string>
+        </property>
         <property name="text">
          <string>Fee (BTC)</string>
         </property>
@@ -104,6 +116,9 @@
       </item>
       <item row="0" column="8">
        <widget class="QLabel" name="label_8">
+        <property name="accessibleName">
+         <string>TR00088</string>
+        </property>
         <property name="text">
          <string>Btc (Received)</string>
         </property>
@@ -607,6 +622,9 @@
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_15">
+        <property name="accessibleName">
+         <string>TR00089</string>
+        </property>
         <property name="text">
          <string>Sell BTC</string>
         </property>
@@ -620,6 +638,9 @@
       </item>
       <item row="2" column="2">
        <widget class="QLabel" name="label_6">
+        <property name="accessibleName">
+         <string>TR00090</string>
+        </property>
         <property name="text">
          <string>Price</string>
         </property>
@@ -633,6 +654,9 @@
       </item>
       <item row="2" column="4">
        <widget class="QLabel" name="label_16">
+        <property name="accessibleName">
+         <string>TR00091</string>
+        </property>
         <property name="text">
          <string>Amount</string>
         </property>
@@ -646,6 +670,9 @@
       </item>
       <item row="2" column="6">
        <widget class="QLabel" name="label_17">
+        <property name="accessibleName">
+         <string>TR00092</string>
+        </property>
         <property name="text">
          <string>Fee</string>
         </property>
@@ -659,6 +686,9 @@
       </item>
       <item row="2" column="8">
        <widget class="QLabel" name="label_18">
+        <property name="accessibleName">
+         <string>TR00093</string>
+        </property>
         <property name="text">
          <string>Fiat (Received)</string>
         </property>
@@ -1174,6 +1204,9 @@
       </item>
       <item row="4" column="8">
        <widget class="QLabel" name="label_19">
+        <property name="accessibleName">
+         <string>TR00094</string>
+        </property>
         <property name="text">
          <string>Profit/Loss</string>
         </property>
@@ -1197,6 +1230,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00095</string>
           </property>
           <property name="text">
            <string>Fee:</string>
@@ -1331,6 +1367,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>TR00096</string>
         </property>
         <property name="text">
          <string> Zero profit Price</string>

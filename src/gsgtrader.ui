@@ -6,21 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1379</width>
-    <height>743</height>
+    <width>1139</width>
+    <height>787</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Qt Bitcoin Trader</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_18">
-   <property name="topMargin">
-    <number>4</number>
-   </property>
-   <property name="verticalSpacing">
-    <number>-1</number>
-   </property>
-   <item row="0" column="0" colspan="3">
+   <item row="0" column="0" colspan="5">
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <property name="spacing">
       <number>4</number>
@@ -28,7 +22,7 @@
      <item>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -38,6 +32,12 @@
          <width>0</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleName">
+        <string>ACCOUNT_GROUPBOX</string>
        </property>
        <property name="title">
         <string>Mt.Gox Account</string>
@@ -69,6 +69,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00005</string>
+          </property>
           <property name="text">
            <string>Curency:</string>
           </property>
@@ -84,6 +87,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>FEE_LABEL</string>
           </property>
           <property name="text">
            <string>Fee:</string>
@@ -181,7 +187,7 @@
         <item row="1" column="5">
          <widget class="QComboBox" name="currencyComboBox">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -268,6 +274,12 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="whatsThis">
+           <string/>
+          </property>
+          <property name="accessibleName">
+           <string>LOGIN_LABEL</string>
+          </property>
           <property name="text">
            <string>Login:</string>
           </property>
@@ -283,6 +295,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00004</string>
           </property>
           <property name="text">
            <string>Volume:</string>
@@ -324,7 +339,7 @@
      <item>
       <widget class="QGroupBox" name="groupBox_9">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -334,6 +349,9 @@
          <width>170</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="accessibleName">
+        <string>BALANCE_GROUPBOX</string>
        </property>
        <property name="title">
         <string>Balance</string>
@@ -542,10 +560,13 @@
      <item>
       <widget class="QGroupBox" name="groupBox_6">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="accessibleName">
+        <string>MARKET_GROUPBOX</string>
        </property>
        <property name="title">
         <string>Market</string>
@@ -577,6 +598,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00012</string>
+          </property>
           <property name="text">
            <string>Last Price:</string>
           </property>
@@ -592,6 +616,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00011</string>
           </property>
           <property name="text">
            <string>Low:</string>
@@ -677,6 +704,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00010</string>
           </property>
           <property name="text">
            <string>High:</string>
@@ -883,6 +913,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00009</string>
+          </property>
           <property name="text">
            <string>Sell:</string>
           </property>
@@ -898,6 +931,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00013</string>
           </property>
           <property name="text">
            <string>Volume:</string>
@@ -940,6 +976,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00008</string>
           </property>
           <property name="text">
            <string>Buy:</string>
@@ -1089,7 +1128,7 @@
      <item>
       <widget class="QGroupBox" name="groupBox_10">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -1100,11 +1139,20 @@
          <height>0</height>
         </size>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <weight>50</weight>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="accessibleName">
+        <string>TR00014</string>
        </property>
        <property name="title">
         <string>Lag</string>
@@ -1136,6 +1184,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00015</string>
+          </property>
           <property name="text">
            <string>Mt.Gox:</string>
           </property>
@@ -1162,6 +1213,9 @@
               <width>90</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="accessibleName">
+             <string>TR00113</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1218,6 +1272,9 @@
               <bold>false</bold>
              </font>
             </property>
+            <property name="accessibleName">
+             <string>TR00017</string>
+            </property>
             <property name="styleSheet">
              <string notr="true">QLabel {border: 1px solid gray; background: #FFAAAA; color: black}</string>
             </property>
@@ -1248,6 +1305,9 @@
             <height>0</height>
            </size>
           </property>
+          <property name="accessibleName">
+           <string>TR00016</string>
+          </property>
           <property name="text">
            <string>API Lag:</string>
           </property>
@@ -1269,6 +1329,9 @@
             <width>90</width>
             <height>0</height>
            </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00113</string>
           </property>
           <property name="styleSheet">
            <string notr="true"/>
@@ -1307,482 +1370,7 @@
      </item>
     </layout>
    </item>
-   <item row="2" column="2">
-    <layout class="QGridLayout" name="gridLayout_16">
-     <property name="topMargin">
-      <number>12</number>
-     </property>
-     <property name="bottomMargin">
-      <number>4</number>
-     </property>
-     <property name="spacing">
-      <number>-1</number>
-     </property>
-     <item row="1" column="1">
-      <widget class="QGroupBox" name="groupBox">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>480</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="title">
-        <string>Donate</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_4">
-        <property name="margin">
-         <number>9</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLabel" name="btcLabel11">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: #996515</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="bitcoinAddress">
-          <property name="minimumSize">
-           <size>
-            <width>80</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc</string>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="copyDonateButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>80</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>50</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Copy</string>
-          </property>
-          <property name="autoDefault">
-           <bool>false</bool>
-          </property>
-          <property name="default">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QGroupBox" name="groupBox_3">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="title">
-        <string>Profit/Loss</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_19">
-        <property name="horizontalSpacing">
-         <number>2</number>
-        </property>
-        <property name="verticalSpacing">
-         <number>9</number>
-        </property>
-        <property name="margin">
-         <number>9</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLabel" name="usdLabel72">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: darkgreen</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QDoubleSpinBox" name="profitLossSpinBox">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-          <property name="prefix">
-           <string/>
-          </property>
-          <property name="decimals">
-           <number>5</number>
-          </property>
-          <property name="minimum">
-           <double>-999999999.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>999999999.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item row="0" column="2" rowspan="2">
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Expanding</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>13</width>
-         <height>13</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="0" colspan="2">
-      <widget class="QGroupBox" name="sellBuyGroupBox">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <property name="title">
-        <string>General</string>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <property name="verticalSpacing">
-         <number>-1</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_51">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Language</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-          <property name="openExternalLinks">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QComboBox" name="comboBox">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <item>
-           <property name="text">
-            <string>English</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="aboutTranslationButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>About Translation</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2" rowspan="2">
-         <widget class="QPushButton" name="buttonNewWindow">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>New Window</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_50">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Security:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-          <property name="openExternalLinks">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QCheckBox" name="sslCheck">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Use SSL Socket</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QLabel" name="label_52">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Support:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-          <property name="openExternalLinks">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1" colspan="2">
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <property name="spacing">
-           <number>8</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="label_55">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="toolTip">
-             <string>https://bitcointalk.org/index.php?topic=201062.0</string>
-            </property>
-            <property name="text">
-             <string>&lt;a href=&quot;https://bitcointalk.org/index.php?topic=201062.0&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;BitcoinTalk&lt;/span&gt;&lt;/a&gt;</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="openExternalLinks">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_53">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="toolTip">
-             <string>https://sourceforge.net/projects/bitcointrader</string>
-            </property>
-            <property name="text">
-             <string>&lt;a href=&quot;https://sourceforge.net/projects/bitcointrader/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;SourceForge&lt;/span&gt;&lt;/a&gt;</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="openExternalLinks">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_54">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="toolTip">
-             <string>https://github.com/JulyIGHOR/QtBitcoinTrader</string>
-            </property>
-            <property name="text">
-             <string>&lt;a href=&quot;https://github.com/JulyIGHOR/QtBitcoinTrader&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="openExternalLinks">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="1" column="0" colspan="3">
+   <item row="1" column="0" colspan="5">
     <layout class="QGridLayout" name="gridLayout_5">
      <item row="0" column="0" rowspan="2">
       <widget class="QGroupBox" name="groupOrders">
@@ -1791,6 +1379,9 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="accessibleName">
+        <string>TR00018</string>
        </property>
        <property name="title">
         <string>Your Open Orders</string>
@@ -1810,10 +1401,19 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <pointsize>20</pointsize>
            </font>
+          </property>
+          <property name="accessibleName">
+           <string>TR00057</string>
           </property>
           <property name="styleSheet">
            <string notr="true">border: 1px solid gray; background: white; color: gray</string>
@@ -1940,6 +1540,9 @@
                   <height>0</height>
                  </size>
                 </property>
+                <property name="accessibleName">
+                 <string>TR00021</string>
+                </property>
                 <property name="text">
                  <string>Cancel Selected</string>
                 </property>
@@ -1959,6 +1562,9 @@
                   <height>0</height>
                  </size>
                 </property>
+                <property name="accessibleName">
+                 <string>TR00020</string>
+                </property>
                 <property name="text">
                  <string>Cancel All</string>
                 </property>
@@ -1977,6 +1583,9 @@
                   <width>60</width>
                   <height>0</height>
                  </size>
+                </property>
+                <property name="accessibleName">
+                 <string>TR00019</string>
                 </property>
                 <property name="text">
                  <string>Select None</string>
@@ -2006,6 +1615,15 @@
          <height>0</height>
         </size>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="accessibleName">
+        <string>TR00022</string>
+       </property>
        <property name="title">
         <string>Orders Log</string>
        </property>
@@ -2024,8 +1642,30 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="accessibleName">
+           <string>TR00023</string>
+          </property>
           <property name="text">
            <string>Last Buy Price:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="labelOrdersLastSellPrice">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00024</string>
+          </property>
+          <property name="text">
+           <string>Last Sell Price:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2092,22 +1732,6 @@
           </property>
           <property name="maximum">
            <double>999999999.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QLabel" name="labelOrdersLastSellPrice">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Last Sell Price:</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -2208,7 +1832,7 @@
      <item row="1" column="1">
       <widget class="QGroupBox" name="groupboxRules">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -2219,126 +1843,14 @@
          <height>10</height>
         </size>
        </property>
+       <property name="accessibleName">
+        <string>TR00025</string>
+       </property>
        <property name="title">
         <string>Rules for creating Orders</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_21">
-        <property name="margin">
-         <number>10</number>
-        </property>
-        <property name="spacing">
-         <number>10</number>
-        </property>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="ruleSelectNone">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Select None</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="QPushButton" name="ruleRemoveAll">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Remove All</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QPushButton" name="ruleAddButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Add Rule</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="3">
-         <widget class="QPushButton" name="ruleRemove">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Remove Selected</string>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="0" colspan="4">
-         <widget class="QLabel" name="rulesNoMessage">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>60</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border: 1px solid gray; background: white; color: gray</string>
-          </property>
-          <property name="text">
-           <string>No Rules</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0" colspan="4">
          <widget class="QTableWidget" name="rulesTable">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -2359,7 +1871,7 @@
            <bool>true</bool>
           </property>
           <property name="selectionMode">
-           <enum>QAbstractItemView::SingleSelection</enum>
+           <enum>QAbstractItemView::ExtendedSelection</enum>
           </property>
           <property name="selectionBehavior">
            <enum>QAbstractItemView::SelectRows</enum>
@@ -2400,556 +1912,206 @@
           </column>
          </widget>
         </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="ruleAddButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00027</string>
+          </property>
+          <property name="text">
+           <string>Add Rule</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="ruleEditButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_EDIT</string>
+          </property>
+          <property name="text">
+           <string>Edit Rule</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="ruleRemoveAll">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_REMOVE_ALL</string>
+          </property>
+          <property name="text">
+           <string>Remove All</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="ruleRemove">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_REMOVE_SELECTED</string>
+          </property>
+          <property name="text">
+           <string>Remove Selected</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="4">
+         <widget class="QLabel" name="rulesNoMessage">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+           </font>
+          </property>
+          <property name="accessibleName">
+           <string>RULE_NOITEMS</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid gray; background: white; color: gray</string>
+          </property>
+          <property name="text">
+           <string>No Rules</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="4">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QToolButton" name="ruleBeep">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="QtResource.qrc">
+              <normaloff>:/Resources/Mute.png</normaloff>:/Resources/Mute.png</iconset>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="ruleSequencialMode">
+            <property name="accessibleName">
+             <string>SEQUENTIAL_MODE</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QRadioButton:disabled:checked {color: black;}</string>
+            </property>
+            <property name="text">
+             <string>Sequential Mode</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="ruleConcurrentMode">
+            <property name="accessibleName">
+             <string>CONCURRENT_MODE</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QRadioButton:disabled:checked {color: black;}</string>
+            </property>
+            <property name="text">
+             <string>Concurrent Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="ruleUp">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="arrowType">
+             <enum>Qt::UpArrow</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="ruleDown">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="arrowType">
+             <enum>Qt::DownArrow</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
        </layout>
       </widget>
      </item>
     </layout>
    </item>
-   <item row="2" column="1">
-    <widget class="QGroupBox" name="sellGroupBox">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>420</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox {color: green}</string>
-     </property>
-     <property name="title">
-      <string>SELL BITCOINS</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="5" column="1">
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <property name="spacing">
-         <number>2</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="usdLabel14">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: darkgreen</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="sellNextMaxBuyStep">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QDoubleSpinBox {border: 0px; background: transparent;}</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-          <property name="prefix">
-           <string/>
-          </property>
-          <property name="decimals">
-           <number>5</number>
-          </property>
-          <property name="minimum">
-           <double>0.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>999999999.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="3" column="2" rowspan="3" colspan="2">
-       <widget class="QWidget" name="sellButtonBack" native="true">
-        <layout class="QGridLayout" name="gridLayout_12">
-         <property name="margin">
-          <number>0</number>
-         </property>
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <item row="0" column="0">
-          <widget class="QPushButton" name="sellBitcoinsButton">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>60</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>16</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {color: blue} QPushButton::disabled {color: gray}</string>
-           </property>
-           <property name="text">
-            <string>SELL</string>
-           </property>
-           <property name="shortcut">
-            <string>Ctrl+S</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <layout class="QHBoxLayout" name="horizontalLayout_9">
-        <property name="spacing">
-         <number>2</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="usdLabel13">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: darkgreen</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="sellNextMaxBuyPrice">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QDoubleSpinBox {border: 0px; background: transparent;}</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-          <property name="buttonSymbols">
-           <enum>QAbstractSpinBox::NoButtons</enum>
-          </property>
-          <property name="prefix">
-           <string/>
-          </property>
-          <property name="decimals">
-           <number>5</number>
-          </property>
-          <property name="minimum">
-           <double>0.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>999999999.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="1" column="2" colspan="2">
-       <widget class="QPushButton" name="sellPricePerCoinAsMarketPrice">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>60</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>As Market Price</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <layout class="QHBoxLayout" name="horizontalLayout_10">
-        <property name="spacing">
-         <number>2</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="usdLabel11">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: darkgreen</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="sellPricePerCoin">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="prefix">
-           <string/>
-          </property>
-          <property name="decimals">
-           <number>5</number>
-          </property>
-          <property name="minimum">
-           <double>0.010000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>999999999.000000000000000</double>
-          </property>
-          <property name="singleStep">
-           <double>0.010000000000000</double>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="2" column="1" rowspan="2">
-       <layout class="QHBoxLayout" name="horizontalLayout_12">
-        <property name="spacing">
-         <number>2</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="usdLabel12">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: darkgreen</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="sellAmountToReceive">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="prefix">
-           <string/>
-          </property>
-          <property name="decimals">
-           <number>5</number>
-          </property>
-          <property name="minimum">
-           <double>0.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>999999999.000000000000000</double>
-          </property>
-          <property name="singleStep">
-           <double>0.010000000000000</double>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="0" column="2">
-       <widget class="QPushButton" name="sellTotalBtcAllIn">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>60</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>All In</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="label_28">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Zero profit Step:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <layout class="QHBoxLayout" name="horizontalLayout_11">
-        <property name="spacing">
-         <number>2</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="btcLabel8">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: #996515</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="sellTotalBtc">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="prefix">
-           <string/>
-          </property>
-          <property name="decimals">
-           <number>8</number>
-          </property>
-          <property name="minimum">
-           <double>0.000000000000000</double>
-          </property>
-          <property name="maximum">
-           <double>999999999.000000000000000</double>
-          </property>
-          <property name="singleStep">
-           <double>0.100000000000000</double>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Price per coin:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QPushButton" name="sellTotalBtcHalfIn">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>60</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Half In</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string>Amount to receive:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_7">
-        <property name="text">
-         <string>Total to SELL:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="label_6">
-        <property name="text">
-         <string>Zero profit Price:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="2" column="0">
+   <item row="2" column="0" rowspan="2">
     <widget class="QGroupBox" name="buyGroupbox">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
@@ -2969,6 +2131,9 @@
        <bold>false</bold>
       </font>
      </property>
+     <property name="accessibleName">
+      <string>BUY_BITCOINS</string>
+     </property>
      <property name="styleSheet">
       <string notr="true">QGroupBox {color: red}</string>
      </property>
@@ -2978,6 +2143,9 @@
      <layout class="QGridLayout" name="gridLayout_6">
       <item row="0" column="0">
        <widget class="QLabel" name="label_16">
+        <property name="accessibleName">
+         <string>TR00030</string>
+        </property>
         <property name="text">
          <string>Total to spend:</string>
         </property>
@@ -3070,6 +2238,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00035</string>
+        </property>
         <property name="text">
          <string>All In</string>
         </property>
@@ -3095,6 +2266,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00036</string>
+        </property>
         <property name="text">
          <string>Half In</string>
         </property>
@@ -3102,6 +2276,9 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_13">
+        <property name="accessibleName">
+         <string>TR00031</string>
+        </property>
         <property name="text">
          <string> Price per coin:</string>
         </property>
@@ -3170,6 +2347,9 @@
           <property name="singleStep">
            <double>0.010000000000000</double>
           </property>
+          <property name="value">
+           <double>100.000000000000000</double>
+          </property>
          </widget>
         </item>
        </layout>
@@ -3194,6 +2374,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="accessibleName">
+         <string>TR00037</string>
+        </property>
         <property name="text">
          <string>As Market Price</string>
         </property>
@@ -3206,6 +2389,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>TR00032</string>
         </property>
         <property name="text">
          <string>Total BTC to BUY:</string>
@@ -3389,6 +2575,9 @@
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_10">
+        <property name="accessibleName">
+         <string>TR00033</string>
+        </property>
         <property name="text">
          <string>Zero profit Price:</string>
         </property>
@@ -3507,6 +2696,9 @@
              <pointsize>16</pointsize>
             </font>
            </property>
+           <property name="accessibleName">
+            <string>BUY_BITCOINS</string>
+           </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {color: red} QPushButton::disabled {color: gray}</string>
            </property>
@@ -3528,6 +2720,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>TR00034</string>
         </property>
         <property name="text">
          <string>Zero profit Step:</string>
@@ -3613,6 +2808,1228 @@
      </layout>
     </widget>
    </item>
+   <item row="2" column="1">
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="accessibleName">
+      <string>TR00038</string>
+     </property>
+     <property name="title">
+      <string>Buy Than Sell Profit</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_16">
+      <property name="horizontalSpacing">
+       <number>2</number>
+      </property>
+      <item row="1" column="0" colspan="2">
+       <widget class="QPushButton" name="buyTotalBtcAllIn_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="accessibleName">
+         <string>TR00039</string>
+        </property>
+        <property name="text">
+         <string>Apply</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="usdLabel72">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: darkgreen</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QDoubleSpinBox" name="profitLossSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::UpDownArrows</enum>
+        </property>
+        <property name="prefix">
+         <string/>
+        </property>
+        <property name="decimals">
+         <number>5</number>
+        </property>
+        <property name="minimum">
+         <double>-999999999.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>999999999.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QToolButton" name="zeroBuyThanSellProfit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="2" rowspan="2">
+    <widget class="QGroupBox" name="sellGroupBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>420</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="accessibleName">
+      <string>SELL_BITCOINS</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {color: green}</string>
+     </property>
+     <property name="title">
+      <string>SELL BITCOINS</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="5" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="usdLabel14">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: darkgreen</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="sellNextMaxBuyStep">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QDoubleSpinBox {border: 0px; background: transparent;}</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>5</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999999.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="4" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="usdLabel13">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: darkgreen</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="sellNextMaxBuyPrice">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QDoubleSpinBox {border: 0px; background: transparent;}</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>5</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999999.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="2" colspan="2">
+       <widget class="QPushButton" name="sellPricePerCoinAsMarketPrice">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="accessibleName">
+         <string>TR00037</string>
+        </property>
+        <property name="text">
+         <string>As Market Price</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="usdLabel11">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: darkgreen</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="sellPricePerCoin">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>5</number>
+          </property>
+          <property name="minimum">
+           <double>0.010000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.010000000000000</double>
+          </property>
+          <property name="value">
+           <double>200.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="1" rowspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="usdLabel12">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: darkgreen</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="sellAmountToReceive">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>5</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.010000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="sellTotalBtcAllIn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="accessibleName">
+         <string>TR00035</string>
+        </property>
+        <property name="text">
+         <string>All In</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_28">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string>TR00046</string>
+        </property>
+        <property name="text">
+         <string>Zero profit Step:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="btcLabel8">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #996515</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="sellTotalBtc">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>8</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.100000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="accessibleName">
+         <string>TR00043</string>
+        </property>
+        <property name="text">
+         <string>Price per coin:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="sellTotalBtcHalfIn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="accessibleName">
+         <string>TR00036</string>
+        </property>
+        <property name="text">
+         <string>Half In</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="accessibleName">
+         <string>TR00044</string>
+        </property>
+        <property name="text">
+         <string>Amount to receive:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="accessibleName">
+         <string>TR00042</string>
+        </property>
+        <property name="text">
+         <string>Total to SELL:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="accessibleName">
+         <string>TR00045</string>
+        </property>
+        <property name="text">
+         <string>Zero profit Price:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2" rowspan="2" colspan="2">
+       <widget class="QWidget" name="sellButtonBack" native="true">
+        <layout class="QGridLayout" name="gridLayout_12">
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="sellBitcoinsButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="accessibleName">
+            <string>SELL_BITCOINS</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {color: blue} QPushButton::disabled {color: gray}</string>
+           </property>
+           <property name="text">
+            <string>SELL</string>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+S</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="3" rowspan="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>11</width>
+       <height>167</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="4" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="sellBuyGroupBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="accessibleName">
+        <string>TR00041</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="title">
+        <string>General</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="verticalSpacing">
+         <number>6</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_51">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00047</string>
+          </property>
+          <property name="text">
+           <string>Language</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="openExternalLinks">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" rowspan="2">
+         <widget class="QPushButton" name="buttonNewWindow">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00051</string>
+          </property>
+          <property name="text">
+           <string>New Window</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="langComboBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_52">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00052</string>
+          </property>
+          <property name="text">
+           <string>Support:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="openExternalLinks">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_50">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00049</string>
+          </property>
+          <property name="text">
+           <string>Security:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="openExternalLinks">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="sslCheck">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string>TR00050</string>
+          </property>
+          <property name="text">
+           <string>Use SSL Socket</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_55">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>https://bitcointalk.org/index.php?topic=201062.0</string>
+            </property>
+            <property name="text">
+             <string>&lt;a href=&quot;https://bitcointalk.org/index.php?topic=201062.0&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;BitcoinTalk&lt;/span&gt;&lt;/a&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_53">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>https://sourceforge.net/projects/bitcointrader</string>
+            </property>
+            <property name="text">
+             <string>&lt;a href=&quot;https://sourceforge.net/projects/bitcointrader/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;SourceForge&lt;/span&gt;&lt;/a&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_54">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>https://github.com/JulyIGHOR/QtBitcoinTrader</string>
+            </property>
+            <property name="text">
+             <string>&lt;a href=&quot;https://github.com/JulyIGHOR/QtBitcoinTrader&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="aboutTranslationButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00048</string>
+          </property>
+          <property name="text">
+           <string>Translation</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>480</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="accessibleName">
+        <string>TR00053</string>
+       </property>
+       <property name="title">
+        <string>Donate</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <property name="margin">
+         <number>9</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="btcLabel11">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #996515</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="bitcoinAddress">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="copyDonateButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="accessibleName">
+           <string>TR00054</string>
+          </property>
+          <property name="text">
+           <string>Copy</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="1">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="accessibleName">
+      <string>TR00040</string>
+     </property>
+     <property name="title">
+      <string>Sell Than Buy Profit</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_19">
+      <property name="horizontalSpacing">
+       <number>2</number>
+      </property>
+      <item row="1" column="0" colspan="2">
+       <widget class="QPushButton" name="buyTotalBtcAllIn_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="accessibleName">
+         <string>TR00039</string>
+        </property>
+        <property name="text">
+         <string>Apply</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="btcLabel8_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #996515</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QToolButton" name="zeroBuyThanSellProfit_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QDoubleSpinBox" name="sellThanBuySpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="prefix">
+         <string/>
+        </property>
+        <property name="decimals">
+         <number>8</number>
+        </property>
+        <property name="minimum">
+         <double>-999999999.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>999999999.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
@@ -3646,8 +4063,8 @@
    <slot>ordersCancelAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>359</x>
-     <y>364</y>
+     <x>373</x>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -3662,8 +4079,8 @@
    <slot>buyBtcToBuyChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>220</x>
-     <y>620</y>
+     <x>241</x>
+     <y>711</y>
     </hint>
     <hint type="destinationlabel">
      <x>3</x>
@@ -3678,8 +4095,8 @@
    <slot>buyBtcToBuyAllIn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>561</y>
+     <x>323</x>
+     <y>655</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3694,8 +4111,8 @@
    <slot>buyBtcToBuyHalfIn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>366</x>
-     <y>561</y>
+     <x>404</x>
+     <y>655</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3710,8 +4127,8 @@
    <slot>buyPricePerCoinChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>221</x>
-     <y>591</y>
+     <x>241</x>
+     <y>682</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3726,8 +4143,8 @@
    <slot>buyPricePerCoinAsMarketPrice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>366</x>
-     <y>590</y>
+     <x>404</x>
+     <y>684</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3742,8 +4159,8 @@
    <slot>buyTotalToSpendInUsdChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>221</x>
-     <y>562</y>
+     <x>241</x>
+     <y>653</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3758,8 +4175,8 @@
    <slot>buyBitcoinsButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>366</x>
-     <y>647</y>
+     <x>404</x>
+     <y>764</y>
     </hint>
     <hint type="destinationlabel">
      <x>1</x>
@@ -3774,7 +4191,7 @@
    <slot>lastSoftLagChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1077</x>
+     <x>1354</x>
      <y>86</y>
     </hint>
     <hint type="destinationlabel">
@@ -3822,8 +4239,8 @@
    <slot>ordersCancelSelected()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>530</x>
-     <y>364</y>
+     <x>551</x>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -3854,7 +4271,7 @@
    <slot>mtgoxLagChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1042</x>
+     <x>1308</x>
      <y>58</y>
     </hint>
     <hint type="destinationlabel">
@@ -3870,8 +4287,8 @@
    <slot>sellTotalBtcToSellAllIn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>669</x>
-     <y>582</y>
+     <x>903</x>
+     <y>655</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -3886,8 +4303,8 @@
    <slot>sellBitcoinButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>735</x>
-     <y>691</y>
+     <x>984</x>
+     <y>764</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -3902,8 +4319,8 @@
    <slot>sellPricePerCoinAsMarketPrice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>735</x>
-     <y>611</y>
+     <x>984</x>
+     <y>684</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -3918,8 +4335,8 @@
    <slot>sellTotalBtcToSellChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>593</x>
-     <y>562</y>
+     <x>821</x>
+     <y>653</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -3934,8 +4351,8 @@
    <slot>sellAmountToReceiveChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>594</x>
-     <y>620</y>
+     <x>821</x>
+     <y>711</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -3950,8 +4367,8 @@
    <slot>sellPricePerCoinInUsdChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>594</x>
-     <y>591</y>
+     <x>821</x>
+     <y>682</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -3966,8 +4383,8 @@
    <slot>sellTotalBtcToSellHalfIn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>735</x>
-     <y>582</y>
+     <x>984</x>
+     <y>655</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4014,8 +4431,8 @@
    <slot>ruleAddButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>814</x>
-     <y>518</y>
+     <x>813</x>
+     <y>580</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4030,8 +4447,8 @@
    <slot>ruleRemoveAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>944</x>
-     <y>518</y>
+     <x>1188</x>
+     <y>590</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4046,28 +4463,12 @@
    <slot>ruleRemove()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1075</x>
-     <y>518</y>
+     <x>1353</x>
+     <y>590</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
      <y>238</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ruleSelectNone</sender>
-   <signal>clicked()</signal>
-   <receiver>rulesTable</receiver>
-   <slot>clearSelection()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>683</x>
-     <y>518</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1075</x>
-     <y>440</y>
     </hint>
    </hints>
   </connection>
@@ -4078,8 +4479,8 @@
    <slot>copyDonateButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1073</x>
-     <y>692</y>
+     <x>1353</x>
+     <y>766</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4126,7 +4527,7 @@
    <slot>marketHighChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>691</x>
+     <x>961</x>
      <y>57</y>
     </hint>
     <hint type="destinationlabel">
@@ -4142,8 +4543,8 @@
    <slot>marketLowChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>691</x>
-     <y>84</y>
+     <x>961</x>
+     <y>85</y>
     </hint>
     <hint type="destinationlabel">
      <x>728</x>
@@ -4206,8 +4607,8 @@
    <slot>ordersLastSellPriceChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1076</x>
-     <y>160</y>
+     <x>1353</x>
+     <y>147</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4222,8 +4623,8 @@
    <slot>ordersLastBuyPriceChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>816</x>
-     <y>160</y>
+     <x>1021</x>
+     <y>147</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4238,8 +4639,8 @@
    <slot>marketLastChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>876</x>
-     <y>51</y>
+     <x>1150</x>
+     <y>57</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4254,8 +4655,8 @@
    <slot>marketBuyChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>568</x>
-     <y>48</y>
+     <x>824</x>
+     <y>57</y>
     </hint>
     <hint type="destinationlabel">
      <x>852</x>
@@ -4270,8 +4671,8 @@
    <slot>marketSellChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>588</x>
-     <y>91</y>
+     <x>824</x>
+     <y>85</y>
     </hint>
     <hint type="destinationlabel">
      <x>907</x>
@@ -4286,8 +4687,8 @@
    <slot>aboutTranslationButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1070</x>
-     <y>583</y>
+     <x>1353</x>
+     <y>654</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4318,8 +4719,8 @@
    <slot>buttonNewWindow()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1070</x>
-     <y>612</y>
+     <x>1353</x>
+     <y>683</y>
     </hint>
     <hint type="destinationlabel">
      <x>1096</x>
@@ -4334,8 +4735,8 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>444</x>
-     <y>64</y>
+     <x>486</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>473</x>
@@ -4350,8 +4751,8 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>444</x>
-     <y>90</y>
+     <x>486</x>
+     <y>84</y>
     </hint>
     <hint type="destinationlabel">
      <x>413</x>
@@ -4366,8 +4767,8 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>739</x>
-     <y>64</y>
+     <x>988</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>768</x>
@@ -4382,8 +4783,8 @@
    <slot>saveSoundToggles()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>739</x>
-     <y>92</y>
+     <x>988</x>
+     <y>86</y>
     </hint>
     <hint type="destinationlabel">
      <x>851</x>
@@ -4395,15 +4796,175 @@
    <sender>profitLossSpinBox</sender>
    <signal>valueChanged(double)</signal>
    <receiver>gsgTraderClass</receiver>
-   <slot>profitLossChanged(double)</slot>
+   <slot>profitBuyThanSellChanged(double)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>800</x>
-     <y>684</y>
+     <x>563</x>
+     <y>650</y>
     </hint>
     <hint type="destinationlabel">
      <x>798</x>
-     <y>754</y>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buyTotalBtcAllIn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>profitBuyThanSell()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>679</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>585</x>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buyTotalBtcAllIn_3</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>profitSellThanBuy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>767</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sellThanBuySpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>profitSellThanBuyChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>563</x>
+     <y>738</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>506</x>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zeroBuyThanSellProfit</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>zeroBuyThanSellProfit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>563</x>
+     <y>679</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zeroBuyThanSellProfit_2</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>zeroSellThanBuyProfit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>563</x>
+     <y>767</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>486</x>
+     <y>710</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ruleEditButton</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>ruleEditButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1023</x>
+     <y>590</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1138</x>
+     <y>502</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ruleUp</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>ruleUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1323</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1197</x>
+     <y>544</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ruleDown</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>ruleDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1352</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1307</x>
+     <y>569</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ruleBeep</sender>
+   <signal>clicked()</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>saveSoundToggles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>723</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1249</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>langComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>gsgTraderClass</receiver>
+   <slot>languageComboBoxChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1261</x>
+     <y>646</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1403</x>
+     <y>616</y>
     </hint>
    </hints>
   </connection>
@@ -4465,6 +5026,15 @@
   <slot>aboutTranslationButton()</slot>
   <slot>checkValidRulesButtons()</slot>
   <slot>buttonNewWindow()</slot>
-  <slot>profitLossChanged(double)</slot>
+  <slot>profitSellThanBuyChanged(double)</slot>
+  <slot>profitSellThanBuy()</slot>
+  <slot>profitBuyThanSell()</slot>
+  <slot>profitBuyThanSellChanged(double)</slot>
+  <slot>zeroBuyThanSellProfit()</slot>
+  <slot>zeroSellThanBuyProfit()</slot>
+  <slot>ruleEditButton()</slot>
+  <slot>ruleUp()</slot>
+  <slot>ruleDown()</slot>
+  <slot>languageComboBoxChanged(int)</slot>
  </slots>
 </ui>

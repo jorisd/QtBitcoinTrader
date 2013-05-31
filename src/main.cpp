@@ -1,6 +1,11 @@
-//Created by July IGHOR
-//http://trader.uax.co
-//Bitcoin Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// Copyright (C) 2013 July IGHOR.
+// I want to create Bitcoin Trader application that can be configured for any rule and strategy.
+// If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// For any questions please use contact form at http://trader.uax.co
+// Or send e-mail directly to julyighor@gmail.com
+//
+// You may use, distribute and copy the Qt Bitcion Trader under the terms of
+// GNU General Public License version 3
 
 #include <QDir>
 #include <QPlastiqueStyle>
@@ -34,14 +39,16 @@ double *appVerReal_;
 QByteArray *appVerStr_;
 bool *validKeySign_;
 bool *useSSL_;
-QFontMetrics *aFontMetrics_;
+JulyTranslator *julyTranslator;
 
 int main(int argc, char *argv[])
 {
 	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
 	QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
+
+	julyTranslator=new JulyTranslator;
 	appDataDir_=new QByteArray();
-	appVerStr_=new QByteArray("0.96");
+	appVerStr_=new QByteArray("0.98");
 	appVerReal_=new double(appVerStr.toDouble());
 	currencyStr_=new QByteArray();
 	currencySign_=new QByteArray();
@@ -63,13 +70,11 @@ int main(int argc, char *argv[])
 #endif
 
 	QApplication a(argc,argv);
-	aFontMetrics_=new QFontMetrics(a.font());
+	a.setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 	QFile *lockFile=0;
 
 #ifndef Q_OS_WIN
-//#ifndef Q_OS_MAC
 	a.setStyle(new QPlastiqueStyle);
-//#endif
 #endif
 	{
 	nonce_=new quint64(0);
@@ -109,6 +114,20 @@ int main(int argc, char *argv[])
 			currencyNamesMap->insert(currencyName.at(0).toAscii(),currencyName.at(1).toAscii());
 			currencySignMap->insert(currencyName.at(0).toAscii(),currencyName.at(2).toAscii());
 		}
+		if(!QFile::exists(appDataDir+"Language"))QDir().mkpath(appDataDir+"Language");
+		QSettings settings(appDataDir+"/Settings.set",QSettings::IniFormat);
+		QString langFile=settings.value("LanguageFile","").toString();
+		if(langFile.isEmpty())
+		{
+			QString localeStr=QLocale().name();
+			if(localeStr=="ru_RU")langFile=":/Resources/Language/Russian.lng";
+			else 
+			if(localeStr=="uk_UA")langFile=":/Resources/Language/Ukrainian.lng";
+			else 
+				langFile=":/Resources/Language/English.lng";
+		}
+		if(!langFile.isEmpty()&&QFile::exists(langFile))
+			julyTranslator->loadFromFile(langFile);
 	}
 
 	bool tryDecrypt=true;
@@ -151,19 +170,27 @@ int main(int argc, char *argv[])
 
 			QString lockFilePath(QDesktopServices::storageLocation(QDesktopServices::TempLocation)+"/QtBitcoinTrader_lock_"+QString(QCryptographicHash::hash(iniFileName.toAscii(),QCryptographicHash::Sha1).toHex()));
 
-            QFile testFile(lockFilePath);
-            if(testFile.open(QIODevice::ReadOnly))
-            {
-                if(!testFile.readAll().isEmpty())QFile::remove(lockFilePath);
-            }
-            else QFile::remove(lockFilePath);
+			QFile::remove(lockFilePath);
 
-			if(QFile::exists(lockFilePath))
+			bool profileLocked=QFile::exists(lockFilePath);
+			if(profileLocked)
 			{
-				QMessageBox::warning(0,"Qt Bitcoin Trader","This profile is already used by another instance.\nAPI does not allow to run two instances with same key sign pair.\nPlease create new profile if you want to use two instances.");
-				tryPassword.clear();
+				QMessageBox msgBox(0);
+				msgBox.setIcon(QMessageBox::Question);
+				msgBox.setWindowTitle("Qt Bitcoin Trader");
+				msgBox.setText(julyTr("RULE_CONFIRM_REMOVE",julyTr("THIS_PROFILE_ALREADY_USED","This profile is already used by another instance.<br>API does not allow to run two instances with same key sign pair.<br>Please create new profile if you want to use two instances.")));
+#ifdef Q_OS_WIN
+				msgBox.setStandardButtons(QMessageBox::Ok);
+				msgBox.setDefaultButton(QMessageBox::Ok);
+				msgBox.exec();
+#else
+				msgBox.setStandardButtons(QMessageBox::Ignore|QMessageBox::Ok);
+				msgBox.setDefaultButton(QMessageBox::Ok);
+				if(msgBox.exec()==QMessageBox::Ignore)profileLocked=false;
+#endif
+				if(profileLocked)tryPassword.clear();
 			}
-			else
+			if(!profileLocked)
 			{
 				QSettings settings(iniFileName,QSettings::IniFormat);
 				QStringList decryptedList=QString(JulyAES256::decrypt(QByteArray::fromBase64(settings.value("CryptedData","").toString().toAscii()),tryPassword.toAscii())).split("\r\n");

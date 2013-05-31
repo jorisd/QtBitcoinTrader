@@ -8,11 +8,19 @@ This software helps you to open and cancel Mt.Gox orders vary fast.
  If you want to help me, than donate to 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
 
  Next ToDo:
- 1) Add localization support
- 2) Add realtime charts
- 3) Make rules more advanced
+ 1) Add realtime charts
+ 2) Make rules more advanced
 
 Change Log
+
+v0.98
+- Added translation engine. Now you can translate application to your native language
+- Fixed ui bugs
+- Enhanced rules. Now there is two modes, Sequential and Concurrent
+
+v0.97
+- Added profit calculation to main window
+- Optimized ui
 
 v0.96
 - Fixed minor bugs
@@ -21,7 +29,6 @@ v0.96
 
 v0.95
 - Fixed fee calculator bug
-- Fixed sounds bug in Linux
 - Now supports resolution down to 1024x700
 - Enhanced rules feature
 - Minor bugs fixed

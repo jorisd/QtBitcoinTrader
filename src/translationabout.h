@@ -7,25 +7,24 @@
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
 // GNU General Public License version 3
 
-#include "tempwindow.h"
-#include "main.h"
+#ifndef TRANSLATIONABOUT_H
+#define TRANSLATIONABOUT_H
 
-TempWindow::TempWindow(QWidget *)
-	: QDialog()
+#include <QDialog>
+#include "ui_translationabout.h"
+
+class TranslationAbout : public QDialog
 {
-	ui.setupUi(this);
-	setWindowFlags(Qt::WindowCloseButtonHint);
-	setWindowModality(Qt::ApplicationModal);
-	setFixedSize(size());
-	setAttribute(Qt::WA_DeleteOnClose,true);
-}
+	Q_OBJECT
 
-TempWindow::~TempWindow()
-{
+public:
+	TranslationAbout(QWidget *parent = 0);
+	~TranslationAbout();
 
-}
+private:
+	Ui::TranslationAbout ui;
+private slots:
+	void createTranslation();
+};
 
-void TempWindow::copyAddress()
-{
-	mainWindow.copyDonateButton();
-}
+#endif // TRANSLATIONABOUT_H

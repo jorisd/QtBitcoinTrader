@@ -7,26 +7,29 @@
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
 // GNU General Public License version 3
 
-#ifndef LOGTHREAD_H
-#define LOGTHREAD_H
+#ifndef TRANSLATIONDIALOG_H
+#define TRANSLATIONDIALOG_H
 
-#include <QThread>
+#include <QDialog>
+#include "ui_translationdialog.h"
 
-class LogThread : public QThread
+class TranslationDialog : public QDialog
 {
 	Q_OBJECT
 
 public:
-	void writeLog(QByteArray);
-	LogThread();
-	~LogThread();
+	TranslationDialog(QWidget *parent = 0);
+	~TranslationDialog();
 
 private:
-	void run();
-signals:
-	void writeLogSignal(QByteArray);
+	QGridLayout *gridLayout;
+	void fillLayoutByMap(QMap<QString,QString>*, QString subName);
+	QList<QLineEdit*> lineEdits;
+	QWidget fonWidget;
+	Ui::TranslationDialog ui;
 public slots:
-	void writeLogSlot(QByteArray);
+	void applyButton();
+	void saveAsButton();
 };
 
-#endif // LOGTHREAD_H
+#endif // TRANSLATIONDIALOG_H

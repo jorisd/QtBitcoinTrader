@@ -1,6 +1,11 @@
-//Created by July IGHOR
-//http://trader.uax.co
-//Bitcoin Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// Copyright (C) 2013 July IGHOR.
+// I want to create Bitcoin Trader application that can be configured for any rule and strategy.
+// If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// For any questions please use contact form at http://trader.uax.co
+// Or send e-mail directly to julyighor@gmail.com
+//
+// You may use, distribute and copy the Qt Bitcion Trader under the terms of
+// GNU General Public License version 3
 
 #include "feecalculator.h"
 #include "main.h"
@@ -20,7 +25,6 @@ FeeCalculator::FeeCalculator()
 	setWindowFlags(Qt::WindowCloseButtonHint);
 	foreach(QDoubleSpinBox* spinBox, findChildren<QDoubleSpinBox*>())new JulySpinBoxFix(spinBox);
 	mainWindow.fixAllChildButtonsAndLabels(this);
-	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 #ifdef Q_OS_WIN
 	if(QtWin::isCompositionEnabled())QtWin::extendFrameIntoClientArea(this);
 #endif
@@ -53,6 +57,14 @@ FeeCalculator::FeeCalculator()
 	ui.usdLabel7->setPixmap(curPix);
 
 	setMaximumSize(minimumSizeHint().width()+200,minimumSizeHint().height());
+
+#ifdef GENERATE_LANGUAGE_FILE
+	julyTranslator->loadMapFromUi(this);
+	julyTranslator->saveToFile("LanguageDefault.lng");
+#endif
+	julyTranslator->translateUi(this);
+
+	connect(julyTranslator,SIGNAL(languageChanged()),this,SLOT(languageChanged()));
 }
 
 FeeCalculator::~FeeCalculator()
@@ -60,9 +72,14 @@ FeeCalculator::~FeeCalculator()
 
 }
 
+void FeeCalculator::languageChanged()
+{
+	julyTranslator->translateUi(this);
+}
+
 void FeeCalculator::setZeroProfitPrice()
 {
-	ui.sellPrice->setValue((ui.buyPrice->value()+ui.buyPrice->value()*ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
+	ui.sellPrice->setValue(ui.buyPrice->value()*(1+ui.feeValue->value()/100)*(1+ui.feeValue->value()/100)+0.01);
 }
 
 void FeeCalculator::profitLossChanged(double val)

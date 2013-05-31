@@ -1,3 +1,12 @@
+// Copyright (C) 2013 July IGHOR.
+// I want to create Bitcoin Trader application that can be configured for any rule and strategy.
+// If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
+// For any questions please use contact form at http://trader.uax.co
+// Or send e-mail directly to julyighor@gmail.com
+//
+// You may use, distribute and copy the Qt Bitcion Trader under the terms of
+// GNU General Public License version 3
+
 #include "passworddialog.h"
 #include "main.h"
 
@@ -22,12 +31,18 @@ PasswordDialog::PasswordDialog(QWidget *parent)
 	if(QtWin::isCompositionEnabled())
 		QtWin::extendFrameIntoClientArea(this);
 #endif
-	setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
 
 	QStringList settingsList=QDir(appDataDir,"*.ini").entryList();
 	for(int n=0;n<settingsList.count();n++)
 		ui.profileComboBox->addItem(QSettings(appDataDir+settingsList.at(n),QSettings::IniFormat).value("ProfileName",QFileInfo(settingsList.at(n)).completeBaseName()).toString(),settingsList.at(n));
-	if(ui.profileComboBox->count()==0)ui.profileComboBox->addItem("Default Profile");
+	if(ui.profileComboBox->count()==0)ui.profileComboBox->addItem(julyTr("DEFAULT_PROFILE_NAME","Default Profile"));
+
+#ifdef GENERATE_LANGUAGE_FILE
+	julyTranslator->loadMapFromUi(this);
+	julyTranslator->saveToFile("LanguageDefault.lng");
+#endif
+
+	julyTranslator->translateUi(this);
 }
 
 PasswordDialog::~PasswordDialog()
@@ -58,7 +73,7 @@ void PasswordDialog::resetDataSlot()
 	QMessageBox msgBox(this);
 	msgBox.setIcon(QMessageBox::Question);
 	msgBox.setWindowTitle(windowTitle());
-	msgBox.setText("Are you sure to delete \""+ui.profileComboBox->currentText()+"\" profile?");
+	msgBox.setText(julyTr("CONFIRM_DELETE_PROFILE","Are you sure to delete \"%1\" profile?").arg(ui.profileComboBox->currentText()));
 	msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
 	msgBox.setDefaultButton(QMessageBox::Yes);
 	if(msgBox.exec()!=QMessageBox::Yes)return;
