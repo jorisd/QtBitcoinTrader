@@ -175,3 +175,4 @@ String_SELL=продажа
 String_LANGUAGE_NAME=Русский
 String_LANGUAGE_AUTHOR=July IGHOR<br>julyighor@gmail.com
 String_LANGUAGE_LOCALE=uk_UA
+String_UPDATE_RELEASED_TEXT=Вышло обновление %1. Можете скачать обновление по этой ссылке %2

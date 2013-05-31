@@ -58,3 +58,4 @@ private slots:
 };
 
 #endif // AUDIOPLAYER_H
+

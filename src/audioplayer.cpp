@@ -158,3 +158,4 @@ qint64 Generator::bytesAvailable() const
 {
 	return m_buffer.size() + QIODevice::bytesAvailable();
 }
+

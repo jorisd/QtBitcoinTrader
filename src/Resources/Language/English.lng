@@ -172,3 +172,4 @@ String_RULES_T_STATE=State
 String_SAME_AS_RULE=Same as Rule Price
 String_SAVE_TRANSLATION=Save translation file
 String_SELL=sell
+String_UPDATE_RELEASED_TEXT=Update released %1. Please download from %2
