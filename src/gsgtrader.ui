@@ -1801,15 +1801,15 @@
         <item row="1" column="0" colspan="6">
          <widget class="QTextEdit" name="logTextEdit">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
            <size>
-            <width>60</width>
-            <height>0</height>
+            <width>0</width>
+            <height>60</height>
            </size>
           </property>
           <property name="undoRedoEnabled">
@@ -1860,8 +1860,8 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>60</width>
-            <height>0</height>
+            <width>0</width>
+            <height>60</height>
            </size>
           </property>
           <property name="editTriggers">
@@ -2011,7 +2011,7 @@
           <property name="minimumSize">
            <size>
             <width>60</width>
-            <height>100</height>
+            <height>60</height>
            </size>
           </property>
           <property name="font">

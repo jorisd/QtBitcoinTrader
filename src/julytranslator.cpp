@@ -22,7 +22,7 @@ int JulyTranslator::loadFromFile(const QString &fileName)
 	QFile loadFile(fileName);
 	if(loadFile.open(QIODevice::ReadOnly))
 	{
-		fillMapsFromList(QString::fromUtf8(loadFile.readAll()).split("\r\n"));
+		fillMapsFromList(QString::fromUtf8(loadFile.readAll()).replace("\\n","<br>").split("\r\n"));
 		loadFile.close();
 		lastLangFile=fileName;
 		emit languageChanged();

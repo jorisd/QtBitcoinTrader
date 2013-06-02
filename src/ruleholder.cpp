@@ -68,13 +68,13 @@ QString RuleHolder::getDescriptionString()
 		}
 		if(ruleMoreLessEqual==0)
 		{
-			if(rulePriceType==1)return julyTr("IF_MARKET_LAST_LESS","If market last price equal to %1").arg(priceStr);
-			if(rulePriceType==2)return julyTr("IF_MARKET_BUY_LESS","If market buy price equal to %1").arg(priceStr);
-			if(rulePriceType==3)return julyTr("IF_MARKET_SELL_LESS","If market sell price equal to %1").arg(priceStr);
-			if(rulePriceType==4)return julyTr("IF_MARKET_HIGH_LESS","If market high price equal to %1").arg(priceStr);
-			if(rulePriceType==5)return julyTr("IF_MARKET_LOW_LESS","If market low price equal to %1").arg(priceStr);
-			if(rulePriceType==6)return julyTr("IF_MARKET_LAST_BUY_LESS","If orders last buy price equal to %1").arg(priceStr);
-			if(rulePriceType==7)return julyTr("IF_MARKET_LAST_SELL_LESS","If orders last sell price equal to %1").arg(priceStr);
+			if(rulePriceType==1)return julyTr("IF_MARKET_LAST_EQUAL","If market last price equal to %1").arg(priceStr);
+			if(rulePriceType==2)return julyTr("IF_MARKET_BUY_EQUAL","If market buy price equal to %1").arg(priceStr);
+			if(rulePriceType==3)return julyTr("IF_MARKET_SELL_EQUAL","If market sell price equal to %1").arg(priceStr);
+			if(rulePriceType==4)return julyTr("IF_MARKET_HIGH_EQUAL","If market high price equal to %1").arg(priceStr);
+			if(rulePriceType==5)return julyTr("IF_MARKET_LOW_EQUAL","If market low price equal to %1").arg(priceStr);
+			if(rulePriceType==6)return julyTr("IF_MARKET_LAST_BUY_EQUAL","If orders last buy price equal to %1").arg(priceStr);
+			if(rulePriceType==7)return julyTr("IF_MARKET_LAST_SELL_EQUAL","If orders last sell price equal to %1").arg(priceStr);
 		}
 		return priceStr;
 }
@@ -91,8 +91,8 @@ QString RuleHolder::getBitcoinsString()
 {
 	if(ruleBtc==-1.0)return julyTr("SELL_ALL_BTC","Sell All my BTC");
 	if(ruleBtc==-2.0)return julyTr("SELL_HALF_BTC","Sell Half my BTC");
-	if(ruleBtc==-3.0)return julyTr("SELL_ALL_FUNDS","Spend All my Funds");
-	if(ruleBtc==-4.0)return julyTr("SELL_HALF_FUNDS","Spend Half my Funds");
+	if(ruleBtc==-3.0)return julyTr("SPEND_ALL_FUNDS","Spend All my Funds");
+	if(ruleBtc==-4.0)return julyTr("SPEND_HALF_FUNDS","Spend Half my Funds");
 	if(ruleBtc==-5.0)return julyTr("NOT_USED","Not Used");
 
 	return bitcoinSign+" "+QString::number(ruleBtc,'f',8);

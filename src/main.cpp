@@ -178,7 +178,7 @@ int main(int argc, char *argv[])
 				QMessageBox msgBox(0);
 				msgBox.setIcon(QMessageBox::Question);
 				msgBox.setWindowTitle("Qt Bitcoin Trader");
-				msgBox.setText(julyTr("RULE_CONFIRM_REMOVE",julyTr("THIS_PROFILE_ALREADY_USED","This profile is already used by another instance.<br>API does not allow to run two instances with same key sign pair.<br>Please create new profile if you want to use two instances.")));
+				msgBox.setText(julyTr("THIS_PROFILE_ALREADY_USED","This profile is already used by another instance.<br>API does not allow to run two instances with same key sign pair.<br>Please create new profile if you want to use two instances."));
 #ifdef Q_OS_WIN
 				msgBox.setStandardButtons(QMessageBox::Ok);
 				msgBox.setDefaultButton(QMessageBox::Ok);
