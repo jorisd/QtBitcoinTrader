@@ -709,7 +709,7 @@ void QtBitcoinTrader::dataReceivedAuth(QByteArray data)
 							}
 						}
 					}
-					if(!logText.isEmpty())logText=" at <font color=\"darkgreen\">"+logText+"</font>";
+					if(!logText.isEmpty())logText=" "+julyTr("AT"," at %1").arg(QString("<font color=\"darkgreen\">"+logText+"</font>")).toAscii();
 					curLog=getMidData("\"Info\":\"","\",\"",&curLog);
 	
 				newLog.append("<font color=\"gray\">"+QDateTime::fromTime_t(logDate.toUInt()).toString(dateTimeFormat)+"</font>  <font color=\"#996515\">"+bitcoinSign+logValue+"</font>"+logText+" "+logType+"<br>");

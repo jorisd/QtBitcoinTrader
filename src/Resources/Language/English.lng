@@ -134,6 +134,7 @@ Label_TR00118=If you want to translate Qt Bitcoin Trader to your native language
 Label_TR00119=1) Press &quot;Create translation button&quot;<br><br>2) Make your changes for all fields. You can use Html formatting<br><br>3) Press &quot;Apply&quot; button and varify that all text fits good<br><br>4) Press &quot;Save As&quot; button and save language file<br><br>5) Send language file to <a href="mailto:julyighor@gmail.com"> julyighor@gmail.com</a>
 Label_TR00120=And after verification your translation will be added<br>to next version of Qt Bitcoin Trader.
 SpinBox_TR00113= sec
+String_AT=at %1
 String_BUY=buy
 String_CONFIRM_DELETE_PROFILE=Are you sure to delete "%1" profile?
 String_CONFIRM_EXIT=Are you sure to close Application?<br>Active rules works only while application is running.<br>Note: rules table will be cleared.
@@ -141,27 +142,27 @@ String_COPY_DONATE_MESSAGE=Bitcoin address copied to clipboard.<br>Thank you for
 String_DATETIME_FORMAT=yyyy-MM-dd HH:mm:ss
 String_DEFAULT_PROFILE_NAME=Default Profile
 String_EDIT_RULE=Edit rule
-String_IF_MARKET_BUY_EQUAL=If market buy price equal to %1
-String_IF_MARKET_BUY_LESS=If market buy price goes less than %1
-String_IF_MARKET_BUY_MORE=If market buy price goes more than %1
-String_IF_MARKET_HIGH_EQUAL=If market high price equal to %1
-String_IF_MARKET_HIGH_LESS=If market high price goes less than %1
-String_IF_MARKET_HIGH_MORE=If market high price goes more than %1
-String_IF_MARKET_LAST_BUY_EQUAL=If orders last buy price equal to %1
-String_IF_MARKET_LAST_BUY_LESS=If orders last buy price goes less than %1
-String_IF_MARKET_LAST_BUY_MORE=If orders last buy price goes more than %1
-String_IF_MARKET_LAST_EQUAL=If market last price equal to %1
-String_IF_MARKET_LAST_LESS=If market last price goes less than %1
-String_IF_MARKET_LAST_MORE=If market last price goes more than %1
-String_IF_MARKET_LAST_SELL_EQUAL=If orders last sell price equal to %1
-String_IF_MARKET_LAST_SELL_LESS=If orders last sell price goes less than %1
-String_IF_MARKET_LAST_SELL_MORE=If orders last sell price goes more than %1
-String_IF_MARKET_LOW_EQUAL=If market low price equal to %1
-String_IF_MARKET_LOW_LESS=If market low price goes less than %1
-String_IF_MARKET_LOW_MORE=If market low price goes more than %1
-String_IF_MARKET_SELL_EQUAL=If market sell price equal to %1
-String_IF_MARKET_SELL_LESS=If market sell price goes less than %1
-String_IF_MARKET_SELL_MORE=If market sell price goes more than %1
+String_IF_MARKET_BUY_EQUAL=If market buy price=%1
+String_IF_MARKET_BUY_LESS=If market buy price<%1
+String_IF_MARKET_BUY_MORE=If market buy price>%1
+String_IF_MARKET_HIGH_EQUAL=If market high price=%1
+String_IF_MARKET_HIGH_LESS=If market high price<%1
+String_IF_MARKET_HIGH_MORE=If market high price>%1
+String_IF_MARKET_LAST_BUY_EQUAL=If orders last buy price=%1
+String_IF_MARKET_LAST_BUY_LESS=If orders last buy price<%1
+String_IF_MARKET_LAST_BUY_MORE=If orders last buy price>%1
+String_IF_MARKET_LAST_EQUAL=If market last price=%1
+String_IF_MARKET_LAST_LESS=If market last price<%1
+String_IF_MARKET_LAST_MORE=If market last price>%1
+String_IF_MARKET_LAST_SELL_EQUAL=If orders last sell price=%1
+String_IF_MARKET_LAST_SELL_LESS=If orders last sell price<%1
+String_IF_MARKET_LAST_SELL_MORE=If orders last sell price>%1
+String_IF_MARKET_LOW_EQUAL=If market low price=%1
+String_IF_MARKET_LOW_LESS=If market low price<%1
+String_IF_MARKET_LOW_MORE=If market low price>%1
+String_IF_MARKET_SELL_EQUAL=If market sell price=%1
+String_IF_MARKET_SELL_LESS=If market sell price<%1
+String_IF_MARKET_SELL_MORE=If market sell price>%1
 String_INVALID_RULE_CHECK=This rule will be executed instantly.<br>This means that you make a mistake.<br>Please check values you entered.
 String_LANGUAGE_AUTHOR=July IGHOR<br>julyighor@gmail.com
 String_LANGUAGE_LOCALE=en_us
@@ -197,6 +198,13 @@ String_RULES_T_DESCR=Description
 String_RULES_T_PRICE=Price
 String_RULES_T_STATE=State
 String_SAME_AS_RULE=Same as Rule Price
+String_AS_MARKET_LAST=Market Last
+String_AS_MARKET_BUY=Market Buy
+String_AS_MARKET_SELL=Market Sell
+String_AS_MARKET_HIGH=Market High
+String_AS_MARKET_LOW=Market Low
+String_AS_ORDERS_LAST_BUY=Orders Last Buy
+String_AS_ORDERS_LAST_SELL=Orders Last Sell
 String_SAVE_TRANSLATION=Save translation file
 String_SELL=sell
 String_SELL_ALL_BTC=Sell All my BTC
