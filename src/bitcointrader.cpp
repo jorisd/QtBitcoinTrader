@@ -1,7 +1,7 @@
 ﻿// Copyright (C) 2013 July IGHOR.
 // I want to create Bitcoin Trader application that can be configured for any rule and strategy.
 // If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
-// For any questions please use contact form at http://trader.uax.co
+// For any questions please use contact form at https://sourceforge.net/projects/bitcointrader/
 // Or send e-mail directly to julyighor@gmail.com
 //
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
@@ -186,13 +186,19 @@ QtBitcoinTrader::QtBitcoinTrader()
 	secondTimer->setSingleShot(true);
 	secondTimer->start(1000);
 
+	QSettings settingsMain(appDataDir+"/Settings.set",QSettings::IniFormat);
+	checkForUpdates=settingsMain.value("CheckForUpdates",true).toBool();
+
+	if(checkForUpdates)
+	{
 	httpUpdate=new QHttp("trader.uax.co",80,this);
 	connect(httpUpdate,SIGNAL(done(bool)),this,SLOT(httpUpdateDone(bool)));
+
 	updateCheckTimer=new QTimer(this);
 	connect(updateCheckTimer,SIGNAL(timeout()),this,SLOT(checkUpdate()));
 	checkUpdate();
 	updateCheckTimer->start(3600000);
-
+	}
 
 	int screenCount=QApplication::desktop()->screenCount();
 	QPoint cursorPos=QCursor::pos();
@@ -249,6 +255,7 @@ void QtBitcoinTrader::reloadLanguageList(QString preferedLangFile)
 	constructorFinished=true;
 	languageChanged();
 }
+
 void QtBitcoinTrader::languageComboBoxChanged(int val)
 {
 	if(val<0||!constructorFinished)return;

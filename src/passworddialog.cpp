@@ -1,7 +1,7 @@
 // Copyright (C) 2013 July IGHOR.
 // I want to create Bitcoin Trader application that can be configured for any rule and strategy.
 // If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
-// For any questions please use contact form at http://trader.uax.co
+// For any questions please use contact form at https://sourceforge.net/projects/bitcointrader/
 // Or send e-mail directly to julyighor@gmail.com
 //
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
@@ -36,7 +36,8 @@ PasswordDialog::PasswordDialog(QWidget *parent)
 	for(int n=0;n<settingsList.count();n++)
 		ui.profileComboBox->addItem(QSettings(appDataDir+settingsList.at(n),QSettings::IniFormat).value("ProfileName",QFileInfo(settingsList.at(n)).completeBaseName()).toString(),settingsList.at(n));
 	if(ui.profileComboBox->count()==0)ui.profileComboBox->addItem(julyTr("DEFAULT_PROFILE_NAME","Default Profile"));
-
+	QSettings settings(appDataDir+"/Settings.set",QSettings::IniFormat);
+	ui.updateCheckBox->setChecked(settings.value("CheckForUpdates",true).toBool());
 #ifdef GENERATE_LANGUAGE_FILE
 	julyTranslator->loadMapFromUi(this);
 	julyTranslator->saveToFile("LanguageDefault.lng");
@@ -47,7 +48,8 @@ PasswordDialog::PasswordDialog(QWidget *parent)
 
 PasswordDialog::~PasswordDialog()
 {
-
+	QSettings settings(appDataDir+"/Settings.set",QSettings::IniFormat);
+	settings.setValue("CheckForUpdates",ui.updateCheckBox->isChecked());
 }
 
 QString PasswordDialog::getIniFilePath()
