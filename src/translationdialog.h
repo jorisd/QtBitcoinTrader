@@ -28,6 +28,7 @@ private:
 	QWidget fonWidget;
 	Ui::TranslationDialog ui;
 public slots:
+	void searchLang(QString);
 	void applyButton();
 	void saveAsButton();
 };

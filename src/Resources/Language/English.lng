@@ -68,6 +68,7 @@ GroupBox_TR00098=Create new Password
 GroupBox_TR00106=Data Password Protection
 GroupBox_TR00114=About Translation
 GroupBox_TR00117=Create translation
+GroupBox_LANG_FILTER=Filter
 Label_FEE_LABEL=Fee:
 Label_HOW_TO_TRANSLATE=Please fill all fields. Than press Apply button and verify that translation looks good. Save translation file and send it to <a href="mailto:julyighor@gmail.com">julyighor@gmail.com</a><br>After verification your translation will be added to next Qt Bitcoin Trader releases.
 Label_LOGIN_LABEL=Login:

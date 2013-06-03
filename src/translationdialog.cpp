@@ -113,3 +113,23 @@ void TranslationDialog::saveAsButton()
 	QFile::remove(fileName);
 	QFile::copy(julyTranslator->lastFile(),fileName);
 }
+
+void TranslationDialog::searchLang(QString filterText)
+{
+	if(filterText.isEmpty())
+	{
+		for(int n=0;n<lineEdits.count();n++)lineEdits[n]->setVisible(true);
+	}
+	else
+	{
+		QStringList langFilter=filterText.split(" ");
+		for(int n=0;n<lineEdits.count();n++)
+		{
+			QString curText=lineEdits[n]->text();
+			bool containsText=false;
+			for(int k=0;k<langFilter.count();k++)if(curText.contains(langFilter.at(k),Qt::CaseInsensitive))containsText=true;
+			lineEdits[n]->setVisible(containsText);
+		}
+	}
+	fonWidget.setFixedHeight(fonWidget.minimumSizeHint().height());
+}

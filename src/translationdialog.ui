@@ -23,11 +23,11 @@
       <string>Make your translation</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="1" colspan="2">
-       <widget class="QLineEdit" name="languageName"/>
-      </item>
       <item row="2" column="1" colspan="2">
        <widget class="QLineEdit" name="authorAbout"/>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QLineEdit" name="languageName"/>
       </item>
       <item row="3" column="0" colspan="3">
        <widget class="QScrollArea" name="scrollArea">
@@ -40,7 +40,7 @@
            <x>0</x>
            <y>0</y>
            <width>360</width>
-           <height>243</height>
+           <height>184</height>
           </rect>
          </property>
         </widget>
@@ -107,6 +107,28 @@ After verification your translation will be added to next Qt Bitcoin Traderrelea
         </property>
        </widget>
       </item>
+      <item row="4" column="0" colspan="3">
+       <widget class="QGroupBox" name="searchGroupBox">
+        <property name="accessibleName">
+         <string>LANG_FILTER</string>
+        </property>
+        <property name="title">
+         <string>Filter</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="searchLineEdit"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QToolButton" name="buttonClearSearch">
+           <property name="text">
+            <string>X</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -170,10 +192,43 @@ After verification your translation will be added to next Qt Bitcoin Traderrelea
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>buttonClearSearch</sender>
+   <signal>clicked()</signal>
+   <receiver>searchLineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>362</x>
+     <y>364</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>TranslationDialog</receiver>
+   <slot>searchLang(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>whatIsLocale()</slot>
   <slot>applyButton()</slot>
   <slot>saveAsButton()</slot>
+  <slot>searchLang(QString)</slot>
  </slots>
 </ui>

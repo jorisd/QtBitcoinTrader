@@ -68,8 +68,9 @@ GroupBox_TR00098=Создать новый Пароль
 GroupBox_TR00106=Введите пароль
 GroupBox_TR00114=Про перевод
 GroupBox_TR00117=Перевести программу
+GroupBox_LANG_FILTER=Поиск
 Label_FEE_LABEL=Налог:
-Label_HOW_TO_TRANSLATE=Заполните все поля. Затем нажмите кнопку Применить и проверьте что перевод выглядит хорошо. Тогда сохраните файл и отправьте по адресу: <a href="mailto:julyighor@gmail.com">julyighor@gmail.com</a> <br> После проверки ваш перевод=добавлен в следующии версии программы.
+Label_HOW_TO_TRANSLATE=Заполните все поля. Затем нажмите кнопку Применить и проверьте что перевод выглядит хорошо. Тогда сохраните файл и отправьте по адресу: <a href="mailto:julyighor@gmail.com">julyighor@gmail.com</a> <br> После проверки ваш перевод будет добавлен в следующии версии программы.
 Label_LOGIN_LABEL=Логин:
 Label_RULE_NOITEMS=Пусто
 Label_TR00004=Объем:
