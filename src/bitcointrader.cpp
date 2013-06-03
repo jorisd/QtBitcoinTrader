@@ -24,6 +24,8 @@
 #include <QSysInfo>
 #include <QProcess>
 #include <QDesktopWidget>
+#include <QDesktopServices>
+#include <QUrl>
 #include "translationabout.h"
 
 #ifdef Q_OS_WIN
@@ -1206,12 +1208,12 @@ void QtBitcoinTrader::updateLogTable()
 void QtBitcoinTrader::copyDonateButton()
 {
 	QApplication::clipboard()->setText(ui.bitcoinAddress->text());
+	QDesktopServices::openUrl(QUrl("bitcoin:"+ui.bitcoinAddress->text()));
 	QMessageBox::information(this,"Qt Bitcoin Trader",julyTr("COPY_DONATE_MESSAGE","Bitcoin address copied to clipboard.<br>Thank you for support!"));
 }
 
 void QtBitcoinTrader::postWorkAtTableItem(QTableWidgetItem *item)
 {
-	if(item==0){qDebug()<<"postWorkAtTableItem unexisting table item";return;}
 	item->setTextAlignment(Qt::AlignCenter);
 	item->setToolTip(item->text());
 }
