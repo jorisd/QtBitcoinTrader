@@ -1,0 +1,6 @@
+Win32Bin=http://master.dl.sourceforge.net/project/bitcointrader/Win32/QtBitcoinTrader.exe
+Win32Ver=0.98
+Win32Signature=ebhJtgQzeUZ51QbPIo8FFy1ogeKk2snzjzONQpxihvOo2JQ0QS7a5WySD3osoL7NoUUyfwWVFiku/fqiTYA0AyOxxNv2J7V2nKBgKQ0umxiKZcEuwQFRgIdwT01d3M1iQwUO1C69v7xcJ4zGLZ8n35T55XmeA/t63ZalHDKVem4=
+MacBin=http://master.dl.sourceforge.net/project/bitcointrader/MacOS/QtBitcoinTrader
+MacVer=0.98
+MacSignature=b8QRFPqVBfI8iJHrbbR6R6VDft6QfFoXZst+fVlazsWDCZMUklskJIWDQlDM7tdZSQ77zQk1/GLBTvtbbOJAY7i3oy4dM8RrCAU4S/qJu9DaRs8VT/qowwj5MrTG465VVbYI69o2nI5kvh46VwyxhdUW8QJwTywOjHX5fv28G+w=
