@@ -13,6 +13,12 @@ This software helps you to open and cancel Mt.Gox orders vary fast.
 
 Change Log
 
+v0.99
+- Fixed minor bugs
+-Added Spanish translation
+-Translation engine updated
+-Checking update engine rewrited. Secure autoinstall for Mac and Win feature added.
+
 v0.98
 - Added translation engine. Now you can translate application to your native language
 - Fixed ui bugs

@@ -1,7 +1,7 @@
 // Copyright (C) 2013 July IGHOR.
 // I want to create Bitcoin Trader application that can be configured for any rule and strategy.
 // If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
-// For any questions please use contact form at https://sourceforge.net/projects/bitcointrader/
+// For any questions please use contact form https://sourceforge.net/projects/bitcointrader/
 // Or send e-mail directly to julyighor@gmail.com
 //
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
@@ -44,6 +44,19 @@ PasswordDialog::PasswordDialog(QWidget *parent)
 #endif
 
 	julyTranslator->translateUi(this);
+
+
+	foreach(QPushButton* pushButtons, findChildren<QPushButton*>())
+		pushButtons->setMinimumWidth(qMin(pushButtons->maximumWidth(),QFontMetrics(pushButtons->font()).width(pushButtons->text())+10));
+
+	foreach(QCheckBox* checkBoxes, findChildren<QCheckBox*>())
+		checkBoxes->setMinimumWidth(qMin(checkBoxes->maximumWidth(),QFontMetrics(checkBoxes->font()).width(checkBoxes->text())+20));
+
+	foreach(QLabel* labels, findChildren<QLabel*>())
+		if(labels->text().length()&&labels->text().at(0)!='<')
+			labels->setMinimumWidth(qMin(labels->maximumWidth(),QFontMetrics(labels->font()).width(labels->text())));
+
+	//if(par->width()<par->minimumSizeHint().width())par->resize(par->minimumSizeHint().width(),par->height());
 }
 
 PasswordDialog::~PasswordDialog()

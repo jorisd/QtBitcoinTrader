@@ -1,7 +1,7 @@
 // Copyright (C) 2013 July IGHOR.
 // I want to create Bitcoin Trader application that can be configured for any rule and strategy.
 // If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
-// For any questions please use contact form at https://sourceforge.net/projects/bitcointrader/
+// For any questions please use contact form https://sourceforge.net/projects/bitcointrader/
 // Or send e-mail directly to julyighor@gmail.com
 //
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
@@ -12,8 +12,6 @@
 
 #include <QtGui/QDialog>
 #include "ui_gsgtrader.h"
-#include <QHttp>
-#include <QSslSocket>
 #include "socketthread.h"
 #include <QHttp>
 #include <QCloseEvent>
@@ -40,7 +38,6 @@ public:
 	
 	QByteArray getMidData(QString a, QString b,QByteArray *data);
 	QTimer *secondTimer;
-	QTimer *updateCheckTimer;
 	SocketThread *socketThreadAuth;
 	QtBitcoinTrader();
 	~QtBitcoinTrader();
@@ -78,7 +75,6 @@ private:
 	void closeEvent(QCloseEvent *event);
 	void reject(){};
 	QString clearData(QString data);
-	QHttp *httpUpdate;
 
 	QString appDir;
 	bool authErrorOnce;
@@ -146,7 +142,6 @@ public slots:
 	void setSslEnabled(bool);
 	void calcButtonClicked();
 	void checkUpdate();
-	void httpUpdateDone(bool);
 
 	void saveSoundToggles();
 	void ruleAddButton();

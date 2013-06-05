@@ -7,29 +7,35 @@
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
 // GNU General Public License version 3
 
-#ifndef PASSWORDDIALOG_H
-#define PASSWORDDIALOG_H
+#ifndef UPDATERDIALOG_H
+#define UPDATERDIALOG_H
 
 #include <QDialog>
-#include "ui_passworddialog.h"
+#include "ui_updaterdialog.h"
+#include <QHttp>
 
-class PasswordDialog : public QDialog
+class UpdaterDialog : public QDialog
 {
 	Q_OBJECT
 
 public:
-	QString getPassword();
-	bool resetData;
-	bool newProfile;
-	QString getIniFilePath();
-	PasswordDialog(QWidget *parent = 0);
-	~PasswordDialog();
+	UpdaterDialog(QWidget *parent = 0);
+	~UpdaterDialog();
+
+private:
+	void downloadError();
+	QString updateVersion;
+	QByteArray updateSignature;
+	QString updateChangeLog;
+	QString updateLink;
+	
+	int stateUpdate;
+	QHttp *httpGet;
+	Ui::UpdaterDialog ui;
 private slots:
-	void resetDataSlot();
-	void addNewProfile();
-	void checkToEnableButton(QString);
-private: 
-	Ui::PasswordDialog ui;
+	void dataReadProgress(int done,int total);
+	void buttonUpdate();
+	void httpDone(bool);
 };
 
-#endif // PASSWORDDIALOG_H
+#endif // UPDATERDIALOG_H

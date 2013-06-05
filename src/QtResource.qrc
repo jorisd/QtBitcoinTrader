@@ -25,10 +25,12 @@
     <file>Resources/SGD.png</file>
     <file>Resources/THB.png</file>
     <file>Resources/USD.png</file>
+    <file>Resources/Public.key</file>
     <file>Resources/QtBitcoinTrader.png</file>
     <file>Resources/Language/English.lng</file>
     <file>Resources/Language/Russian.lng</file>
     <file>Resources/Language/Ukrainian.lng</file>
+    <file>Resources/Language/Spanish.lng</file>
     <file>Resources/Language/LangList.ini</file>
   </qresource>
 </RCC>

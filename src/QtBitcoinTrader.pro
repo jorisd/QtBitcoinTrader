@@ -11,10 +11,10 @@ INCLUDEPATH += .
 HEADERS += addrulewindow.h \
            audioplayer.h \
            bitcointrader.h \
-           bitcointraderupdater.h \
            feecalculator.h \
            julyaes256.h \
            julylightchanges.h \
+           julyrsa.h \
            julyspinboxfix.h \
            julytranslator.h \
            logthread.h \
@@ -23,24 +23,25 @@ HEADERS += addrulewindow.h \
            passworddialog.h \
            ruleholder.h \
            socketthread.h \
-           tempwindow.h \
            translationabout.h \
-           translationdialog.h
+           translationdialog.h \
+           translationline.h \
+           updaterdialog.h
 FORMS += addrulewindow.ui \
          feecalculator.ui \
          gsgtrader.ui \
          newpassworddialog.ui \
          passworddialog.ui \
-         tempwindow.ui \
          translationabout.ui \
-         translationdialog.ui
+         translationdialog.ui \
+         updaterdialog.ui
 SOURCES += addrulewindow.cpp \
            audioplayer.cpp \
            bitcointrader.cpp \
-           bitcointraderupdater.cpp \
            feecalculator.cpp \
            julyaes256.cpp \
            julylightchanges.cpp \
+           julyrsa.cpp \
            julyspinboxfix.cpp \
            julytranslator.cpp \
            logthread.cpp \
@@ -49,9 +50,10 @@ SOURCES += addrulewindow.cpp \
            passworddialog.cpp \
            ruleholder.cpp \
            socketthread.cpp \
-           tempwindow.cpp \
            translationabout.cpp \
-           translationdialog.cpp
+           translationdialog.cpp \
+           translationline.cpp \
+           updaterdialog.cpp
 RESOURCES += QtResource.qrc
 QT += network multimedia
 LIBS += -lcrypto

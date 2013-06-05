@@ -14,7 +14,7 @@
    <string>Qt Bitcoin Trader</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0" colspan="2">
+   <item row="0" column="0" colspan="3">
     <widget class="QGroupBox" name="makeYourTranslationButton">
      <property name="accessibleName">
       <string>MAKE_YOUR_TRANSLATION</string>
@@ -23,9 +23,6 @@
       <string>Make your translation</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="1" colspan="2">
-       <widget class="QLineEdit" name="authorAbout"/>
-      </item>
       <item row="1" column="1" colspan="2">
        <widget class="QLineEdit" name="languageName"/>
       </item>
@@ -40,7 +37,7 @@
            <x>0</x>
            <y>0</y>
            <width>360</width>
-           <height>184</height>
+           <height>191</height>
           </rect>
          </property>
         </widget>
@@ -129,6 +126,9 @@ After verification your translation will be added to next Qt Bitcoin Traderrelea
         </layout>
        </widget>
       </item>
+      <item row="2" column="1" colspan="2">
+       <layout class="QGridLayout" name="authorLayout"/>
+      </item>
      </layout>
     </widget>
    </item>
@@ -142,7 +142,7 @@ After verification your translation will be added to next Qt Bitcoin Traderrelea
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="1" column="2">
     <widget class="QPushButton" name="buttonSaveAs">
      <property name="whatsThis">
       <string/>
@@ -155,9 +155,27 @@ After verification your translation will be added to next Qt Bitcoin Traderrelea
      </property>
     </widget>
    </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="deleteTranslationButton">
+     <property name="accessibleName">
+      <string>DELETE_TRANSLATION</string>
+     </property>
+     <property name="text">
+      <string>Delete Translation</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>languageName</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>searchLineEdit</tabstop>
+  <tabstop>buttonClearSearch</tabstop>
+  <tabstop>buttonApply</tabstop>
+  <tabstop>buttonSaveAs</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -167,8 +185,8 @@ After verification your translation will be added to next Qt Bitcoin Traderrelea
    <slot>applyButton()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>143</x>
-     <y>419</y>
+     <x>131</x>
+     <y>425</y>
     </hint>
     <hint type="destinationlabel">
      <x>152</x>
@@ -224,11 +242,28 @@ After verification your translation will be added to next Qt Bitcoin Traderrelea
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>deleteTranslationButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TranslationDialog</receiver>
+   <slot>deleteTranslationButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>whatIsLocale()</slot>
   <slot>applyButton()</slot>
   <slot>saveAsButton()</slot>
   <slot>searchLang(QString)</slot>
+  <slot>deleteTranslationButton()</slot>
  </slots>
 </ui>

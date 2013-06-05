@@ -1,7 +1,7 @@
 ﻿// Copyright (C) 2013 July IGHOR.
 // I want to create Bitcoin Trader application that can be configured for any rule and strategy.
 // If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
-// For any questions please use contact form at https://sourceforge.net/projects/bitcointrader/
+// For any questions please use contact form https://sourceforge.net/projects/bitcointrader/
 // Or send e-mail directly to julyighor@gmail.com
 //
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
@@ -9,7 +9,6 @@
 
 #include <QDir>
 #include <QMessageBox>
-#include <QHttp>
 #include <QSettings>
 #include "main.h"
 #include "julylightchanges.h"
@@ -18,7 +17,6 @@
 #include <QFileInfo>
 #include <QClipboard>
 #include <QProcess>
-#include "tempwindow.h"
 #include "feecalculator.h"
 #include <QFile>
 #include <QSysInfo>
@@ -189,17 +187,6 @@ QtBitcoinTrader::QtBitcoinTrader()
 	QSettings settingsMain(appDataDir+"/Settings.set",QSettings::IniFormat);
 	checkForUpdates=settingsMain.value("CheckForUpdates",true).toBool();
 
-	if(checkForUpdates)
-	{
-	httpUpdate=new QHttp("trader.uax.co",80,this);
-	connect(httpUpdate,SIGNAL(done(bool)),this,SLOT(httpUpdateDone(bool)));
-
-	updateCheckTimer=new QTimer(this);
-	connect(updateCheckTimer,SIGNAL(timeout()),this,SLOT(checkUpdate()));
-	checkUpdate();
-	updateCheckTimer->start(3600000);
-	}
-
 	int screenCount=QApplication::desktop()->screenCount();
 	QPoint cursorPos=QCursor::pos();
 	QRect currentDesktopRect(0,0,1024,720);
@@ -221,6 +208,15 @@ QtBitcoinTrader::QtBitcoinTrader()
 	checkValidRulesButtons();
 	currencyChanged(ui.currencyComboBox->currentIndex());
 	connect(julyTranslator,SIGNAL(languageChanged()),this,SLOT(languageChanged()));
+
+	if(checkForUpdates)checkUpdate();
+}
+
+void QtBitcoinTrader::checkUpdate()
+{
+	QProcess proc;
+	proc.startDetached(QApplication::applicationFilePath()+" /checkupdate");
+	proc.waitForStarted();
 }
 
 QtBitcoinTrader::~QtBitcoinTrader()
@@ -230,6 +226,7 @@ QtBitcoinTrader::~QtBitcoinTrader()
 void QtBitcoinTrader::reloadLanguageList(QString preferedLangFile)
 {
 	if(preferedLangFile.isEmpty())preferedLangFile=julyTranslator->lastFile();
+	if(!QFile::exists(preferedLangFile))preferedLangFile.clear();
 	constructorFinished=false;
 	ui.langComboBox->clear();
 
@@ -241,6 +238,17 @@ void QtBitcoinTrader::reloadLanguageList(QString preferedLangFile)
 	for(int n=0;n<resourceLanguages.count();n++)if(!resourceLanguages.at(n).isEmpty())langList<<":/Resources/Language/"+resourceLanguages.at(n);
 	langList.sort();
 	int selectedLangId=-1;
+	if(preferedLangFile.isEmpty())
+	{
+		QString localeStr=QLocale().name();
+		if(localeStr.startsWith("ru"))preferedLangFile=":/Resources/Language/Russian.lng";
+		else 
+			if(localeStr.startsWith("uk"))preferedLangFile=":/Resources/Language/Ukrainian.lng";
+			else 
+				if(localeStr.startsWith("es"))preferedLangFile=":/Resources/Language/Spanish.lng";
+				else 
+					preferedLangFile=":/Resources/Language/English.lng";
+	}
 	for(int n=0;n<langList.count();n++)
 	{
 		JulyTranslator translateName;
@@ -410,50 +418,11 @@ void QtBitcoinTrader::setSslEnabled(bool on)
 	settings.setValue("OpenSSL",on);
 }
 
-void QtBitcoinTrader::checkUpdate()
-{
-	httpUpdate->get("/API.php?Thread=Call&Object=General&Method=CheckUpdate");
-}
-
 QString QtBitcoinTrader::clearData(QString data)
 {
 	while(data.count()&&(data.at(0)=='{'||data.at(0)=='['||data.at(0)=='\"'))data.remove(0,1);
 	while(data.count()&&(data.at(data.length()-1)=='}'||data.at(data.length()-1)==']'||data.at(data.length()-1)=='\"'))data.remove(data.length()-1,1);
 	return data;
-}
-
-void QtBitcoinTrader::httpUpdateDone(bool on)
-{
-	if(on)return;
-	QString allData=httpUpdate->readAll();
-	if(allData.length()<3)return;
-	QString errorString;
-	QString versionString;
-	QStringList allDataList=allData.split(",");
-	for(int n=0;n<allDataList.count();n++)
-	{
-		QStringList pairList=allDataList.at(n).split(":");
-		if(pairList.count()==2)
-		{
-			QString name=clearData(pairList.first());
-			QString value=clearData(pairList.last());
-			if(name=="Error")errorString=value;
-			if(name=="Version")versionString=value;
-		}
-	}
-	if(errorString.isEmpty())
-	{
-		if(versionString.toDouble()>appVerReal)
-		{
-#ifdef Q_OS_WIN
-			QProcess proc;
-			proc.startDetached(QApplication::applicationFilePath()+" /checkupdate");
-			proc.waitForStarted();
-#else
-			QMessageBox::information(this,"Qt Bitcoin Trader",julyTr("UPDATE_RELEASED_TEXT","Update released %1. Please download from %2").arg(versionString).arg("https://sourceforge.net/projects/bitcointrader/"));
-#endif
-		}
-	}
 }
 
 void QtBitcoinTrader::saveSoundToggles()
@@ -470,7 +439,7 @@ void QtBitcoinTrader::saveSoundToggles()
 void QtBitcoinTrader::accountFeeChanged(double val)
 {
 	floatFee=val/100;
-	floatFeeDec=1.0-floatFee;
+	floatFeeDec=1.0-floatFee;                 
 	floatFeeInc=1.0+floatFee;
 }
 
@@ -530,7 +499,7 @@ void QtBitcoinTrader::dataReceivedAuth(QByteArray data)
 			if(!btcBalance.isEmpty())ui.accountBTC->setValue(btcBalance.toDouble());
 
 			QByteArray usdBalance=getMidData(currencyStr+"\":{\"Balance\":{\"value\":\"","",&data);
-			ui.accountUSD->setValue(usdBalance.toDouble());
+			if(!usdBalance.isEmpty())ui.accountUSD->setValue(usdBalance.toDouble());
 
 			QByteArray monthValue=getMidData("Monthly_Volume\":{\"value\":\"","\",",&data);
 			if(!monthValue.isEmpty())ui.accountVolume->setValue(monthValue.toDouble());

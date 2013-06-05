@@ -1,7 +1,7 @@
 // Copyright (C) 2013 July IGHOR.
 // I want to create Bitcoin Trader application that can be configured for any rule and strategy.
 // If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
-// For any questions please use contact form at https://sourceforge.net/projects/bitcointrader/
+// For any questions please use contact form https://sourceforge.net/projects/bitcointrader/
 // Or send e-mail directly to julyighor@gmail.com
 //
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
@@ -36,6 +36,7 @@ void JulyTranslator::fillMapsFromList(const QStringList &list)
 	for(int n=0;n<list.count();n++)
 	{
 		QString currentRow=list.at(n);
+		if(currentRow.isEmpty()||!currentRow.at(0).isLetter())continue;
 		if(fillMapsFromLine(&buttonMap,currentRow,"Button_"))
 			if(fillMapsFromLine(&labelMap,currentRow,"Label_"))
 				if(fillMapsFromLine(&checkBoxMap,currentRow,"CheckBox_"))

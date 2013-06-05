@@ -1,7 +1,7 @@
 // Copyright (C) 2013 July IGHOR.
 // I want to create Bitcoin Trader application that can be configured for any rule and strategy.
 // If you want to help me please Donate: 1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc
-// For any questions please use contact form at https://sourceforge.net/projects/bitcointrader/
+// For any questions please use contact form https://sourceforge.net/projects/bitcointrader/
 // Or send e-mail directly to julyighor@gmail.com
 //
 // You may use, distribute and copy the Qt Bitcion Trader under the terms of
@@ -13,12 +13,13 @@
 #include <QtGui/QApplication>
 #include <QFileInfo>
 #include <QSettings>
-#include "bitcointraderupdater.h"
+#include "updaterdialog.h"
 #include "passworddialog.h"
 #include "newpassworddialog.h"
 #include "julyaes256.h"
 #include <QTextCodec>
 #include <QDesktopServices>
+#include "translationdialog.h"
 #include <QMessageBox>
 
 QByteArray *appDataDir_;
@@ -48,7 +49,7 @@ int main(int argc, char *argv[])
 
 	julyTranslator=new JulyTranslator;
 	appDataDir_=new QByteArray();
-	appVerStr_=new QByteArray("0.98");
+	appVerStr_=new QByteArray("0.99");
 	appVerReal_=new double(appVerStr.toDouble());
 	currencyStr_=new QByteArray();
 	currencySign_=new QByteArray();
@@ -57,44 +58,75 @@ int main(int argc, char *argv[])
 	useSSL_=new bool(true);
 	currencySignMap=new QMap<QByteArray,QByteArray>;
 	currencyNamesMap=new QMap<QByteArray,QByteArray>;
-#ifdef Q_OS_WIN
-	if(argc>1)
-	{
-		QApplication a(argc,argv);
-		if(a.arguments().last()=="/checkupdate")
-		{
-			BitcoinTraderUpdater updater;
-			return a.exec();
-		}
-	}
-#endif
+	QString globalStyleSheet="QGroupBox {background: rgba(255,255,255,160); border: 1px solid gray;border-radius: 3px;margin-top: 7px;} QGroupBox:title {background: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.7, stop: 0 #fff, stop: 1 transparent); border-radius: 2px; padding: 1 4px; top: -7; left: 7px;} QLabel {color: black;} QDoubleSpinBox {background: white;} QTextEdit {background: white;} QCheckBox {color: black;} QLineEdit {color: black; background: white; border: 1px solid gray;}";
 
-	QApplication a(argc,argv);
-	a.setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
-	QFile *lockFile=0;
-
-#ifndef Q_OS_WIN
-	a.setStyle(new QPlastiqueStyle);
-#endif
-	{
-	nonce_=new quint64(0);
-	logEnabled_=new bool(false);
 
 #ifdef Q_OS_WIN
+	if(QFile::exists("./QtBitcoinTrader"))appDataDir="./QtBitcoinTrader";
+	else
+	{
 	appDataDir=QDesktopServices::storageLocation(QDesktopServices::DataLocation).toAscii()+"/QtBitcoinTrader/";
 	if(!QFile::exists(appDataDir))QDir().mkpath(appDataDir);
-	QString oldIni=QApplication::applicationDirPath()+"/"+QFileInfo(a.applicationFilePath()).completeBaseName()+".ini";
-
-	if(QFile::exists(oldIni))
-	{
-		QFile::copy(oldIni,appDataDir+QFileInfo(a.applicationFilePath()).completeBaseName()+".ini");
-		QFile::remove(oldIni);
 	}
 #else
 	appDataDir=QDesktopServices::storageLocation(QDesktopServices::HomeLocation).toAscii()+"/.config/QtBitcoinTrader/";
 	if(!QFile::exists(appDataDir))QDir().mkpath(appDataDir);
 #endif
-	a.setStyleSheet("QGroupBox {background: rgba(255,255,255,160); border: 1px solid gray;border-radius: 3px;margin-top: 7px;} QGroupBox:title {background: qradialgradient(cx: 0.5, cy: 0.5, fx: 0.5, fy: 0.5, radius: 0.7, stop: 0 #fff, stop: 1 transparent); border-radius: 2px; padding: 1 4px; top: -7; left: 7px;} QLabel {color: black;} QDoubleSpinBox {background: white;} QTextEdit {background: white;} QCheckBox {color: black;} QLineEdit {color: black; background: white; border: 1px solid gray;}");
+	
+	if(argc>1)
+	{
+		QApplication a(argc,argv);
+		if(a.arguments().last()=="/checkupdate")
+		{
+#ifndef Q_OS_WIN
+			a.setStyle(new QPlastiqueStyle);
+#endif
+			a.setStyleSheet(globalStyleSheet);
+
+			QSettings settings(appDataDir+"/Settings.set",QSettings::IniFormat);
+			QString langFile=settings.value("LanguageFile","").toString();
+			if(langFile.isEmpty())
+			{
+				QString localeStr=QLocale().name();
+				if(localeStr.startsWith("ru"))langFile=":/Resources/Language/Russian.lng";
+				else 
+					if(localeStr.startsWith("uk"))langFile=":/Resources/Language/Ukrainian.lng";
+					else 
+						if(localeStr.startsWith("es"))langFile=":/Resources/Language/Spanish.lng";
+						else 
+							langFile=":/Resources/Language/English.lng";
+			}
+			if(!langFile.isEmpty()&&QFile::exists(langFile))
+				julyTranslator->loadFromFile(langFile);
+
+			UpdaterDialog updater;
+			return a.exec();
+		}
+	}
+
+	QApplication a(argc,argv);
+#ifndef Q_OS_WIN
+	a.setStyle(new QPlastiqueStyle);
+#endif
+
+#ifdef  Q_OS_WIN
+	QFile::remove(a.applicationFilePath()+".upd");
+	QFile::remove(a.applicationFilePath()+".bkp");
+#endif
+
+#ifdef  Q_OS_MAC
+	QFile::remove(a.applicationFilePath()+".upd");
+	QFile::remove(a.applicationFilePath()+".bkp");
+#endif
+
+	a.setWindowIcon(QIcon(":/Resources/QtBitcoinTrader.png"));
+	QFile *lockFile=0;
+
+	{
+	nonce_=new quint64(0);
+	logEnabled_=new bool(false);
+
+	a.setStyleSheet(globalStyleSheet);
 
 	logFileName_=new QString("QtBitcoinTrader.log");
 	iniFileName_=new QString("QtBitcoinTrader.ini");
@@ -120,15 +152,20 @@ int main(int argc, char *argv[])
 		if(langFile.isEmpty())
 		{
 			QString localeStr=QLocale().name();
-			if(localeStr=="ru_RU")langFile=":/Resources/Language/Russian.lng";
+			if(localeStr.startsWith("ru"))langFile=":/Resources/Language/Russian.lng";
 			else 
-			if(localeStr=="uk_UA")langFile=":/Resources/Language/Ukrainian.lng";
+			if(localeStr.startsWith("uk"))langFile=":/Resources/Language/Ukrainian.lng";
 			else 
-				langFile=":/Resources/Language/English.lng";
+			if(localeStr.startsWith("es"))langFile=":/Resources/Language/Spanish.lng";
+			else 
+			langFile=":/Resources/Language/English.lng";
 		}
 		if(!langFile.isEmpty()&&QFile::exists(langFile))
 			julyTranslator->loadFromFile(langFile);
 	}
+
+	//(new TranslationDialog)->show();
+	//return a.exec();
 
 	bool tryDecrypt=true;
 	bool showNewPasswordDialog=false;
