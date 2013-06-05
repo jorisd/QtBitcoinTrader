@@ -34,7 +34,9 @@
 #define currencySign (*currencySign_)
 #define bitcoinSign (*bitcoinSign_)
 #define appDataDir (*appDataDir_)
+#define defaultLangFile (*defaultLangFile_)
 
+extern QString *defaultLangFile_;
 extern JulyTranslator *julyTranslator;
 extern QByteArray *appDataDir_;
 extern QByteArray *bitcoinSign_;

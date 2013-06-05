@@ -236,17 +236,7 @@ void QtBitcoinTrader::reloadLanguageList(QString preferedLangFile)
 	for(int n=0;n<resourceLanguages.count();n++)if(!resourceLanguages.at(n).isEmpty())langList<<":/Resources/Language/"+resourceLanguages.at(n);
 	langList.sort();
 	int selectedLangId=-1;
-	if(preferedLangFile.isEmpty())
-	{
-		QString localeStr=QLocale().name();
-		if(localeStr.startsWith("ru"))preferedLangFile=":/Resources/Language/Russian.lng";
-		else 
-			if(localeStr.startsWith("uk"))preferedLangFile=":/Resources/Language/Ukrainian.lng";
-			else 
-				if(localeStr.startsWith("es"))preferedLangFile=":/Resources/Language/Spanish.lng";
-				else 
-					preferedLangFile=":/Resources/Language/English.lng";
-	}
+	if(preferedLangFile.isEmpty()||!preferedLangFile.isEmpty()&&!QFile::exists(preferedLangFile))preferedLangFile=defaultLangFile;
 	for(int n=0;n<langList.count();n++)
 	{
 		JulyTranslator translateName;
