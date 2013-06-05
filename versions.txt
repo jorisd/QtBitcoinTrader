@@ -1,7 +1,7 @@
 Win32Bin=http://master.dl.sourceforge.net/project/bitcointrader/Win32/QtBitcoinTrader.exe
 Win32Ver=0.99
 Win32ChangeLog=- Added translation engine. Now you can translate application to your native language<br>- Fixed ui bugs<br>- Enhanced rules. Now there is two modes, Sequential and Concurrent
-Win32Signature=ebhJtgQzeUZ51QbPIo8FFy1ogeKk2snzjzONQpxihvOo2JQ0QS7a5WySD3osoL7NoUUyfwWVFiku/fqiTYA0AyOxxNv2J7V2nKBgKQ0umxiKZcEuwQFRgIdwT01d3M1iQwUO1C69v7xcJ4zGLZ8n35T55XmeA/t63ZalHDKVem4=
+Win32Signature=B/I60D01yb14LrMaUGcy19PoxbxpIzbRwUwflJ6urtLuj+9sVicykQgfkQABySU7dQcX7Ei84KX7nTXRMDYT8W1UtDpYvIOnfHlbffKZYZ/dgB3Cy52EmigQGMMrcdukvWwjA7/dxBujRnOQd5rxK/GYAZ6sfZQeeEYEsDw0zRo=
 MacBin=http://master.dl.sourceforge.net/project/bitcointrader/MacOS/QtBitcoinTrader
 MacVer=0.99
 MacSignature=b8QRFPqVBfI8iJHrbbR6R6VDft6QfFoXZst+fVlazsWDCZMUklskJIWDQlDM7tdZSQ77zQk1/GLBTvtbbOJAY7i3oy4dM8RrCAU4S/qJu9DaRs8VT/qowwj5MrTG465VVbYI69o2nI5kvh46VwyxhdUW8QJwTywOjHX5fv28G+w=
