@@ -62,8 +62,13 @@ int main(int argc, char *argv[])
 
 
 #ifdef Q_OS_WIN
-	if(QFile::exists("./QtBitcoinTrader"))appDataDir="./QtBitcoinTrader";
-	else
+	if(QFile::exists("./QtBitcoinTrader"))
+	{
+		appDataDir="./QtBitcoinTrader/";
+		QDir().mkpath(appDataDir+"Language");
+		if(!QFile::exists(appDataDir+"Language"))appDataDir.clear();
+	}
+	if(appDataDir.isEmpty())
 	{
 	appDataDir=QDesktopServices::storageLocation(QDesktopServices::DataLocation).toAscii()+"/QtBitcoinTrader/";
 	if(!QFile::exists(appDataDir))QDir().mkpath(appDataDir);

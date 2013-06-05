@@ -17,7 +17,7 @@ TranslationLine::TranslationLine(QWidget *parent)
 	setWordWrapMode(QTextOption::WrapAnywhere);
 	setTabChangesFocus(true);
 	setAcceptRichText(false);
-	
+    setMinimumWidth(100);
 	setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	connect(this,SIGNAL(textChanged()),this,SLOT(textChangedSlot()));

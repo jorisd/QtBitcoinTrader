@@ -79,9 +79,12 @@ TranslationDialog::TranslationDialog(QWidget *parent)
 			lastWidget=nextWidget;
 		}
 		setTabOrder(lastWidget,ui.searchLineEdit);
-	fixLayout();
+
+        resize(640,640);
+        fixLayout();
 	if(mainWindow_)mainWindow.ui.aboutTranslationButton->setEnabled(false);
-	QTimer::singleShot(100,this,SLOT(fixLayout()));
+
+    QTimer::singleShot(100,this,SLOT(fixLayout()));
 }
 
 TranslationDialog::~TranslationDialog()
@@ -97,7 +100,7 @@ void TranslationDialog::fixLayout()
 
 void TranslationDialog::resizeEvent(QResizeEvent *event)
 {
-	event->accept();
+    event->accept();
 	fixLayout();
 }
 

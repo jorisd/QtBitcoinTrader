@@ -23,8 +23,7 @@ PasswordDialog::PasswordDialog(QWidget *parent)
 	resetData=false;
 	newProfile=false;
 	ui.setupUi(this);
-	setWindowTitle(windowTitle()+" v"+appVerStr);
-	setFixedSize(350,minimumSizeHint().height());
+    setWindowTitle(windowTitle()+" v"+appVerStr);
 	setWindowFlags(Qt::WindowCloseButtonHint|Qt::WindowStaysOnTopHint);
 	ui.okButton->setEnabled(false);
 #ifdef Q_OS_WIN
@@ -46,17 +45,10 @@ PasswordDialog::PasswordDialog(QWidget *parent)
 	julyTranslator->translateUi(this);
 
 
-	foreach(QPushButton* pushButtons, findChildren<QPushButton*>())
-		pushButtons->setMinimumWidth(qMin(pushButtons->maximumWidth(),QFontMetrics(pushButtons->font()).width(pushButtons->text())+10));
-
 	foreach(QCheckBox* checkBoxes, findChildren<QCheckBox*>())
 		checkBoxes->setMinimumWidth(qMin(checkBoxes->maximumWidth(),QFontMetrics(checkBoxes->font()).width(checkBoxes->text())+20));
 
-	foreach(QLabel* labels, findChildren<QLabel*>())
-		if(labels->text().length()&&labels->text().at(0)!='<')
-			labels->setMinimumWidth(qMin(labels->maximumWidth(),QFontMetrics(labels->font()).width(labels->text())));
-
-	//if(par->width()<par->minimumSizeHint().width())par->resize(par->minimumSizeHint().width(),par->height());
+    setFixedSize(minimumSizeHint());
 }
 
 PasswordDialog::~PasswordDialog()
