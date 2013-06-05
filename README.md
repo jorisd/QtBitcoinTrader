@@ -15,10 +15,10 @@ Change Log
 
 v0.99
 - Fixed minor bugs
--Added Spanish translation
--Translation engine updated
--Checking update engine rewrited. Secure autoinstall for Mac and Win feature added.
--Added portable mode for Windows (Just create folder QtBitcoinTrader near exe file)
+- Added Spanish translation
+- Translation engine updated
+- Checking update engine rewrited. Secure autoinstall for Mac and Win feature added.
+- Added portable mode for Windows (Just create folder QtBitcoinTrader near exe file)
 
 v0.98
 - Added translation engine. Now you can translate application to your native language
