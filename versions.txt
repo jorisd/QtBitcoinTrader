@@ -1,10 +1,10 @@
 Win32Ver=0.99
 MacVer=1.00
-SrcVer=1.00
+SrcVer=0.99
 Win32Bin=http://master.dl.sourceforge.net/project/bitcointrader/Win32/QtBitcoinTrader.exe
 MacBin=http://master.dl.sourceforge.net/project/bitcointrader/MacOS/QtBitcoinTrader
-Win32ChangeLog=- Fixed minor bugs<br>-Added Spanish translation<br>-Translation engine updated
-MacChangeLog=- Fixed minor bugs<br>-Added Spanish translation<br>-Translation engine updatedConcurrent
-SrcLog=- Fixed minor bugs<br>-Added Spanish translation<br>-Translation engine updated
+Win32ChangeLog=- Fixed minor bugs<br>-Added Spanish translation<br>-Translation engine updated<br>-Checking update rewrited. Secure autoinstall for Mac and Win feature added.
+MacChangeLog=- Fixed minor bugs<br>-Added Spanish translation<br>-Translation engine updated<br>-Checking update rewrited. Secure autoinstall for Mac and Win feature added.
+SrcLog=- Fixed minor bugs<br>-Added Spanish translation<br>-Translation engine updated<br>-Checking update rewrited. Secure autoinstall for Mac and Win feature added.
 Win32Signature=KtM7xfCvFYz+VJue8gA/UT0SmGgu8mq7W8+1RjXrJ2dHhEGvb7z7UvCqBqSjX9BMOzQg91rwWYRmhlX929OkK7/2JvqoZ+JwLrKkB80BL9h7ms3YU9ZMgo9ofcR3UJJ+7Pez7txEpuSNdp4+em9/096QVdV1CgUycBw8HOFnjOhx6P3tXModqaFryyq426sFyA9Rz/vnc9+ZjVJQ9fIGo88mVgBVYOvBtRfJCVNedwqAUbAJj5yvztt+sklhlLede/VDx4bzTqaNiKmlF7PcCH8rP5iahYKuNHy5jYfzz2+OHcnEl3H8sCMCP+edbkM+TJaUbSEv9P/YH2/Vf8bVAg==
 MacSignature=b8QRFPqVBfI8iJHrbbR6R6VDft6QfFoXZst+fVlazsWDCZMUklskJIWDQlDM7tdZSQ77zQk1/GLBTvtbbOJAY7i3oy4dM8RrCAU4S/qJu9DaRs8VT/qowwj5MrTG465VVbYI69o2nI5kvh46VwyxhdUW8QJwTywOjHX5fv28G+w=
