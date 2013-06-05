@@ -214,9 +214,7 @@ QtBitcoinTrader::QtBitcoinTrader()
 
 void QtBitcoinTrader::checkUpdate()
 {
-	QProcess proc;
-	proc.startDetached(QApplication::applicationFilePath()+" /checkupdate");
-	proc.waitForStarted();
+    QProcess::startDetached(QApplication::applicationFilePath(),QStringList("/checkupdate"));
 }
 
 QtBitcoinTrader::~QtBitcoinTrader()

@@ -127,7 +127,10 @@ bool canAutoUpdate=false;
 			if(!QFile::exists(bkpBin)){downloadError();return;}
 			QFile::rename(updBin,curBin);
 			if(!QFile::exists(curBin)){QMessageBox::critical(this,windowTitle(),"Critical error. Please reinstall application. Download it from http://sourceforge.net/projects/bitcointrader/<br>File not exists: "+curBin+"\n"+updBin);downloadError();return;}
-			QMessageBox::information(this,windowTitle(),julyTr("UPDATED_SUCCESSFULLY","Application updated successfully. Please restart application to apply changes."));
+#ifdef Q_OS_MAC
+            QFile(curBin).setPermissions(QFile(bkpBin).permissions());
+#endif
+            QMessageBox::information(this,windowTitle(),julyTr("UPDATED_SUCCESSFULLY","Application updated successfully. Please restart application to apply changes."));
 			QCoreApplication::quit();
 		}
 	}

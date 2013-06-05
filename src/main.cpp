@@ -73,10 +73,10 @@ int main(int argc, char *argv[])
 	if(!QFile::exists(appDataDir))QDir().mkpath(appDataDir);
 #endif
 	
-	if(argc>1)
+    if(argc>1)
 	{
 		QApplication a(argc,argv);
-		if(a.arguments().last()=="/checkupdate")
+        if(a.arguments().last()=="/checkupdate")
 		{
 #ifndef Q_OS_WIN
 			a.setStyle(new QPlastiqueStyle);
