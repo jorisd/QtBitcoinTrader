@@ -97,6 +97,9 @@
         <property name="openExternalLinks">
          <bool>true</bool>
         </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+        </property>
        </widget>
       </item>
      </layout>
@@ -219,36 +222,6 @@ Or if you want to fix errors in existing translation.&lt;br&gt;Please follow ins
       <string>About Qt Bitcoin Trader</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="0">
-       <widget class="QLabel" name="aboutTextLabel">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="accessibleName">
-         <string/>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QLabel {color: black; border: 1px solid gray; background: white; padding:6px}</string>
-        </property>
-        <property name="text">
-         <string>Qt Bitcoin Trader is a free Open Source project&lt;br&gt;developed on pure C++ Qt and OpenSSL.&lt;br&gt;
-If you want to help make project better please donate: &lt;a href=&quot;bitcoin:1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc&quot;&gt;1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc&lt;/a&gt;&lt;br&gt;
-Feel free to send me recommendations and fixes to: &lt;a href=&quot;mailto:julyighor@gmail.com&quot;&gt;julyighor@gmail.com&lt;/a&gt;&lt;br&gt;</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-        <property name="openExternalLinks">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="0">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <property name="spacing">
@@ -339,6 +312,39 @@ Feel free to send me recommendations and fixes to: &lt;a href=&quot;mailto:julyi
          </widget>
         </item>
        </layout>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="aboutTextLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="accessibleName">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {color: black; border: 1px solid gray; background: white; padding:6px}</string>
+        </property>
+        <property name="text">
+         <string>Qt Bitcoin Trader is a free Open Source project&lt;br&gt;developed on pure C++ Qt and OpenSSL.&lt;br&gt;
+If you want to help make project better please donate: &lt;a href=&quot;bitcoin:1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc&quot;&gt;1d6iMwjjNo8ZGYeJBZKXgcgVk9o7fXcjc&lt;/a&gt;&lt;br&gt;
+Feel free to send me recommendations and fixes to: &lt;a href=&quot;mailto:julyighor@gmail.com&quot;&gt;julyighor@gmail.com&lt;/a&gt;&lt;br&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="openExternalLinks">
+         <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

@@ -22,7 +22,7 @@ public:
 	bool isChanged(){return toPlainText()!=defaultText;}
 	QString getValidText();
 	void setItemText(QString);
-	void setDefaultText(QString defText){if(defText!="yyyy-MM-dd HH:mm:ss"&&defText!="Mt.Gox:")defaultText=defText;}
+	void setDefaultText(QString defText);
 	TranslationLine(QWidget *parent=0);
 	~TranslationLine();
 private:

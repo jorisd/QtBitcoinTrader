@@ -59,6 +59,12 @@ void TranslationLine::fixSize()
 	fixingSize=false;
 }
 
+
+void TranslationLine::setDefaultText(QString defText)
+{
+	if(defText!="yyyy-MM-dd HH:mm:ss"&&defText!="Mt.Gox:")defaultText=defText.replace("<br>","\n");
+}
+
 void TranslationLine::setItemText(QString text)
 {
 	if(text.isEmpty())text=defaultText;
